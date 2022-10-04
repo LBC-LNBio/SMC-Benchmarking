@@ -1,8 +1,6 @@
 # Supramolecular cages benchmarking
 
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/LBC-LNBio/moc-benchmarking)
-
-![GitHub](https://img.shields.io/github/license/LBC-LNBio/moc-benchmarking)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/LBC-LNBio/moc-benchmarking) ![GitHub](https://img.shields.io/github/license/LBC-LNBio/moc-benchmarking)
 
 A set of well-known metal organic compounds (MOCs) were selected from the literature to evaluate and validate benchmarking methods in the context of MOCs.
 
