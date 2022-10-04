@@ -19,9 +19,18 @@ A set of well-known metal organic compounds (MOCs) were selected from the litera
 
 ## Requirements
 
-- [openbabel](https://pypi.org/project/openbabel/) (v3.1.1): is a chemical toolbox designed to speak the many languages of chemical data. A wrapper that is automatically using the SWIG package and provide access to almost all of the Open Babel interfaces via Python.
+- [openbabel](https://pypi.org/project/openbabel/) (v3.1.1.1): is a chemical toolbox designed to speak the many languages of chemical data. A wrapper that is automatically using the SWIG package and provide access to almost all of the Open Babel interfaces via Python.
 
 - [pybel](https://pypi.org/project/pybel/) (v0.15.5): is a pure Python package for parsing and handling biological encoded in Biological Expression Language. A lightweight wrapper around openbabel module, that provides a more convenient and Pythonic ways to access the Open Babel toolkit.
+
+To install both, run:
+
+```bash
+$ sudo apt install python3-openbabel
+```
+
+To use Pybel, use `from openbabel import pybel`.
+
 
 ## License
 
