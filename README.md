@@ -26,7 +26,7 @@ A set of well-known metal organic compounds (MOCs) were selected from the litera
 To install Open Babel and PyBEL, run:
 
 ```bash
-$ sudo apt install python3-openbabel
+sudo apt install python3-openbabel
 ```
 
 To use Open Babel and PyBEL, run:
