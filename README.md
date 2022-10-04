@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/LBC-LNBio/moc-benchmarking)
 
 
-A set of well-known metal organic compounds (MOCs) were selected from the literature to evaluate and validated benchmarking methods in the context of MOCs.
+A set of well-known metal organic compounds (MOCs) were selected from the literature to evaluate and validate benchmarking methods in the context of MOCs.
 
 ## Benchmarking methods
 
