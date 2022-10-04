@@ -23,14 +23,18 @@ A set of well-known metal organic compounds (MOCs) were selected from the litera
 
 - [pybel](https://pypi.org/project/pybel/) (v0.15.5): is a pure Python package for parsing and handling biological encoded in Biological Expression Language. A lightweight wrapper around openbabel module, that provides a more convenient and Pythonic ways to access the Open Babel toolkit.
 
-To install both, run:
+To install Open Babel and PyBEL, run:
 
 ```bash
 $ sudo apt install python3-openbabel
 ```
 
-To use Pybel, use `from openbabel import pybel`.
+To use Open Babel and PyBEL, run:
 
+```python
+from openbabel import openbabel
+from openbabel import pybel
+```
 
 ## License
 
