@@ -5,6 +5,7 @@ etc/
 methods/
 .vscode/
 *.pdf
+data/*.pdb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
