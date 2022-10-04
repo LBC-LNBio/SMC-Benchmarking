@@ -32,8 +32,8 @@ $ sudo apt install python3-openbabel
 To use Open Babel and PyBEL, run:
 
 ```python
-from openbabel import openbabel
-from openbabel import pybel
+> from openbabel import openbabel
+> from openbabel import pybel
 ```
 
 ## License
