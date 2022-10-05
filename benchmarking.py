@@ -37,8 +37,11 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
 
 def run_KVFinder_suite(
     pdbs: List[str],
-    probe_out: Union[float, List[float]] = 8.0,
     step: Union[float, List[float]] = 0.6,
+    probe_out: Union[float, List[float]] = 8.0,
+    removal_distance: Union[float, List[float]] = 2.4,
+    volume_cutoff: Union[float, List[float]] = 5.0,
+    
 ) -> None:
     # Check arguments
     if type(pdbs) not in [list]:
@@ -65,9 +68,9 @@ def run_KVFinder_suite(
     os.makedirs(basedir, exist_ok=True)
 
     # Run KVFinder-suite for all files
-    for pdb, s, po in zip(pdbs, step, probe_out):
+    for pdb, s, po, rd, vc in zip(pdbs, step, probe_out, removal_distance, volume_cutoff):
         # Base Name
-        basename = os.path.basename(pdb)
+        basename = os.path.basename(pdb).replace(".pdb", "")
 
         # Atomic information
         atomic = pyKVFinder.read_pdb(pdb)
@@ -76,7 +79,7 @@ def run_KVFinder_suite(
 
         # Cavity detection
         _, cavities = pyKVFinder.detect(
-            atomic, vertices, step=s, probe_out=po
+            atomic, vertices, step=s, probe_out=po, removal_distance=rd, volume_cutoff=vc
         )
 
         # Spatial characterization
@@ -127,4 +130,9 @@ if __name__ == "__main__":
 
     print("[==> Benchmarking methods: ")
     print("> pyKVFinder (v0.4.4)")
-    run_KVFinder_suite(pdbs, probe_out=[8.0, 12.0, 12.0, 40.0, 8.0, 8.0, 8.0, 8.0], step=0.25)
+    run_KVFinder_suite(pdbs,
+    step=0.25,
+    probe_out=[8.0, 20.0, 20.0, 40.0, 20.0, 20.0, 20.0, 20.0],
+    removal_distance=[0.0, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4],
+    volume_cutoff=[800.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
+    )

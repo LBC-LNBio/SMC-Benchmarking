@@ -1,0 +1,20 @@
+# pyKVFinder results
+
+[FILES]
+INPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/data/F1.pdb"
+OUTPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/F1.KVFinder.output.pdb"
+
+[PARAMETERS]
+STEP = 0.25
+
+[RESULTS.VOLUME]
+KAA = 419.53
+
+[RESULTS.AREA]
+KAA = 179.97
+
+[RESULTS.MAX_DEPTH]
+KAA = 3.47
+
+[RESULTS.AVG_DEPTH]
+KAA = 1.12
