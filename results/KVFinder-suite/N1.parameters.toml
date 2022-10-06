@@ -1,0 +1,30 @@
+[FILES]
+INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/N1.pdb"
+BASE_NAME = "N1"
+OUTPUT_DIRECTORY = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite"
+DICTIONARY = "/home/jvsguerra/.local/lib/python3.10/site-packages/pyKVFinder/data/vdw.dat"
+
+[SETTINGS]
+STEP = 0.25
+
+[SETTINGS.MODES]
+BOX_ADJUSTMENT = false
+LIGAND_ADJUSTMENT = false
+DEPTH = true
+SURFACE = "SES"
+IGNORE_BACKBONE = false
+
+[SETTINGS.PROBES]
+PROBE_IN = 1.4
+PROBE_OUT = 8.0
+
+[SETTINGS.CUTOFFS]
+VOLUME_CUTOFF = 5.0
+LIGAND_CUTOFF = 5.0
+REMOVAL_DISTANCE = 1.5
+
+[SETTINGS.BOX]
+p1 = [ -11.27, -15.19, 59.79,]
+p2 = [ 29.84, -15.19, 59.79,]
+p3 = [ -11.27, 26.41, 59.79,]
+p4 = [ -11.27, -15.19, 97.85,]

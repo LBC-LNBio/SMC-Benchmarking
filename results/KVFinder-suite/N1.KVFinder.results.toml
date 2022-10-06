@@ -1,20 +1,34 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/data/N1.pdb"
-OUTPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/N1.KVFinder.output.pdb"
+INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/N1.pdb"
+OUTPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/N1.KVFinder.output.pdb"
 
 [PARAMETERS]
 STEP = 0.25
 
 [RESULTS.VOLUME]
-KAA = 411.7
+KAA = 475.05
 
 [RESULTS.AREA]
-KAA = 205.95
+KAA = 282.46
 
 [RESULTS.MAX_DEPTH]
-KAA = 3.91
+KAA = 4.5
 
 [RESULTS.AVG_DEPTH]
-KAA = 1.41
+KAA = 2.03
+
+[RESULTS.RESIDUES]
+KAA = [ [ "1", " ", "UNL",],]
+
+[RESULTS.FREQUENCY.KAA.RESIDUES]
+UNL = 1
+
+[RESULTS.FREQUENCY.KAA.CLASS]
+R1 = 0
+R2 = 0
+R3 = 0
+R4 = 0
+R5 = 0
+RX = 1
