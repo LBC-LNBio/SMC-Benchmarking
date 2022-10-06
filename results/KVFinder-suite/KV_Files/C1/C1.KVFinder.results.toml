@@ -3,24 +3,24 @@
 title = "parKVFinder results file"
 
 [FILES_PATH]
-INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/C1.pdb"
-OUTPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/KV_Files/C1/C1.KVFinder.output.pdb"
+INPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/data/C1.pdb"
+OUTPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/KV_Files/C1/C1.KVFinder.output.pdb"
 LIGAND = "-"
 
 [PARAMETERS]
 RESOLUTION = "Off"
-STEP_SIZE = 0.60
+STEP_SIZE = 0.25
 
 [RESULTS]
 # Volume, area and interface residues information for each cavity
 
 	[RESULTS.VOLUME]
 	# Volume unit is cubic angstrom
-	KAA = 498.10
+	KAA = 540.58
 
 	[RESULTS.AREA]
 	# Area unit is square angstrom
-	KAA = 193.65
+	KAA = 219.25
 
 	[RESULTS.RESIDUES]
 	# Interface residues for each cavity
