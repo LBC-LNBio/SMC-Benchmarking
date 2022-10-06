@@ -19,7 +19,7 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 ## Requirements
 
-- [Python 3](https://www.python.org) (v3.10)
+- [Python 3](https://www.python.org) (v3.10): Python is a high-level, interpreted, interactive and object-oriented scripting language. 
 
 - [openbabel](https://pypi.org/project/openbabel/) (v3.1.1.1): a chemical toolbox designed to speak the many languages of chemical data. A wrapper that is automatically using the SWIG package and provide access to almost all of the Open Babel interfaces via Python.
 
