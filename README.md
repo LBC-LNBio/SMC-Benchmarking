@@ -19,24 +19,26 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 ## Requirements
 
+- [Python 3](https://www.python.org) (v3.10)
+
 - [openbabel](https://pypi.org/project/openbabel/) (v3.1.1.1): a chemical toolbox designed to speak the many languages of chemical data. A wrapper that is automatically using the SWIG package and provide access to almost all of the Open Babel interfaces via Python.
 
 - [pybel](https://pypi.org/project/pybel/) (v0.15.5): a pure Python package for parsing and handling biological encoded in Biological Expression Language. A lightweight wrapper around openbabel module, that provides a more convenient and Pythonic ways to access the Open Babel toolkit.
 
-To install Open Babel and PyBEL, run:
+To install Python 3, Open Babel and PyBEL, run:
 
 ```bash
-sudo apt install python3-openbabel
+sudo apt install python3 python3-openbabel
 ```
 
-To use Open Babel and PyBEL in Python ecosystem, run:
+To use Open Babel and PyBEL in Python 3 ecosystem, run:
 
-```python
+```python3
 from openbabel import openbabel
 from openbabel import pybel
 ```
 
-### Python packages
+## Python requirements
 
 - [toml](https://pypi.org/project/toml) (v0.10.2): a Python library for parsing and creating TOML.
 
@@ -48,6 +50,14 @@ To install toml, pyKVFinder, biobb_vs, run:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Benchmarking
+
+To execute the benchmarking, run:
+
+```bash
+python benchmarking.py
 ```
 
 ## License
