@@ -38,7 +38,6 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
 
 if __name__ == "__main__":
     print("[==> Converting XYZ to PDB")
-
     # Get XYZ files in data
     xyzs = [
         os.path.join("./data", f)
@@ -57,3 +56,20 @@ if __name__ == "__main__":
         removal_distance=[0.0, 1.0, 1.0, 3.5, 2.0, 1.5, 2.0, 3.0],
         volume_cutoff=[800.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0],
     )
+
+    # Fpocket
+
+    # McVol
+
+    # pywindow
+
+    # POVME
+
+    # GHECOM
+
+    # CAVER
+
+    # MoloVol
+    
+    # PyVol
+
