@@ -1,5 +1,8 @@
 # Files to ignore
 
+# Not update
+F2.surface.pdb
+
 # Debbuging
 etc/
 .vscode/
