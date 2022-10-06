@@ -1,4 +1,4 @@
-# Supramolecular cages benchmarking
+# SupraMolecular Cages benchmarking (SMC-Benchmarking)
 
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/LBC-LNBio/moc-benchmarking) 
 ![GitHub](https://img.shields.io/github/license/LBC-LNBio/moc-benchmarking)
