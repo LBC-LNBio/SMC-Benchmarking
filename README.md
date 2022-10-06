@@ -1,4 +1,4 @@
-# SupraMolecular Cages benchmarking (SMC-Benchmarking)
+# <ins>S</ins>upra<ins>M</ins>olecular <ins>C</ins>ages <ins>Benchmarking</ins>
 
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/LBC-LNBio/moc-benchmarking) 
 ![GitHub](https://img.shields.io/github/license/LBC-LNBio/moc-benchmarking)
