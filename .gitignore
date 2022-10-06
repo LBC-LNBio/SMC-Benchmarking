@@ -2,7 +2,6 @@
 
 # Debbuging
 etc/
-methods/
 .vscode/
 *.pdf
 data/*.pdb
