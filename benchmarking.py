@@ -31,6 +31,9 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
     # Convert XYZ to PDB
     for xyz, pdb in zip(xyzs, pdbs):
         mol = next(pybel.readfile("xyz", xyz))
+        # Convert residue names from UNL to UNK
+        for atom in mol.atoms:
+            atom.residue.OBResidue.SetName('UNK')
         mol.write("pdb", pdb, overwrite=True)
 
     return pdbs
@@ -47,6 +50,7 @@ if __name__ == "__main__":
 
     # Convert XYZ to PDB files
     pdbs = xyz2pdb(xyzs)
+    exit()
 
     print("[==> Benchmarking methods: ")
     KVsuite.run(
