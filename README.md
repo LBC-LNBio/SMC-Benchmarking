@@ -42,7 +42,7 @@ from openbabel import pybel
 
 - [toml](https://pypi.org/project/toml) (v0.10.2): a Python library for parsing and creating TOML.
 
-- [pyKVFinder](https://pypi.org/project/toml) (v0.4.4): a Python package for detecting and characterizing biomolecular cavities.
+- [pyKVFinder](https://pypi.org/project/pyKVFinder) (v0.4.4): a Python package for detecting and characterizing biomolecular cavities.
 
 - [biobb_vs](https://pypi.org/project/biobb_vs) (v3.8.1): a collection to perform virtual screening studies. Biobb (BioExcel building blocks) packages are Python building blocks that create new layer of compatibility and interoperability over popular bioinformatics tools.
 
