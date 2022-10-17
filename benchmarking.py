@@ -51,6 +51,7 @@ if __name__ == "__main__":
     # Convert XYZ to PDB files
     pdbs = xyz2pdb(xyzs)
 
+    print("[==> Benchmarking methods: ")
     # KVFinder suite
     KVsuite.run(
         pdbs,
