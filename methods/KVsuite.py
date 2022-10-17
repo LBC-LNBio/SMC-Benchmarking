@@ -205,6 +205,20 @@ def run(
         step = [step] * len(pdbs)
     elif len(step) != len(pdbs):
         raise Exception("`step` must have the same length as `pdbs`.")
+    if type(removal_distance) not in [float, list]:
+        raise TypeError("`removal_distance` must be a float or a list of them.")
+    elif type(removal_distance) is float:
+        removal_distance = [removal_distance] * len(pdbs)
+    elif len(removal_distance) != len(pdbs):
+        raise Exception("`removal_distance` must have the same length as `pdbs`.")
+    if type(volume_cutoff) not in [float, list]:
+        raise TypeError("`volume_cutoff` must be a float or a list of them.")
+    elif type(volume_cutoff) is float:
+        volume_cutoff = [volume_cutoff] * len(pdbs)
+    elif len(volume_cutoff) != len(pdbs):
+        raise Exception("`volume_cutoff` must have the same length as `pdbs`.")
+
+
 
     # Create basedir
     basedir = "./results/KVFinder-suite"
@@ -221,5 +235,4 @@ def run(
     for pdb, s, po, rd, vc in zip(
         pdbs, step, probe_out, removal_distance, volume_cutoff
     ):
-
         _run_parKVFinder(pdb, s, po, rd, vc, basedir)

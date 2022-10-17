@@ -50,15 +50,14 @@ if __name__ == "__main__":
 
     # Convert XYZ to PDB files
     pdbs = xyz2pdb(xyzs)
-    exit()
 
-    print("[==> Benchmarking methods: ")
+    # KVFinder suite
     KVsuite.run(
         pdbs,
         step=0.25,
-        probe_out=[8.0, 8.0, 8.0, 20.0, 10.0, 8.0, 10.0, 8.0],
-        removal_distance=[0.0, 1.0, 1.0, 3.5, 2.0, 1.5, 2.0, 3.0],
-        volume_cutoff=[800.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0],
+        probe_out=[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0],
+        removal_distance=[0.75, 2.0, 1.75, 2.0, 2.0, 1.0, 1.25, 3.5, 2.0, 1.5, 1.25, 0.5, 2.0, 1.5],
+        volume_cutoff=[80.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 80.0, 20.0, 5.0, 5.0],
     )
 
     # Fpocket

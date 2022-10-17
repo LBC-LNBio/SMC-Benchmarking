@@ -1,0 +1,28 @@
+# TOML results file for parKVFinder software
+
+title = "parKVFinder results file"
+
+[FILES_PATH]
+INPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/data/B2.pdb"
+OUTPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/KV_Files/B2/B2.KVFinder.output.pdb"
+LIGAND = "-"
+
+[PARAMETERS]
+RESOLUTION = "Off"
+STEP_SIZE = 0.25
+
+[RESULTS]
+# Volume, area and interface residues information for each cavity
+
+	[RESULTS.VOLUME]
+	# Volume unit is cubic angstrom
+	KAA = 261.44
+
+	[RESULTS.AREA]
+	# Area unit is square angstrom
+	KAA = 218.36
+
+	[RESULTS.RESIDUES]
+	# Interface residues for each cavity
+	# ["residue number","chain identifier","residue name"]
+	KAA = []
