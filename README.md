@@ -14,10 +14,9 @@ A set of well-known supramolecular cages were selected from the literature to ev
 - [POVME](https://doi.org/10.1021/acs.jctc.7b00500);
 - [GHECOM](https://doi.org/10.1002/prot.22639);
 - [CAVER](https://doi.org/10.1093/bioinformatics/bty386);
-- [MoloVol](https://doi.org/10.1107/S1600576722004988);
-- [PyVol](https://doi.org/10.1101/816702).
+- [MoloVol](https://doi.org/10.1107/S1600576722004988).
 
-## Requirements
+## System requirements
 
 - [Python 3](https://www.python.org) (v3.10): Python is a high-level, interpreted, interactive and object-oriented scripting language. 
 
