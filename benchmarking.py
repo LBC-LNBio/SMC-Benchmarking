@@ -1,7 +1,7 @@
 import os
 from typing import List
 from openbabel import pybel
-from methods import KVsuite
+from methods import KVsuite, fpocket
 
 
 def xyz2pdb(xyzs: List[str]) -> List[str]:
@@ -33,7 +33,7 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
         mol = next(pybel.readfile("xyz", xyz))
         # Convert residue names from UNL to UNK
         for atom in mol.atoms:
-            atom.residue.OBResidue.SetName('UNK')
+            atom.residue.OBResidue.SetName("UNK")
         mol.write("pdb", pdb, overwrite=True)
 
     return pdbs
@@ -62,6 +62,8 @@ if __name__ == "__main__":
     )
 
     # Fpocket
+    pdbs = ["./data/A1.pdb"]
+    fpocket.run(pdbs, min_radius=[3.2], max_radius=[6.4], num_spheres=[15])
 
     # McVol
 
@@ -74,6 +76,5 @@ if __name__ == "__main__":
     # CAVER
 
     # MoloVol
-    
-    # PyVol
 
+    # PyVol
