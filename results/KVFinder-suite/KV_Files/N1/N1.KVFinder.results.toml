@@ -16,11 +16,11 @@ STEP_SIZE = 0.25
 
 	[RESULTS.VOLUME]
 	# Volume unit is cubic angstrom
-	KAA = 477.05
+	KAA = 490.11
 
 	[RESULTS.AREA]
 	# Area unit is square angstrom
-	KAA = 254.53
+	KAA = 266.51
 
 	[RESULTS.RESIDUES]
 	# Interface residues for each cavity

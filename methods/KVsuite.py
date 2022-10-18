@@ -12,7 +12,7 @@ def _run_pyKVFinder(
     removal_distance: float = 2.4,
     volume_cutoff: float = 5.0,
     basedir: str = ".",
-):
+) -> None:
     # Base Name
     basename = os.path.basename(pdb).replace(".pdb", "")
 
@@ -67,7 +67,7 @@ def _run_parKVFinder(
     removal_distance: float = 2.4,
     volume_cutoff: float = 5.0,
     basedir: str = ".",
-):
+) -> None:
     # Check if parameters exist
     if os.path.exists("parameters.toml"):
         os.remove("parameters.toml")
@@ -217,8 +217,6 @@ def run(
         volume_cutoff = [volume_cutoff] * len(pdbs)
     elif len(volume_cutoff) != len(pdbs):
         raise Exception("`volume_cutoff` must have the same length as `pdbs`.")
-
-
 
     # Create basedir
     basedir = "./results/KVFinder-suite"
