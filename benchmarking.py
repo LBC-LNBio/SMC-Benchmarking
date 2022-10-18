@@ -62,8 +62,14 @@ if __name__ == "__main__":
     )
 
     # Fpocket
-    pdbs = ["./data/A1.pdb"]
-    fpocket.run(pdbs, min_radius=[3.2], max_radius=[6.4], num_spheres=[15])
+    # User manual: https://fpocket.sourceforge.net/manual_fpocket2.pdf
+    fpocket.run(
+        pdbs,
+        min_radius=[3.4, 3.4, 3.4, 3.4, 3.4, 2.0, 2.0, 3.4, 3.4, 3.7, 3.4, 3.4, 3.4, 4.0],
+        max_radius=[8.0, 8.0, 8.0, 8.0, 8.0, 6.2, 6.2, 40., 6.2, 8.0, 6.2, 6.2, 6.2, 7.0],
+        num_spheres=[15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15],
+        selection=[1, 1, 1, 1, 1, 1, 1, 37, 1, 1, 1, 1, 1, 7],
+    )
 
     # McVol
 

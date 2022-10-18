@@ -2,25 +2,15 @@ import os
 import zipfile
 from typing import List, Union
 from biobb_vs.fpocket.fpocket_run import fpocket_run
-
-
-# fpocket_all_pockets = "fpocket_all_pockets.zip"
-# fpocket_summary = "fpocket_summary.json"
-# prop = {"min_radius": 3, "max_radius": 6, "num_spheres": 35}
-
-# fpocket_run(
-#     input_pdb_path="./data/A1.pdb",
-#     output_pockets_zip=fpocket_all_pockets,
-#     output_summary=fpocket_summary,
-#     properties=prop,
-# )
+from biobb_vs.fpocket.fpocket_select import fpocket_select
 
 
 def _run_fpocket(
     pdb: str,
-    min_radius: float = 3.2,
-    max_radius: float = 6.4,
+    min_radius: float = 3.4,
+    max_radius: float = 6.2,
     num_spheres: int = 15,
+    selection: int = 1,
     basedir: str = ".",
 ) -> None:
     # Base Name
@@ -33,21 +23,25 @@ def _run_fpocket(
     output = os.path.join(basedir, f"{basename}.zip")
 
     # Run fpocket
-    fpocket_run(
-        input_pdb_path=pdb,
-        output_pockets_zip=output,
-        output_summary=os.path.join(basedir, basename, f"summary.json"),
-        properties={
-            "min_radius": min_radius,
-            "max_radius": max_radius,
-            "num_spheres": num_spheres,
-            "restart": True
-        },
-    )
+    if pdb.find("O2.pdb") < 0:
+        fpocket_run(
+            input_pdb_path=pdb,
+            output_pockets_zip=output,
+            output_summary=os.path.join(basedir, basename, f"summary.json"),
+            properties={
+                "min_radius": min_radius,
+                "max_radius": max_radius,
+                "num_spheres": num_spheres,
+            },
+        )
 
-    # Unzip results
-    with zipfile.ZipFile(output, 'r') as zip:
-        zip.extractall(os.path.join(basedir, basename))
+        # Select
+        fpocket_select(
+            input_pockets_zip=output,
+            output_pocket_pdb=os.path.join(basedir, basename, f"pocket{selection}_atm.pdb"),
+            output_pocket_pqr=os.path.join(basedir, basename, f"pocket{selection}_vert.pqr"),
+            properties={"pocket": selection},
+        )
 
 
 def run(
@@ -55,6 +49,7 @@ def run(
     min_radius: Union[float, List[float]] = 3.2,
     max_radius: Union[float, List[float]] = 6.4,
     num_spheres: Union[int, List[int]] = 15,
+    selection: Union[int, List[int]] = 1,
 ) -> None:
     # Check arguments
     if type(pdbs) not in [list]:
@@ -75,12 +70,18 @@ def run(
         max_radius = [max_radius] * len(pdbs)
     elif len(max_radius) != len(pdbs):
         raise Exception("`max_radius` must have the same length as `pdbs`.")
-    if type(num_spheres) not in [float, list]:
-        raise TypeError("`num_spheres` must be a float or a list of them.")
-    elif type(num_spheres) is float:
+    if type(num_spheres) not in [int, list]:
+        raise TypeError("`num_spheres` must be a integer or a list of them.")
+    elif type(num_spheres) is int:
         num_spheres = [num_spheres] * len(pdbs)
     elif len(num_spheres) != len(pdbs):
         raise Exception("`num_spheres` must have the same length as `pdbs`.")
+    if type(selection) not in [int, list]:
+        raise TypeError("`selection` must be a integer or a list of them.")
+    elif type(selection) is int:
+        selection = [selection] * len(pdbs)
+    elif len(selection) != len(pdbs):
+        raise Exception("`selection` must have the same length as `pdbs`.")
 
     # Create basedir
     basedir = "./results/fpocket"
@@ -88,13 +89,10 @@ def run(
 
     # Run fpocket for all files
     print("> fpocket (v3.1.4.2)")
-    for pdb, m, M, n in zip(pdbs, min_radius, max_radius, num_spheres):
-        _run_fpocket(pdb, m, M, n, basedir)
+    for pdb, m, M, n, s in zip(pdbs, min_radius, max_radius, num_spheres, selection):
+        _run_fpocket(pdb, m, M, n, s, basedir)
 
-    # Remove zip, log and error files
-    for fn in os.listdir(basedir):
-        if fn.endswith('.zip'):
-            os.remove(os.path.join(basedir, fn))
+    # Remove log and error files
     for fn in os.listdir():
-        if fn.endswith('.out') or fn.endswith('.err'):
+        if fn.endswith(".out") or fn.endswith(".err"):
             os.remove(fn)
