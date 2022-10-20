@@ -1,7 +1,7 @@
 import os
 from typing import List
 from openbabel import pybel
-from methods import KVsuite, fpocket, pywindow
+from methods import KVsuite, fpocket, pywindow, GHECOM
 
 
 def xyz2pdb(xyzs: List[str]) -> List[str]:
@@ -74,6 +74,12 @@ if __name__ == "__main__":
     )
 
     # GHECOM
+    # Documentation: https://pdbj.org/ghecom/README_ghecom.html
+    GHECOM.run(
+        pdbs,
+        gws=[0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80],
+        rlxs=[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 20.00, 10.0, 10.0, 10.0, 10.00, 10.0, 10.0],
+    )
 
     # pywindow
     # Documentation: https://marcinmiklitz.github.io/pywindow/

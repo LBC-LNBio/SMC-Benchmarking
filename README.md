@@ -24,6 +24,8 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 - [pybel](https://pypi.org/project/pybel/) (v0.15.5): a pure Python package for parsing and handling biological encoded in Biological Expression Language. A lightweight wrapper around openbabel module, that provides a more convenient and Pythonic ways to access the Open Babel toolkit.
 
+- [GHECOM](https://pdbj.org/ghecom/) (21/07/2020): a software for finding multi-scale pockets on protein surfaces using mathematical morphology.ghec
+
 To install Python 3, Open Babel and PyBEL, run:
 
 ```bash
@@ -35,6 +37,19 @@ To use Open Babel and PyBEL in Python 3 ecosystem, run:
 ```python3
 from openbabel import openbabel
 from openbabel import pybel
+```
+
+To install GHECOM, run:
+
+```bash
+mkdir -p etc/
+mkdir -p etc/ghecom
+wget -O etc/ghecom.tar.gz https://pdbj.org/ghecom/cgi-bin/dwnld_src_file.cgi?filename=ghecom-src-20211201.tar.gz
+tar -xf etc/ghecom.tar.gz -C etc/ghecom
+cd etc/ghecom/src
+make
+sudo ln -s `pwd`/ghecom /usr/local/bin/ghecom
+cd ../../../
 ```
 
 ## Python requirements
@@ -56,9 +71,12 @@ pip install -r requirements.txt
 To install pywindow, run:
 
 ```bash
+mkdir -p etc
+cd etc
 git clone https://github.com/marcinmiklitz/pywindow
 cd pywindow/
 python setup.py install
+cd ../../
 ```
 
 ## Benchmarking
