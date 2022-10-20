@@ -10,7 +10,7 @@ A set of well-known supramolecular cages were selected from the literature to ev
 - KVFinder suite ([parKVFinder](https://doi.org/10.1016/j.softx.2020.100606) and [pyKVFinder](https://doi.org/10.1186/s12859-021-04519-4));
 - [Fpocket](https://doi.org/10.1186/1471-2105-10-168);
 - [McVol](https://doi.org/10.1007/s00894-009-0541-y);
-- [pywindow](https://doi.org/10.1021/acs.jcim.8b00490 );
+- [pywindow](https://doi.org/10.1021/acs.jcim.8b00490);
 - [POVME](https://doi.org/10.1021/acs.jctc.7b00500);
 - [GHECOM](https://doi.org/10.1002/prot.22639);
 - [CAVER](https://doi.org/10.1093/bioinformatics/bty386);
@@ -43,12 +43,22 @@ from openbabel import pybel
 
 - [pyKVFinder](https://pypi.org/project/pyKVFinder) (v0.4.4): a Python package for detecting and characterizing biomolecular cavities.
 
-- [biobb_vs](https://pypi.org/project/biobb_vs) (v3.8.1): a collection to perform virtual screening studies. Biobb (BioExcel building blocks) packages are Python building blocks that create new layer of compatibility and interoperability over popular bioinformatics tools.
+- [biobb_vs](https://pypi.org/project/biobb_vs) (v3.8.1): a collection to perform virtual screening studies. Biobb (BioExcel building blocks) packages are Python building blocks that create new layer of compatibility and interoperability over popular bioinformatics tools. Fpocket software (v3.1.4.2) is available inside this Python package.
+
+- [pywindow](https://github.com/marcinmiklitz/pywindow) (v0.0.4): a Python package for the analysis of structural properties of molecular pores, porous organic cages, MOFs and metalorganic cages.
 
 To install toml, pyKVFinder, biobb_vs, run:
 
 ```bash
 pip install -r requirements.txt
+```
+
+To install pywindow, run:
+
+```bash
+git clone https://github.com/marcinmiklitz/pywindow
+cd pywindow/
+python setup.py install
 ```
 
 ## Benchmarking

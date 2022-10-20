@@ -1,7 +1,7 @@
 import os
 from typing import List
 from openbabel import pybel
-from methods import KVsuite, fpocket
+from methods import KVsuite, fpocket, pywindow
 
 
 def xyz2pdb(xyzs: List[str]) -> List[str]:
@@ -53,6 +53,8 @@ if __name__ == "__main__":
 
     print("[==> Benchmarking methods: ")
     # KVFinder suite
+    # parKVFinder documentation: https://github.com/LBC-LNBio/parKVFinder/wiki
+    # pyKVFinder documentation: https://lbc-lnbio.github.io/pyKVFinder/
     KVsuite.run(
         pdbs,
         step=0.25,
@@ -71,13 +73,15 @@ if __name__ == "__main__":
         selection=[1, 1, 1, 1, 1, 1, 1, 37, 1, 1, 1, 1, 1, 7],
     )
 
-    # McVol
+    # GHECOM
 
     # pywindow
+    # Documentation: https://marcinmiklitz.github.io/pywindow/
+    pywindow.run(pdbs)
+
+    # McVol
 
     # POVME
-
-    # GHECOM
 
     # CAVER
 

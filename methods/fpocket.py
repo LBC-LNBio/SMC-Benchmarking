@@ -19,7 +19,7 @@ def _run_fpocket(
     # Basedir
     os.makedirs(os.path.join(basedir, basename), exist_ok=True)
 
-    # Output directly
+    # Output file
     output = os.path.join(basedir, f"{basename}.zip")
 
     # Run fpocket

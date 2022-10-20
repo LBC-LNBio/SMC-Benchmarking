@@ -1,0 +1,19 @@
+HEADER
+HEADER 0  - Void volume                       : 1028.70
+HEADER 1  - Window 1 diameter                 : 2.4245
+HEADER 2  - Window 2 diameter                 : 2.4286
+HEADER 3  - Window 3 diameter                 : 2.4213
+HEADER 4  - Window 4 diameter                 : 2.4246
+HEADER 5  - Window 5 diameter                 : 2.4241
+HEADER 6  - Window 6 diameter                 : 2.4268
+HEADER 7  - Window 7 diameter                 : 2.4240
+HEADER 8  - Window 8 diameter                 : 2.4242
+HETATM    0  PS1 COM A   1      12.171  12.171  12.172   0.0  6.26           P
+HETATM    1  PS1 W1  A   1      16.742  16.742  16.742   0.0  1.21           P
+HETATM    2  PS1 W2  A   1       7.576   7.576  16.767   0.0  1.21           P
+HETATM    3  PS1 W3  A   1       7.633  16.710  16.710   0.0  1.21           P
+HETATM    4  PS1 W4  A   1      16.742   7.601  16.742   0.0  1.21           P
+HETATM    5  PS1 W5  A   1       7.604  16.739   7.604   0.0  1.21           P
+HETATM    6  PS1 W6  A   1      16.756   7.587   7.587   0.0  1.21           P
+HETATM    7  PS1 W7  A   1       7.604   7.604   7.605   0.0  1.21           P
+HETATM    8  PS1 W8  A   1      16.739  16.739   7.604   0.0  1.21           P
