@@ -135,7 +135,7 @@ def run(molecules: List[str]) -> None:
         f.write("# Instructions\n\n")
         f.write("To visualiaze pywindow results for any cage, run:\n\n")
         f.write("```bash\npython {ID}-pymol2.py\n```\n")
-        f.write("So, for cage A1, run:\n\n")
+        f.write("So, for cage A1, inside results/pywindow/A1 directory, run:\n\n")
         f.write("```bash\npython A1-pymol2.py\n```\n")
 
     # Run pywindow
