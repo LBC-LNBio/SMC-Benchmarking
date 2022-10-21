@@ -18,7 +18,9 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 ## System requirements
 
-- [Python 3](https://www.python.org) (v3.10): Python is a high-level, interpreted, interactive and object-oriented scripting language. 
+- [Python 3](https://www.python.org) (v3.10.6): Python is a high-level, interpreted, interactive and object-oriented scripting language. 
+
+- [Python 2](https://www.python.org) (v2.7.18): Python is a high-level, interpreted, interactive and object-oriented scripting language. 
 
 - [openbabel](https://pypi.org/project/openbabel/) (v3.1.1.1): a chemical toolbox designed to speak the many languages of chemical data. A wrapper that is automatically using the SWIG package and provide access to almost all of the Open Babel interfaces via Python.
 
@@ -26,10 +28,10 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 - [GHECOM](https://pdbj.org/ghecom/) (21/07/2020): a software for finding multi-scale pockets on protein surfaces using mathematical morphology.
 
-To install Python 3, Open Babel and PyBEL, run:
+To install Python 3, Python 2, Pip 3, Pip 2, Open Babel and PyBEL, run:
 
 ```bash
-sudo apt install python3 python3-openbabel
+sudo apt install python3 python3-pip python3-openbabel python2 python-pip
 ```
 
 To use Open Babel and PyBEL in Python 3 ecosystem, run:
@@ -52,7 +54,7 @@ sudo ln -s `pwd`/ghecom /usr/local/bin/ghecom
 cd ../../../
 ```
 
-## Python requirements
+## Python 3 requirements
 
 - [toml](https://pypi.org/project/toml) (v0.10.2): a Python library for parsing and creating TOML.
 
@@ -62,12 +64,10 @@ cd ../../../
 
 - [pywindow](https://github.com/marcinmiklitz/pywindow) (v0.0.4): a Python package for the analysis of structural properties of molecular pores, porous organic cages, MOFs and metalorganic cages.
 
-- [povme](https://pypi.org/project/povme/) (v3.0.35): is a Python package characterizing the shape and flexibility of a cavity in detail.
-
-To install toml, pyKVFinder, biobb_vs, povme, run:
+To install toml, pyKVFinder, biobb_vs, run:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements3.txt
 ```
 
 To install pywindow, run:
@@ -77,8 +77,17 @@ mkdir -p etc
 cd etc
 git clone https://github.com/marcinmiklitz/pywindow
 cd pywindow/
-python setup.py install
+python3 setup.py install
 cd ../../
+```
+## Python 2 requirements
+
+- [povme](https://pypi.org/project/povme/) (v3.0.35): is a Python package characterizing the shape and flexibility of a cavity in detail.
+
+To install povme, run:
+
+```bash
+pip2 install -r requirements2.txt
 ```
 
 ## Benchmarking
@@ -86,7 +95,7 @@ cd ../../
 To execute the benchmarking, run:
 
 ```bash
-python benchmarking.py
+python3 benchmarking.py
 ```
 
 ## License

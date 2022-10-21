@@ -1,12 +1,57 @@
+#!/usr/bin/env python3
 import os
 import subprocess
-from typing import List, Union
+from typing import List, Union, Optional
 import toml
 import pyKVFinder
 
 
+def _pymol(
+    molecule: str, cavity: str, surface: Optional[str], step: float, basedir: str = "."
+):
+    # Base name
+    basename = os.path.basename(molecule).strip(".pdb")
+
+    molecule = os.path.realpath(molecule)
+    cavity = os.path.realpath(cavity)
+    if surface is not None:
+        surface = os.path.realpath(surface)
+
+    # Write script to visualization
+    with open(os.path.join(basedir, f"{basename}-pymol2.py"), "w") as f:
+        f.write("import pymol\n")
+        f.write("from pymol import cmd, stored\n\n")
+        f.write('pymol.finish_launching(["pymol", "-q"])\n\n')
+        f.write(f'cmd.load("{molecule}", quiet=False)\n')
+        f.write(f'cmd.load("{cavity}", quiet=False)\n')
+        if surface is not None:
+            f.write(f'cmd.load("{surface}", quiet=False)\n')
+        f.write("\n")
+        f.write(f'cmd.hide("sticks", "{os.path.basename(cavity).strip(".pdb")}")\n')
+        f.write(f'cmd.show("spheres", "{os.path.basename(cavity).strip(".pdb")}")\n')
+        f.write(
+            f'cmd.alter("obj {os.path.basename(cavity).strip(".pdb")}", "vdw={step/2}")\n'
+        )
+        if surface is not None:
+            f.write(
+                f'cmd.alter("obj {os.path.basename(surface).strip(".pdb")}", "vdw={step/2}")\n'
+            )
+        f.write(f"cmd.rebuild()\n\n")
+        f.write("stored.b = []\n")
+        f.write(
+            f'cmd.iterate("(obj {os.path.basename(cavity).strip(".pdb")})", "stored.b.append(b)")\n'
+        )
+        f.write(
+            f'cmd.spectrum("b", "blue_white_red", "{os.path.basename(cavity).strip(".pdb")}", [min(stored.b), max(stored.b)])\n'
+        )
+        f.write(
+            f'cmd.ramp_new("Depth", "{os.path.basename(cavity).strip(".pdb")}", [min(stored.b), max(stored.b)], ["blue", "white", "red"])\n\n'
+        )
+        f.write("cmd.orient()\n")
+
+
 def _run_pyKVFinder(
-    pdb: str,
+    molecule: str,
     step: float = 0.6,
     probe_out: float = 8.0,
     removal_distance: float = 2.4,
@@ -14,10 +59,14 @@ def _run_pyKVFinder(
     basedir: str = ".",
 ) -> None:
     # Base Name
-    basename = os.path.basename(pdb).replace(".pdb", "")
+    basename = os.path.basename(molecule).strip(".pdb")
+
+    # Basedir
+    basedir = os.path.join(basedir, basename)
+    os.makedirs(basedir, exist_ok=True)
 
     # Atomic information
-    atomic = pyKVFinder.read_pdb(pdb)
+    atomic = pyKVFinder.read_pdb(molecule)
     # Grid dimensions
     vertices = pyKVFinder.get_vertices(atomic, probe_out=probe_out)
 
@@ -37,8 +86,8 @@ def _run_pyKVFinder(
     depths, max_depth, avg_depth = pyKVFinder.depth(cavities, step=step)
 
     # Export cavities
-    opdb = os.path.join(basedir, f"{basename}.KVFinder.output.pdb")
-    pyKVFinder.export(opdb, cavities, surface, vertices, B=depths, step=step)
+    output = os.path.join(basedir, f"{basename}.KVFinder.output.pdb")
+    pyKVFinder.export(output, cavities, surface, vertices, B=depths, step=step)
     osurf = os.path.join(basedir, f"{basename}.surface.pdb")
     surface_representation = (cavities == 0).astype(int) * 2
     pyKVFinder.export(
@@ -49,9 +98,9 @@ def _run_pyKVFinder(
     oresults = os.path.join(basedir, f"{basename}.KVFinder.results.toml")
     pyKVFinder.write_results(
         oresults,
-        pdb,
+        molecule,
         None,
-        opdb,
+        output,
         volume=volume,
         area=area,
         max_depth=max_depth,
@@ -59,15 +108,25 @@ def _run_pyKVFinder(
         step=step,
     )
 
+    # Write pymol visualization
+    _pymol(molecule, output, osurf, step, basedir)
+
 
 def _run_parKVFinder(
-    pdb: str,
+    molecule: str,
     step: float = 0.6,
     probe_out: float = 8.0,
     removal_distance: float = 2.4,
     volume_cutoff: float = 5.0,
     basedir: str = ".",
 ) -> None:
+    # Base Name
+    basename = os.path.basename(molecule).strip(".pdb")
+
+    # Basedir
+    basedir = os.path.join(basedir, basename)
+    os.makedirs(basedir, exist_ok=True)
+
     # Check if parameters exist
     if os.path.exists("parameters.toml"):
         os.remove("parameters.toml")
@@ -82,11 +141,11 @@ def _run_parKVFinder(
             f"dictionary = \"{os.path.join(os.getenv('KVFinder_PATH'), 'dictionary')}\"\n"
         )
         f.write("# The path of the input PDB file.\n")
-        f.write(f'pdb = "{os.path.realpath(pdb)}"\n')
+        f.write(f'pdb = "{os.path.realpath(molecule)}"\n')
         f.write("# The path of the output directory.\n")
         f.write(f'output = "{os.path.realpath(basedir)}"\n')
         f.write("# Base name for output files.\n")
-        f.write(f"base_name = \"{os.path.basename(pdb).replace('.pdb', '')}\"\n")
+        f.write(f"base_name = \"{os.path.basename(molecule).strip('.pdb')}\"\n")
         f.write("# Path for the ligand's PDB file.\n")
         f.write(f'ligand = "-"\n')
 
@@ -175,62 +234,91 @@ def _run_parKVFinder(
     process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
 
+    # Write pymol visualization
+    _pymol(
+        molecule,
+        os.path.join(
+            os.path.realpath(basedir), "KV_Files", basename, f"{basename}.KVFinder.output.pdb"
+        ),
+        None,
+        step,
+        os.path.join(basedir, "KV_Files", basename),
+    )
+
     # Remove parameters.toml
     os.remove("parameters.toml")
 
 
 def run(
-    pdbs: List[str],
+    molecules: List[str],
     step: Union[float, List[float]] = 0.6,
     probe_out: Union[float, List[float]] = 8.0,
     removal_distance: Union[float, List[float]] = 2.4,
     volume_cutoff: Union[float, List[float]] = 5.0,
 ) -> None:
     # Check arguments
-    if type(pdbs) not in [list]:
-        raise TypeError("`pdbs` must be a list of PDB files.")
-    if any([not pdb.endswith(".pdb") for pdb in pdbs]):
-        raise ValueError("`pdbs` must contain only PDB files.")
-    if any([not os.path.isfile(pdb) for pdb in pdbs]):
+    if type(molecules) not in [list]:
+        raise TypeError("`molecules` must be a list of PDB files.")
+    if any([not molecule.endswith(".pdb") for molecule in molecules]):
+        raise ValueError("`molecules` must contain only PDB files.")
+    if any([not os.path.isfile(molecule) for molecule in molecules]):
         raise ValueError("`pdbs` must contain valid PDB files.")
     if type(probe_out) not in [float, list]:
         raise TypeError("`probe_out` must be a float or a list of them.")
     elif type(probe_out) is float:
-        probe_out = [probe_out] * len(pdbs)
-    elif len(probe_out) != len(pdbs):
-        raise Exception("`probe_out` must have the same length as `pdbs`.")
+        probe_out = [probe_out] * len(molecules)
+    elif len(probe_out) != len(molecules):
+        raise Exception("`probe_out` must have the same length as `molecules`.")
     if type(step) not in [float, list]:
         raise TypeError("`step` must be a float or a list of them.")
     elif type(step) is float:
-        step = [step] * len(pdbs)
-    elif len(step) != len(pdbs):
-        raise Exception("`step` must have the same length as `pdbs`.")
+        step = [step] * len(molecules)
+    elif len(step) != len(molecules):
+        raise Exception("`step` must have the same length as `molecules`.")
     if type(removal_distance) not in [float, list]:
         raise TypeError("`removal_distance` must be a float or a list of them.")
     elif type(removal_distance) is float:
-        removal_distance = [removal_distance] * len(pdbs)
-    elif len(removal_distance) != len(pdbs):
-        raise Exception("`removal_distance` must have the same length as `pdbs`.")
+        removal_distance = [removal_distance] * len(molecules)
+    elif len(removal_distance) != len(molecules):
+        raise Exception("`removal_distance` must have the same length as `molecules`.")
     if type(volume_cutoff) not in [float, list]:
         raise TypeError("`volume_cutoff` must be a float or a list of them.")
     elif type(volume_cutoff) is float:
-        volume_cutoff = [volume_cutoff] * len(pdbs)
-    elif len(volume_cutoff) != len(pdbs):
-        raise Exception("`volume_cutoff` must have the same length as `pdbs`.")
+        volume_cutoff = [volume_cutoff] * len(molecules)
+    elif len(volume_cutoff) != len(molecules):
+        raise Exception("`volume_cutoff` must have the same length as `molecules`.")
 
     # Create basedir
     basedir = "./results/KVFinder-suite"
     os.makedirs(basedir, exist_ok=True)
 
+    # Instructions to visualize results
+    with open(os.path.join(basedir, "INSTRUCTIONS.md"), "w") as f:
+        f.write("# Instructions\n\n")
+        f.write("## pyKVFinder\n\n")
+        f.write("To visualiaze pyKVFinder results for any cage, run:\n\n")
+        f.write("```bash\npython {ID}-pymol2.py\n```\n")
+        f.write("So, for cage A1, inside results/KVFinder-suite/A1 directory, run:\n\n")
+        f.write("```bash\npython A1-pymol2.py\n```\n\n")
+        f.write("## parKVFinder\n\n")
+        f.write("To visualiaze parKVFinder results for any cage, run:\n\n")
+        f.write("```bash\npython {ID}-pymol2.py\n```\n")
+        f.write(
+            "So, for cage A1, inside results/KVFinder-suite/A1/KV_Files directory, run:\n\n"
+        )
+        f.write("```bash\npython A1-pymol2.py\n```\n")
+
     # Run KVFinder-suite for all files
     print("> pyKVFinder (v0.4.4)")
-    for pdb, s, po, rd, vc in zip(
-        pdbs, step, probe_out, removal_distance, volume_cutoff
+    for molecule, s, po, rd, vc in zip(
+        molecules, step, probe_out, removal_distance, volume_cutoff
     ):
-        _run_pyKVFinder(pdb, s, po, rd, vc, basedir)
+        print(molecule)
+        _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
 
     print("> parKVFinder (v1.1.4)")
-    for pdb, s, po, rd, vc in zip(
-        pdbs, step, probe_out, removal_distance, volume_cutoff
+    for molecule, s, po, rd, vc in zip(
+        molecules, step, probe_out, removal_distance, volume_cutoff
     ):
-        _run_parKVFinder(pdb, s, po, rd, vc, basedir)
+        print(molecule)
+        _run_parKVFinder(molecule, s, po, rd, vc, basedir)

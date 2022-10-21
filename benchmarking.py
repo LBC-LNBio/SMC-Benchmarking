@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
 import os
 from typing import List
 from openbabel import pybel
-from methods import KVsuite, fpocket, pywindow, GHECOM
+from methods import KVsuite, fpocket, pywindow, GHECOM, POVME
 
 
 def xyz2pdb(xyzs: List[str]) -> List[str]:
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     # pyKVFinder documentation: https://lbc-lnbio.github.io/pyKVFinder/
     KVsuite.run(
         pdbs,
-        step=0.25,
+        step=[0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
         probe_out=[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0],
         removal_distance=[0.75, 2.0, 1.75, 2.0, 2.0, 1.0, 1.25, 3.5, 2.0, 1.5, 1.25, 0.5, 2.0, 1.5],
         volume_cutoff=[80.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 80.0, 20.0, 5.0, 5.0],
@@ -87,6 +88,42 @@ if __name__ == "__main__":
 
     # POVME
     # Documentation: https://github.com/POVME/POVME3
+    POVME.run(
+        pdbs,
+        inclusion_regions=[
+            [12.171, 12.171, 12.171, 10],
+            [0.000, 0.000, 20.583, 6],
+            [-4.729, 18.156, 7.611, 6.5],
+            [20.538, 0.000, 63.698, 6.5],
+            [18.745, 18.747, 18.753, 6.5],
+            [6.927, 5.681, 6.603, 10],
+            [13.148, 19.722, 3.994, 6.5],
+            [37.141, 17.836, 18.198, 25],
+            [18.038, 7.504, 11.476, 5],
+            [11.196, 6.464, 81.912, 5],
+            [4, 6, 12, 16, 15, 15],
+            [4.201, 12.171, 12.171, 3],
+            [-4.846, 17.740, 7.438, 7],
+            [6.819, 9.706, 0.000, 8],
+        ],
+        grid_spacings=[
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.5,
+            1.0,
+            1.0,
+        ],
+        contiguous_points_criterias=3,
+    )
 
     # McVol
 

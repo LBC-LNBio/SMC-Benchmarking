@@ -1,45 +1,20 @@
+#!/usr/bin/env python3
 import os
 import subprocess
 from typing import List, Union
-import toml
-
-
-def _run_GHECOM(
-    molecule: str,
-    gw: float = 0.8,
-    rlx: float = 10.0,
-    basedir: str = ".",
-) -> None:
-    # Basename
-    basename = os.path.basename(molecule).strip(".pdb")
-
-    # Basedir
-    basedir = os.path.join(basedir, basename)
-    os.makedirs(basedir, exist_ok=True)
-
-    # Run GHECOM
-    command = f"ghecom -M M -ipdb {molecule} -opocpdb {os.path.join(basedir, f'{basename}.pocket.pdb')} -opdb {os.path.join(basedir, f'{basename}.pocketness.pdb')} -ores {os.path.join(basedir, f'{basename}.res')} -atmhet B -gw {gw} -rlx {rlx}"
-    process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-
-    # Write pymol visualization
-    _pymol(
-        os.path.join(basedir, f"{basename}.pocketness.pdb"),
-        os.path.join(basedir, f"{basename}.pocket.pdb"),
-        gw,
-        basedir,
-    )
 
 
 def _pymol(molecule: str, pocket: str, gw: float, basedir: str = "."):
     # Base name
-    basename = os.path.basename(molecule).strip(".pdb").strip(".xyz")
+    basename = os.path.basename(molecule).strip(".pdb")
 
     pocket = os.path.basename(pocket).strip(".pdb")
     molecule = os.path.basename(molecule).strip(".pdb")
 
     # Write script to visualization
-    with open(os.path.join(basedir, f"{basename.strip('.pocketness')}-pymol2.py"), "w") as f:
+    with open(
+        os.path.join(basedir, f"{basename.strip('.pocketness')}-pymol2.py"), "w"
+    ) as f:
         f.write("import pymol\n")
         f.write("from pymol import cmd, stored\n\n")
         f.write('pymol.finish_launching(["pymol", "-q"])\n\n')
@@ -68,6 +43,33 @@ def _pymol(molecule: str, pocket: str, gw: float, basedir: str = "."):
             f'cmd.ramp_new("Pocketness", "{molecule}", [min(stored.b), max(stored.b)], ["blue", "white", "red"])\n\n'
         )
         f.write("cmd.orient()\n")
+
+
+def _run_GHECOM(
+    molecule: str,
+    gw: float = 0.8,
+    rlx: float = 10.0,
+    basedir: str = ".",
+) -> None:
+    # Basename
+    basename = os.path.basename(molecule).strip(".pdb")
+
+    # Basedir
+    basedir = os.path.join(basedir, basename)
+    os.makedirs(basedir, exist_ok=True)
+
+    # Run GHECOM
+    command = f"ghecom -M M -ipdb {molecule} -opocpdb {os.path.join(basedir, f'{basename}.pocket.pdb')} -opdb {os.path.join(basedir, f'{basename}.pocketness.pdb')} -ores {os.path.join(basedir, f'{basename}.res')} -atmhet B -gw {gw} -rlx {rlx}"
+    process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+    output, error = process.communicate()
+
+    # Write pymol visualization
+    _pymol(
+        os.path.join(basedir, f"{basename}.pocketness.pdb"),
+        os.path.join(basedir, f"{basename}.pocket.pdb"),
+        gw,
+        basedir,
+    )
 
 
 def run(
@@ -99,7 +101,16 @@ def run(
     basedir = "./results/GHECOM"
     os.makedirs(basedir, exist_ok=True)
 
+    # Instructions to visualize results
+    with open(os.path.join(basedir, "INSTRUCTIONS.md"), "w") as f:
+        f.write("# Instructions\n\n")
+        f.write("To visualiaze GHECOM results for any cage, run:\n\n")
+        f.write("```bash\npython {ID}-pymol2.py\n```\n")
+        f.write("So, for cage A1, inside results/GHECOM/A1 directory, run:\n\n")
+        f.write("```bash\npython A1-pymol2.py\n```\n")
+
     # Run GHECOM
     print("> GHECOM (21/07/2020)")
     for molecule, gw, rlx in zip(molecules, gws, rlxs):
+        print(molecule)
         _run_GHECOM(molecule, gw, rlx, basedir)

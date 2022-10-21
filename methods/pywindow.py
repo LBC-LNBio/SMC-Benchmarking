@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 from typing import List, Dict, Any
 import toml
@@ -5,24 +6,26 @@ import numpy
 import pywindow
 
 
-def _run_pywindow(molecule: str, basedir: str = ".") -> None:
-    # Base name
-    basename = os.path.basename(molecule).strip(".pdb").strip(".xyz")
+def _get_PDB_line(
+    atom_number: int,
+    residue_name: str,
+    coordinates: numpy.ndarray,
+    radius: float,
+):
+    field_name = "HETATM".ljust(6)
+    atom_number = f"{atom_number}".rjust(5)
+    atom_name = "PS1".rjust(4)
+    residue_name = residue_name.ljust(3)
+    chain = "A".rjust(1)
+    residue_number = str(1).rjust(4)
+    x = f"{coordinates[0]:8.3f}".rjust(8)
+    y = f"{coordinates[1]:8.3f}".rjust(8)
+    z = f"{coordinates[2]:8.3f}".rjust(8)
+    occupancy = "0.0".rjust(6)
+    b = f"{radius:6.2f}".ljust(6)
+    element = "P".rjust(12)
 
-    # Basedir
-    os.makedirs(os.path.join(basedir, basename), exist_ok=True)
-
-    # Load molecular system
-    molsys = pywindow.MolecularSystem.load_file(molecule)
-
-    # Convert molecular system to molecule
-    mol = molsys.system_to_molecule()
-
-    # Perform full_analysis
-    results = mol.full_analysis()
-
-    # Post-processing
-    results = _post_processing(molecule, results, os.path.join(basedir, basename))
+    return f"{field_name}{atom_number} {atom_name} {residue_name} {chain}{residue_number}    {x}{y}{z}{occupancy}{b}{element}\n"
 
 
 def _post_processing(
@@ -90,26 +93,24 @@ def _post_processing(
         f.write("cmd.orient()")
 
 
-def _get_PDB_line(
-    atom_number: int,
-    residue_name: str,
-    coordinates: numpy.ndarray,
-    radius: float,
-):
-    field_name = "HETATM".ljust(6)
-    atom_number = f"{atom_number}".rjust(5)
-    atom_name = "PS1".rjust(4)
-    residue_name = residue_name.ljust(3)
-    chain = "A".rjust(1)
-    residue_number = str(1).rjust(4)
-    x = f"{coordinates[0]:8.3f}".rjust(8)
-    y = f"{coordinates[1]:8.3f}".rjust(8)
-    z = f"{coordinates[2]:8.3f}".rjust(8)
-    occupancy = "0.0".rjust(6)
-    b = f"{radius:6.2f}".ljust(6)
-    element = "P".rjust(12)
+def _run_pywindow(molecule: str, basedir: str = ".") -> None:
+    # Base name
+    basename = os.path.basename(molecule).strip(".pdb").strip(".xyz")
 
-    return f"{field_name}{atom_number} {atom_name} {residue_name} {chain}{residue_number}    {x}{y}{z}{occupancy}{b}{element}\n"
+    # Basedir
+    os.makedirs(os.path.join(basedir, basename), exist_ok=True)
+
+    # Load molecular system
+    molsys = pywindow.MolecularSystem.load_file(molecule)
+
+    # Convert molecular system to molecule
+    mol = molsys.system_to_molecule()
+
+    # Perform full_analysis
+    results = mol.full_analysis()
+
+    # Post-processing
+    results = _post_processing(molecule, results, os.path.join(basedir, basename))
 
 
 def run(molecules: List[str]) -> None:
@@ -131,7 +132,7 @@ def run(molecules: List[str]) -> None:
     os.makedirs(basedir, exist_ok=True)
 
     # Instructions to visualize results
-    with open(os.path.join(basedir, "INSTRUCTIONS.md"), 'w') as f:
+    with open(os.path.join(basedir, "INSTRUCTIONS.md"), "w") as f:
         f.write("# Instructions\n\n")
         f.write("To visualiaze pywindow results for any cage, run:\n\n")
         f.write("```bash\npython {ID}-pymol2.py\n```\n")
@@ -141,4 +142,5 @@ def run(molecules: List[str]) -> None:
     # Run pywindow
     print("> pywindow (v0.0.4)")
     for molecule in molecules:
+        print(molecule)
         _run_pywindow(molecule, basedir)
