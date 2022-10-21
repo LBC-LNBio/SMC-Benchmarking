@@ -1,0 +1,20 @@
+# pyKVFinder results
+
+[FILES]
+INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/H1.pdb"
+OUTPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/H1/H1.KVFinder.output.pdb"
+
+[PARAMETERS]
+STEP = 0.25
+
+[RESULTS.VOLUME]
+KAA = 230.61
+
+[RESULTS.AREA]
+KAA = 94.96
+
+[RESULTS.MAX_DEPTH]
+KAA = 2.8
+
+[RESULTS.AVG_DEPTH]
+KAA = 0.89

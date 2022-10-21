@@ -1,0 +1,37 @@
+# TOML results file for parKVFinder software
+
+title = "parKVFinder results file"
+
+[FILES_PATH]
+INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/W1.pdb"
+OUTPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/W1/KV_Files/W1/W1.KVFinder.output.pdb"
+LIGAND = "-"
+
+[PARAMETERS]
+RESOLUTION = "Off"
+STEP_SIZE = 0.25
+
+[RESULTS]
+# Volume, area and interface residues information for each cavity
+
+	[RESULTS.VOLUME]
+	# Volume unit is cubic angstrom
+	KAA = 9.03
+	KAB = 936.00
+	KAC = 9.06
+	KAD = 5.39
+
+	[RESULTS.AREA]
+	# Area unit is square angstrom
+	KAA = 17.58
+	KAB = 627.83
+	KAC = 17.07
+	KAD = 9.97
+
+	[RESULTS.RESIDUES]
+	# Interface residues for each cavity
+	# ["residue number","chain identifier","residue name"]
+	KAA = []
+	KAB = []
+	KAC = []
+	KAD = []
