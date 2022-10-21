@@ -4,7 +4,7 @@ from pymol import cmd, stored
 pymol.finish_launching(["pymol", "-q"])
 
 cmd.load("/home/jvsguerra/remote-repos/moc-benchmarking/data/C1.pdb", quiet=False)
-cmd.load("/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/C1/KV_Files/C1.KVFinder.output.pdb", quiet=False)
+cmd.load("/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/C1/KV_Files/C1/C1.KVFinder.output.pdb", quiet=False)
 
 cmd.hide("sticks", "C1.KVFinder.output")
 cmd.show("spheres", "C1.KVFinder.output")

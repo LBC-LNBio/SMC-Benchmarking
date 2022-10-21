@@ -314,7 +314,7 @@ def run(
         molecules, step, probe_out, removal_distance, volume_cutoff
     ):
         print(molecule)
-        _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
+        # _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
 
     print("> parKVFinder (v1.1.4)")
     for molecule, s, po, rd, vc in zip(
