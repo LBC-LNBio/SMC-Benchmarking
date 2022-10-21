@@ -73,7 +73,6 @@ def _pymol(molecule: str, pocket: str, gw: float, basedir: str = "."):
 def run(
     molecules: List[str],
     gws: Union[float, List[float]] = 0.8,
-    rlis: Union[float, List[float]] = 1.87,
     rlxs: Union[float, List[float]] = 10.0,
 ) -> None:
     # Check arguments

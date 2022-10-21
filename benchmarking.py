@@ -85,12 +85,11 @@ if __name__ == "__main__":
     # Documentation: https://marcinmiklitz.github.io/pywindow/
     pywindow.run(pdbs)
 
-    # McVol
-
     # POVME
+    # Documentation: https://github.com/POVME/POVME3
+
+    # McVol
 
     # CAVER
 
     # MoloVol
-
-    # PyVol

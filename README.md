@@ -24,7 +24,7 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 - [pybel](https://pypi.org/project/pybel/) (v0.15.5): a pure Python package for parsing and handling biological encoded in Biological Expression Language. A lightweight wrapper around openbabel module, that provides a more convenient and Pythonic ways to access the Open Babel toolkit.
 
-- [GHECOM](https://pdbj.org/ghecom/) (21/07/2020): a software for finding multi-scale pockets on protein surfaces using mathematical morphology.ghec
+- [GHECOM](https://pdbj.org/ghecom/) (21/07/2020): a software for finding multi-scale pockets on protein surfaces using mathematical morphology.
 
 To install Python 3, Open Babel and PyBEL, run:
 
@@ -62,7 +62,9 @@ cd ../../../
 
 - [pywindow](https://github.com/marcinmiklitz/pywindow) (v0.0.4): a Python package for the analysis of structural properties of molecular pores, porous organic cages, MOFs and metalorganic cages.
 
-To install toml, pyKVFinder, biobb_vs, run:
+- [povme](https://pypi.org/project/povme/) (v3.0.35): is a Python package characterizing the shape and flexibility of a cavity in detail.
+
+To install toml, pyKVFinder, biobb_vs, povme, run:
 
 ```bash
 pip install -r requirements.txt

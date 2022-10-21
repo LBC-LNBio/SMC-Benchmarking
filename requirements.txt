@@ -1,3 +1,4 @@
 toml==0.10.2
 pyKVFinder==0.4.4
 biobb_vs==3.8.1
+povme==3.0.35
