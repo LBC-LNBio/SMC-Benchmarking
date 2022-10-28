@@ -50,8 +50,8 @@ wget -O etc/ghecom.tar.gz https://pdbj.org/ghecom/cgi-bin/dwnld_src_file.cgi?fil
 tar -xf etc/ghecom.tar.gz -C etc/ghecom
 cd etc/ghecom/src
 make
-sudo ln -s `pwd`/ghecom /usr/local/bin/ghecom
 cd ../../../
+sudo ln -s `pwd`/etc/ghecom/ghecom /usr/local/bin/ghecom
 ```
 
 ## Python 3 requirements

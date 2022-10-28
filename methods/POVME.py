@@ -38,7 +38,8 @@ def _pymol(
             f'cmd.alter("obj {os.path.basename(surface).strip(".pdb")}", "vdw={grid_spacing/2}")\n'
         )
         f.write(f"cmd.rebuild()\n\n")
-        f.write("cmd.orient()\n")
+        f.write("cmd.orient()\n\n")
+        f.write(f'cmd.save("{f"{basename}.pse"}")\n')
 
 
 def _input_file(

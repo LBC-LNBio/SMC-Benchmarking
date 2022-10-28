@@ -3,8 +3,8 @@
 title = "parKVFinder results file"
 
 [FILES_PATH]
-INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/O2.pdb"
-OUTPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/O2/KV_Files/O2/O2.KVFinder.output.pdb"
+INPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/data/O2.pdb"
+OUTPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/O2/KV_Files/O2/O2.KVFinder.output.pdb"
 LIGAND = "-"
 
 [PARAMETERS]

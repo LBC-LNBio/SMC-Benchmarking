@@ -42,7 +42,8 @@ def _pymol(molecule: str, pocket: str, gw: float, basedir: str = "."):
         f.write(
             f'cmd.ramp_new("Pocketness", "{molecule}", [min(stored.b), max(stored.b)], ["blue", "white", "red"])\n\n'
         )
-        f.write("cmd.orient()\n")
+        f.write("cmd.orient()\n\n")
+        f.write(f'cmd.save("{f"{basename}.pse"}")\n')
 
 
 def _run_GHECOM(

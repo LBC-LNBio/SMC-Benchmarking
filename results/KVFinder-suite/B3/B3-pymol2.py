@@ -3,9 +3,9 @@ from pymol import cmd, stored
 
 pymol.finish_launching(["pymol", "-q"])
 
-cmd.load("/home/jvsguerra/remote-repos/moc-benchmarking/data/B3.pdb", quiet=False)
-cmd.load("/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/B3/B3.KVFinder.output.pdb", quiet=False)
-cmd.load("/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/B3/B3.surface.pdb", quiet=False)
+cmd.load("/home/jvsguerra/remote-repos/SMC-Benchmarking/data/B3.pdb", quiet=False)
+cmd.load("/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/B3/B3.KVFinder.output.pdb", quiet=False)
+cmd.load("/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/B3/B3.surface.pdb", quiet=False)
 
 cmd.hide("sticks", "B3.KVFinder.output")
 cmd.show("spheres", "B3.KVFinder.output")
@@ -19,3 +19,5 @@ cmd.spectrum("b", "blue_white_red", "B3.KVFinder.output", [min(stored.b), max(st
 cmd.ramp_new("Depth", "B3.KVFinder.output", [min(stored.b), max(stored.b)], ["blue", "white", "red"])
 
 cmd.orient()
+
+cmd.save("B3.pse")

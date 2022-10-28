@@ -47,7 +47,8 @@ def _pymol(
         f.write(
             f'cmd.ramp_new("Depth", "{os.path.basename(cavity).strip(".pdb")}", [min(stored.b), max(stored.b)], ["blue", "white", "red"])\n\n'
         )
-        f.write("cmd.orient()\n")
+        f.write("cmd.orient()\n\n")
+        f.write(f'cmd.save("{f"{basename}.pse"}")\n')
 
 
 def _run_pyKVFinder(
@@ -314,7 +315,7 @@ def run(
         molecules, step, probe_out, removal_distance, volume_cutoff
     ):
         print(molecule)
-        # _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
+        _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
 
     print("> parKVFinder (v1.1.4)")
     for molecule, s, po, rd, vc in zip(

@@ -1,8 +1,8 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/data/B1.pdb"
-OUTPUT = "/home/jvsguerra/remote-repos/moc-benchmarking/results/KVFinder-suite/B1/B1.KVFinder.output.pdb"
+INPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/data/B1.pdb"
+OUTPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/B1/B1.KVFinder.output.pdb"
 
 [PARAMETERS]
 STEP = 0.25

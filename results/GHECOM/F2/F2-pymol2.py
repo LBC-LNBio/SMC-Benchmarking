@@ -23,3 +23,5 @@ cmd.spectrum("b", "blue_white_red", "F2.pocketness", [min(stored.b), max(stored.
 cmd.ramp_new("Pocketness", "F2.pocketness", [min(stored.b), max(stored.b)], ["blue", "white", "red"])
 
 cmd.orient()
+
+cmd.save("F2.pocketness.pse")

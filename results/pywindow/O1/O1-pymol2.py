@@ -17,3 +17,5 @@ cmd.rebuild()
 cmd.spectrum("b", "blue_white_red", "O1.pywindow", [0, max(stored.b)])
 cmd.ramp_new("radius", "O1.pywindow", [0, max(stored.b)], ["blue", "white", "red"])
 cmd.orient()
+
+cmd.save("O1.pse")

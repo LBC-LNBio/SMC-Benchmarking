@@ -22,11 +22,18 @@ def _pymol(molecule: str, cavity: str, atm: str, basedir: "."):
         f.write(f'cmd.load("{cavity}", quiet=False)\n')
         f.write(f'cmd.load("{atm}", quiet=False)\n')
         f.write("\n")
-        f.write(f'cmd.hide("sticks", "{os.path.basename(cavity).replace(".pqr", "")}")\n')
-        f.write(f'cmd.show("surface", "{os.path.basename(cavity).replace(".pqr", "")}")\n')
-        f.write(f'cmd.color("white", "{os.path.basename(cavity).replace(".pqr", "")}")\n')
+        f.write(
+            f'cmd.hide("sticks", "{os.path.basename(cavity).replace(".pqr", "")}")\n'
+        )
+        f.write(
+            f'cmd.show("surface", "{os.path.basename(cavity).replace(".pqr", "")}")\n'
+        )
+        f.write(
+            f'cmd.color("white", "{os.path.basename(cavity).replace(".pqr", "")}")\n'
+        )
         f.write(f"cmd.rebuild()\n\n")
-        f.write("cmd.orient()\n")
+        f.write("cmd.orient()\n\n")
+        f.write(f'cmd.save("{f"{basename}.pse"}")\n')
 
 
 def _run_fpocket(
@@ -63,12 +70,8 @@ def _run_fpocket(
         # Select
         fpocket_select(
             input_pockets_zip=output,
-            output_pocket_pdb=os.path.join(
-                basedir, f"pocket{selection}_atm.pdb"
-            ),
-            output_pocket_pqr=os.path.join(
-                basedir, f"pocket{selection}_vert.pqr"
-            ),
+            output_pocket_pdb=os.path.join(basedir, f"pocket{selection}_atm.pdb"),
+            output_pocket_pqr=os.path.join(basedir, f"pocket{selection}_vert.pqr"),
             properties={"pocket": selection},
         )
 
@@ -134,7 +137,9 @@ def run(
 
     # Run fpocket for all files
     print("> fpocket (v3.1.4.2)")
-    for molecule, m, M, n, s in zip(molecules, min_radius, max_radius, num_spheres, selection):
+    for molecule, m, M, n, s in zip(
+        molecules, min_radius, max_radius, num_spheres, selection
+    ):
         print(molecule)
         _run_fpocket(molecule, m, M, n, s, basedir)
 
