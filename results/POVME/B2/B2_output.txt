@@ -36,6 +36,6 @@ FRAME        | VOLUME (A^3) | SURF. A. (A^2)
 -------------+--------------+----------------
 1            |   92.0       |   117.0
 
-Execution time = 2.11553502083 sec
+Execution time = 2.12415504456 sec
 
 WARNING! Cannot save color file for aromatic because no color present in any frame.

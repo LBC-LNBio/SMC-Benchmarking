@@ -36,7 +36,7 @@ FRAME        | VOLUME (A^3) | SURF. A. (A^2)
 -------------+--------------+----------------
 1            |   211.0      |   135.0
 
-Execution time = 2.09169697762 sec
+Execution time = 2.0814769268 sec
 
 WARNING! Cannot save color file for hydrophilic because no color present in any frame.
 WARNING! Cannot save color file for aromatic because no color present in any frame.

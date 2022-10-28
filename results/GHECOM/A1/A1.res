@@ -1,6 +1,6 @@
 #TITLE   Pocket invRinacc value for residues
 #OUTPUTFILENAME    ./results/GHECOM/A1/A1.res
-#DATE    Oct 28,2022 11:3:52
+#DATE    Oct 28,2022 14:53:32
 #COMMAND ghecom -M M -ipdb ./data/A1.pdb -opocpdb ./results/GHECOM/A1/A1.pocket.pdb -opdb ./results/GHECOM/A1/A1.pocketness.pdb -ores ./results/GHECOM/A1/A1.res -atmhet B -gw 0.8 -rlx 10.0
 #COMMENT INPUT_RECEPTOR_PDB_FILE:./data/A1.pdb
 #COMMENT NATOM_OF_RECEPTOR:240

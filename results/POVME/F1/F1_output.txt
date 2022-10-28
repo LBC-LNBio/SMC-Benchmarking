@@ -36,7 +36,7 @@ FRAME        | VOLUME (A^3) | SURF. A. (A^2)
 -------------+--------------+----------------
 1            |   461.0      |   265.0
 
-Execution time = 2.05259990692 sec
+Execution time = 2.07159209251 sec
 
 WARNING! Cannot save color file for aromatic because no color present in any frame.
 WARNING! Cannot save color file for hbondAcceptor because no color present in any frame.
