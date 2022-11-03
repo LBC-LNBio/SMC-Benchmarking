@@ -42,14 +42,24 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
 
 if __name__ == "__main__":
     print("[==> Converting XYZ to PDB")
-    # Get XYZ files in data
+     # Get XYZ files in guests
     xyzs = [
-        os.path.join("./data", f)
-        for f in sorted(os.listdir("./data"))
+        os.path.join("./guests", f)
+        for f in sorted(os.listdir("./guests"))
+        if f.endswith(".xyz")
+    ]
+ 
+    # Convert guests XYZ to PDB files
+    xyz2pdb(xyzs)
+ 
+    # Get XYZ files in hosts
+    xyzs = [
+        os.path.join("./hosts", f)
+        for f in sorted(os.listdir("./hosts"))
         if f.endswith(".xyz")
     ]
 
-    # Convert XYZ to PDB files
+    # Convert hosts XYZ to PDB files
     pdbs = xyz2pdb(xyzs)
 
     print("[==> Benchmarking methods: ")

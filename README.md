@@ -77,7 +77,7 @@ mkdir -p etc
 cd etc
 git clone https://github.com/marcinmiklitz/pywindow
 cd pywindow/
-python3 setup.py install
+pip install .
 cd ../../
 ```
 ## Python 2 requirements
