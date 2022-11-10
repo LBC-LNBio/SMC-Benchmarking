@@ -160,7 +160,7 @@ if __name__ == "__main__":
     )
 
     # CAVER
-    print("> CAVER (v3.0.3)")
+    print("> CAVER (v3.0.3)") ## NOTE: Use CAVER Analyst 2.0
     print("Creating output directories. Now, run CAVER in pymol.")
     os.makedirs("./results/CAVER", exist_ok=True)
     for d in pdbs:
