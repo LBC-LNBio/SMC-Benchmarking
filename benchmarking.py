@@ -136,8 +136,6 @@ if __name__ == "__main__":
         contiguous_points_criterias=3,
     )
 
-    # CAVER
-
     # MoloVol
     MoloVol.run(
         pdbs,
@@ -160,3 +158,18 @@ if __name__ == "__main__":
             5.0,
         ],
     )
+
+    # CAVER
+    print("> CAVER (v3.0.3)")
+    print("Creating output directories. Now, run CAVER in pymol.")
+    os.makedirs("./results/CAVER", exist_ok=True)
+    for d in pdbs:
+        d = os.path.basename(d).strip(".pdb")
+        os.makedirs(os.path.join("./results/CAVER", d), exist_ok=True)
+    print("== CAVER custom parameters ==")
+    print("C1: {'Shell Radius': 10, 'Minimum Probe Radius': 0.7}")
+    print("F1: {'Shell Radius': 5}")
+    print("F2: {'Clustering Threshold': 5}")
+    print("N1: {'Shell Radius': 7}")
+    print("O2: {'Shell Radius': 2}")
+    print("=============================")

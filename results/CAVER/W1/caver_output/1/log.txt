@@ -1,0 +1,53 @@
+Caver computation started.
+Settings loaded from:
+/home/jvsguerra/remote-repos/SMC-Benchmarking/results/CAVER/W1/caver_output/1/inputs/config_2022-11-10-20-03.txt
+
+Basic parameters:
+starting_point_coordinates [6.818, 9.706, 0.0]
+probe_radius 0.9
+shell_radius 3.0
+shell_depth 4.0
+frame_weighting_coefficient 1.0
+frame_clustering_threshold 1.0
+
+*** Processing W1.pdb ***
+24 redundant tunnels removed.
+10 tunnels stored.
+
+Loading tunnels from /home/jvsguerra/remote-repos/SMC-Benchmarking/results/CAVER/W1/caver_output/1/data/tunnels/tunnels_W1.pdb.obj
+Loaded 10 tunnels for W1.pdb.
+10 tunnels successfully loaded.
+
+Computing average surface for 10 tunnels.
+Average surface represented by 6 points.
+Computing distance matrix using weighting_coefficient 1.0.
+Performing average link hierarchical of 10 tunnels clustering to create /home/jvsguerra/remote-repos/SMC-Benchmarking/results/CAVER/W1/caver_output/1/data/tree_.txt.
+Total java memory: 6291 MB.
+Allocating 6091 MB of RAM...
+Maximum allowed cluster-cluster distance matrix size is 55188, in case of memory error in the next computation phase, try to set the parameter murtagh_matrix_size to a lower value in config.txt.
+10 tunnels clustered into 6 clusters using clustering_threshold 3.5.
+
+Leaving only the cheapest tunnel per cluster per snapshot - 6 tunnels kept.
+Statistical analysis of results started.
+Saving summary information.
+Saving profile heat maps.
+Saving tunnel characteristics.
+Saving tunnel-lining residues and atoms.
+Saving bottlenecks.
+Saving tunnel profiles.
+Statistical analysis finished.
+Visualizations started.
+Cluster subsampling for visualization: random.
+Visualizations finished.
+
+Finished successfully.
+
+-----------------------------------------------------------------------
+ Thank you for using CAVER, please cite:
+
+ Chovancova, E., Pavelka, A., Benes, P., Strnad, O., Brezovsky, J.,
+ Kozlikova, B., Gora, A., Sustr, V., Klvana, M., Medek, P.,
+ Biedermannova, L., Sochor, J. Damborsky, J. (2012) CAVER 3.0: A Tool
+ for the Analysis of Transport Pathways in Dynamic Protein Structures.
+ PLoS Comput Biol 8: e1002708. doi:10.1371/journal.pcbi.1002708
+-----------------------------------------------------------------------

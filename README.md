@@ -68,13 +68,20 @@ wget -O etc/MoloVol/Manual.pdf https://github.com/molovol/MoloVol/releases/downl
 dpkg -i etc/MoloVol/MoloVol.deb
 ```
 
-To install CAVER, run:
+To install CAVER, follow:
+
+1. Run:
 
 ```bash
 mkdir -p etc/CAVER
-wget -O etc/CAVER/caver_3.0.2.zip https://www.caver.cz/fil/download/caver30/302/caver_3.0.2.zip
 wget -O etc/CAVER/caver-pymol-plugin-3.0.3.zip https://github.com/loschmidt/caver-pymol-plugin/archive/v3.0.3.zip
+unzip etc/CAVER/caver-pymol-plugin-3.0.3.zip -d etc/CAVER/caver-pymol-plugin-3.0.3
 ```
+
+2. Start PyMOL
+3. Open Plugin manager (Plugin -> Plugin manager)
+4. Install plugin (Install new plugin -> Choose file... and select ./etc/CAVER/caver-pymol-plugin-3.0.3/Caver3/__init__.py)
+5. Restart PyMOL
 
 ## Python 3 requirements
 
