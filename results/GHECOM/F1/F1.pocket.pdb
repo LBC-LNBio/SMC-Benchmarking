@@ -1,12 +1,12 @@
-HEADER    GRID     ./results/GHECOM/F1/F1.pocket. 28-OCT-22   0XXX
+HEADER    GRID     ./results/GHECOM/F1/F1.pocket. 09-NOV-22   0XXX
 TITLE   Clustered_MultiScale_Pocket
 REMARK  minNgridClus 0 Nrank_keep -1
-REMARK  COMMAND ghecom -M M -ipdb ./data/F1.pdb -opocpdb ./results/GHECOM/F1/F1.pocket.pdb -opdb ./results/GHECOM/F1/F1.pocketness.pdb -ores ./results/GHECOM/F1/F1.res -atmhet B -gw 0.8 -rlx 10.0
-REMARK  DATE    Oct 28,2022 14:53:36
+REMARK  COMMAND ghecom -M M -ipdb ./hosts/F1.pdb -opocpdb ./results/GHECOM/F1/F1.pocket.pdb -opdb ./results/GHECOM/F1/F1.pocketness.pdb -ores ./results/GHECOM/F1/F1.res -atmhet B -gw 0.8 -rlx 10.0
+REMARK  DATE    Nov 9,2022 19:26:12
 REMARK  grid_size   84   84   90
 REMARK  grid_width    0.800
 REMARK  OrigPos  -20.412 -13.838  -31.624
-REMARK  COMMENT INPUT_RECEPTOR_PDB_FILE:./data/F1.pdb
+REMARK  COMMENT INPUT_RECEPTOR_PDB_FILE:./hosts/F1.pdb
 REMARK  COMMENT NATOM_OF_RECEPTOR:150
 REMARK  COMMENT grid_width  0.800 A VdW volume: 3836 grids, 1964.03 AAA
 REMARK  COMMENT MIN_RLARGE:2.000000

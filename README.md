@@ -28,6 +28,8 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 - [GHECOM](https://pdbj.org/ghecom/) (21/07/2020): a software for finding multi-scale pockets on protein surfaces using mathematical morphology.
 
+- [MoloVol](https://github.com/molovol/MoloVol) (v1.0.0): a software for volume and surface computations of single molecules and crystallographic unit cells.
+
 To install Python 3, Python 2, Pip 3, Pip 2, Open Babel and PyBEL, run:
 
 ```bash
@@ -52,6 +54,16 @@ cd etc/ghecom/src
 make
 cd ../../../
 sudo ln -s `pwd`/etc/ghecom/ghecom /usr/local/bin/ghecom
+```
+
+To install MoloVol, run:
+
+```bash
+mkdir -p etc/MoloVol
+wget -O etc/MoloVol/MoloVol.deb https://github.com/molovol/MoloVol/releases/download/v1.0.0/MoloVol_debian_x84-64_v1.0.deb
+wget -O etc/MoloVol/Guide.pdf https://github.com/molovol/MoloVol/releases/download/v1.0.0/MoloVol_Quick_Start_Guide_v1.0.pdf
+wget -O etc/MoloVol/Manual.pdf https://github.com/molovol/MoloVol/releases/download/v1.0.0/MoloVol_User_Manual_v1.0.pdf
+dpkg -i etc/MoloVol/MoloVol.deb
 ```
 
 ## Python 3 requirements

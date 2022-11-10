@@ -3,8 +3,8 @@ from pymol import cmd, stored
 
 pymol.finish_launching(["pymol", "-q"])
 
-cmd.load("/home/jvsguerra/remote-repos/SMC-Benchmarking/data/F1.pdb", quiet=False)
-cmd.load("/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/F1/KV_Files/F1/F1.KVFinder.output.pdb", quiet=False)
+cmd.load("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/F1.pdb", quiet=False)
+cmd.load("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/F1/KV_Files/F1/F1.KVFinder.output.pdb", quiet=False)
 
 cmd.hide("sticks", "F1.KVFinder.output")
 cmd.show("spheres", "F1.KVFinder.output")

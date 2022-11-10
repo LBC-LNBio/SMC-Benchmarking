@@ -1,8 +1,8 @@
 #TITLE   Pocket invRinacc value for residues
 #OUTPUTFILENAME    ./results/GHECOM/B1/B1.res
-#DATE    Oct 28,2022 14:53:33
-#COMMAND ghecom -M M -ipdb ./data/B1.pdb -opocpdb ./results/GHECOM/B1/B1.pocket.pdb -opdb ./results/GHECOM/B1/B1.pocketness.pdb -ores ./results/GHECOM/B1/B1.res -atmhet B -gw 0.8 -rlx 10.0
-#COMMENT INPUT_RECEPTOR_PDB_FILE:./data/B1.pdb
+#DATE    Nov 9,2022 19:26:11
+#COMMAND ghecom -M M -ipdb ./hosts/B1.pdb -opocpdb ./results/GHECOM/B1/B1.pocket.pdb -opdb ./results/GHECOM/B1/B1.pocketness.pdb -ores ./results/GHECOM/B1/B1.res -atmhet B -gw 0.8 -rlx 10.0
+#COMMENT INPUT_RECEPTOR_PDB_FILE:./hosts/B1.pdb
 #COMMENT NATOM_OF_RECEPTOR:196
 #COMMENT grid_width  0.800 A VdW volume: 4306 grids, 2204.67 AAA
 #COMMENT MIN_RLARGE:2.000000

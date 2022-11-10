@@ -3,7 +3,7 @@ from pymol import cmd, stored
 
 pymol.finish_launching(["pymol", "-q"])
 
-cmd.load("../../../data/F1.pdb", quiet=False)
+cmd.load("../../../hosts/F1.pdb", quiet=False)
 cmd.load("F1.pywindow.pdb", quiet=False)
 
 stored.b = []

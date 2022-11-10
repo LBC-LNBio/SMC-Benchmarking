@@ -6,14 +6,14 @@ from typing import List, Union
 
 def _pymol(molecule: str, pocket: str, gw: float, basedir: str = "."):
     # Base name
-    basename = os.path.basename(molecule).strip(".pdb")
+    basename = os.path.basename(molecule).strip('.pocketness').strip(".pdb")
 
     pocket = os.path.basename(pocket).strip(".pdb")
     molecule = os.path.basename(molecule).strip(".pdb")
 
     # Write script to visualization
     with open(
-        os.path.join(basedir, f"{basename.strip('.pocketness')}-pymol2.py"), "w"
+        os.path.join(basedir, f"{basename}-pymol2.py"), "w"
     ) as f:
         f.write("import pymol\n")
         f.write("from pymol import cmd, stored\n\n")

@@ -61,7 +61,7 @@ def _pymol(molecule: str, windows: Dict[str, Any], basedir: str = "."):
         f.write("import pymol\n")
         f.write("from pymol import cmd, stored\n\n")
         f.write('pymol.finish_launching(["pymol", "-q"])\n\n')
-        f.write(f'cmd.load("../../../data/{basename}.pdb", quiet=False)\n')
+        f.write(f'cmd.load("../../../hosts/{basename}.pdb", quiet=False)\n')
         f.write(f'cmd.load("{basename}.pywindow.pdb", quiet=False)\n\n')
         f.write("stored.b = []\n")
         residues = ["COM"] + [f"W{nwindow+1}" for nwindow in range(len(windows))]

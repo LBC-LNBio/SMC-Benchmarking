@@ -2,7 +2,7 @@
 import os
 from typing import List
 from openbabel import pybel
-from methods import KVsuite, fpocket, pywindow, GHECOM, POVME
+from methods import KVsuite, fpocket, pywindow, GHECOM, POVME, MoloVol
 
 
 def xyz2pdb(xyzs: List[str]) -> List[str]:
@@ -42,16 +42,17 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
 
 if __name__ == "__main__":
     print("[==> Converting XYZ to PDB")
-     # Get XYZ files in guests
+    # Get XYZ files in guests
     xyzs = [
         os.path.join("./guests", f)
         for f in sorted(os.listdir("./guests"))
         if f.endswith(".xyz")
     ]
- 
+
     # Convert guests XYZ to PDB files
     xyz2pdb(xyzs)
- 
+    # NOTE: Volume of guests are calculated with YASARA software
+
     # Get XYZ files in hosts
     xyzs = [
         os.path.join("./hosts", f)
@@ -71,7 +72,7 @@ if __name__ == "__main__":
         step=[0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
         probe_out=[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0],
         removal_distance=[0.75, 2.0, 1.75, 2.0, 2.0, 1.0, 1.25, 3.5, 2.0, 1.5, 1.25, 0.5, 2.0, 1.75],
-        volume_cutoff=[80.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 80.0, 20.0, 5.0, 20.0],
+        volume_cutoff=[80.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 80.0, 2.0, 5.0, 20.0],
     )
 
     # Fpocket
@@ -135,8 +136,27 @@ if __name__ == "__main__":
         contiguous_points_criterias=3,
     )
 
-    # McVol
-
     # CAVER
 
     # MoloVol
+    MoloVol.run(
+        pdbs,
+        grid_spacings=0.6,
+        small_probes=1.4,
+        large_probes=[
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            5.0,
+            5.0,
+            20.0,
+            5.0,
+            5.0,
+            8.0,
+            15.0,
+            7.0,
+            5.0,
+        ],
+    )
