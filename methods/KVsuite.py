@@ -12,11 +12,6 @@ def _pymol(
     # Base name
     basename = os.path.basename(molecule).strip(".pdb")
 
-    molecule = os.path.realpath(molecule)
-    cavity = os.path.realpath(cavity)
-    if surface is not None:
-        surface = os.path.realpath(surface)
-
     # Write script to visualization
     with open(os.path.join(basedir, f"{basename}-pymol2.py"), "w") as f:
         f.write("import pymol\n")
@@ -110,7 +105,13 @@ def _run_pyKVFinder(
     )
 
     # Write pymol visualization
-    _pymol(molecule, output, osurf, step, basedir)
+    _pymol(
+        f"../../../{molecule}",
+        os.path.basename(output),
+        os.path.basename(osurf),
+        step,
+        basedir,
+    )
 
 
 def _run_parKVFinder(
@@ -237,10 +238,8 @@ def _run_parKVFinder(
 
     # Write pymol visualization
     _pymol(
-        molecule,
-        os.path.join(
-            os.path.realpath(basedir), "KV_Files", basename, f"{basename}.KVFinder.output.pdb"
-        ),
+        f"../../../../../{molecule}",
+        f"{basename}.KVFinder.output.pdb",
         None,
         step,
         os.path.join(basedir, "KV_Files", basename),

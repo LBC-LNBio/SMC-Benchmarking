@@ -18,9 +18,9 @@ def _pymol(molecule: str, cavity: str, atm: str, basedir: "."):
         f.write("import pymol\n")
         f.write("from pymol import cmd, stored\n\n")
         f.write('pymol.finish_launching(["pymol", "-q"])\n\n')
-        f.write(f'cmd.load("{molecule}", quiet=False)\n')
-        f.write(f'cmd.load("{cavity}", quiet=False)\n')
-        f.write(f'cmd.load("{atm}", quiet=False)\n')
+        f.write(f'cmd.load("../../../hosts/{basename}.pdb", quiet=False)\n')
+        f.write(f'cmd.load("{os.path.basename(cavity)}", quiet=False)\n')
+        f.write(f'cmd.load("{os.path.basename(atm)}", quiet=False)\n')
         f.write("\n")
         f.write(
             f'cmd.hide("sticks", "{os.path.basename(cavity).replace(".pqr", "")}")\n'

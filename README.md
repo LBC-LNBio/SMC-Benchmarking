@@ -30,6 +30,8 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 - [MoloVol](https://github.com/molovol/MoloVol) (v1.0.0): a software for volume and surface computations of single molecules and crystallographic unit cells.
 
+- [CAVER](https://www.caver.cz) (v3.0.2): is a software tool for analysis and visualization of tunnels and channels in protein structures.
+
 To install Python 3, Python 2, Pip 3, Pip 2, Open Babel and PyBEL, run:
 
 ```bash
@@ -64,6 +66,14 @@ wget -O etc/MoloVol/MoloVol.deb https://github.com/molovol/MoloVol/releases/down
 wget -O etc/MoloVol/Guide.pdf https://github.com/molovol/MoloVol/releases/download/v1.0.0/MoloVol_Quick_Start_Guide_v1.0.pdf
 wget -O etc/MoloVol/Manual.pdf https://github.com/molovol/MoloVol/releases/download/v1.0.0/MoloVol_User_Manual_v1.0.pdf
 dpkg -i etc/MoloVol/MoloVol.deb
+```
+
+To install CAVER, run:
+
+```bash
+mkdir -p etc/CAVER
+wget -O etc/CAVER/caver_3.0.2.zip https://www.caver.cz/fil/download/caver30/302/caver_3.0.2.zip
+wget -O etc/CAVER/caver-pymol-plugin-3.0.3.zip https://github.com/loschmidt/caver-pymol-plugin/archive/v3.0.3.zip
 ```
 
 ## Python 3 requirements

@@ -3,9 +3,9 @@ from pymol import cmd, stored
 
 pymol.finish_launching(["pymol", "-q"])
 
-cmd.load("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/F2.pdb", quiet=False)
-cmd.load("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/F2/F2.KVFinder.output.pdb", quiet=False)
-cmd.load("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/F2/F2.surface.pdb", quiet=False)
+cmd.load("../../.././hosts/F2.pdb", quiet=False)
+cmd.load("F2.KVFinder.output.pdb", quiet=False)
+cmd.load("F2.surface.pdb", quiet=False)
 
 cmd.hide("sticks", "F2.KVFinder.output")
 cmd.show("spheres", "F2.KVFinder.output")

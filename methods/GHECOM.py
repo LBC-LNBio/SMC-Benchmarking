@@ -6,7 +6,7 @@ from typing import List, Union
 
 def _pymol(molecule: str, pocket: str, gw: float, basedir: str = "."):
     # Base name
-    basename = os.path.basename(molecule).strip('.pocketness').strip(".pdb")
+    basename = os.path.basename(molecule).strip(".pdb").strip('.pocketness')
 
     pocket = os.path.basename(pocket).strip(".pdb")
     molecule = os.path.basename(molecule).strip(".pdb")
