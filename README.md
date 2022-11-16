@@ -80,7 +80,7 @@ unzip etc/CAVER/caver-pymol-plugin-3.0.3.zip -d etc/CAVER/caver-pymol-plugin-3.0
 
 2. Start PyMOL
 3. Open Plugin manager (Plugin -> Plugin manager)
-4. Install plugin (Install new plugin -> Choose file... and select ./etc/CAVER/caver-pymol-plugin-3.0.3/Caver3/__init__.py)
+4. Install plugin (Install new plugin -> Choose file... and select ./etc/CAVER/caver-pymol-plugin-3.0.3/caver-pymol-plugin-3.0.3/Caver3/__init__.py)
 5. Restart PyMOL
 
 ## Python 3 requirements

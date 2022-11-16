@@ -3,7 +3,7 @@ from pymol import cmd
 def parrent(dir):
   return os.path.abspath(os.path.join(dir, os.path.pardir))
 
-scripts = '/home/jvsguerra/remote-repos/SMC-Benchmarking/results/CAVER/C1/caver_output/1/pymol' + '/'
+scripts = '/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/C1/caver_output/1/pymol' + '/'
 home = parrent(scripts) + '/'
 
 def exists(name):

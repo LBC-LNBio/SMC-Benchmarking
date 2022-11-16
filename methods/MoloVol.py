@@ -18,7 +18,7 @@ def _pymol(molecule: str, large_probe: float, basedir: str = "."):
         f.write(
             f'cmd.load("{basename}_surface-map_grid-0.6_rad1-1.4_rad2-{large_probe:.1f}_full-structure.dx", quiet=False)\n\n'
         )
-        f.write(f'cmd.isomesh("cavities", "{basename}_surface-map_grid-0.6_rad1-1.4_rad2-{large_probe:.1f}_full-structure", level=1.5) # Molecular surface')
+        f.write(f'cmd.isomesh("cavities", "{basename}_surface-map_grid-0.6_rad1-1.4_rad2-{large_probe:.1f}_full-structure", level=3.0) # Isolated cavity')
         f.write("cmd.orient()\n\n")
         f.write(f'cmd.save("{f"{basename}.pse"}")\n')
 

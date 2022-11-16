@@ -113,4 +113,4 @@ swap yes
 seed 1   
 java_heap 6000
 include_residue_names  UNK
-starting_point_coordinates 6.924 5.685 6.602
+starting_point_coordinates -6.461 29.784 13.873

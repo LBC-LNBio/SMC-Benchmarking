@@ -1,7 +1,7 @@
 from pymol import cmd
 
 if not os.path.exists("../data/clusters_timeless"):
-	cmd.cd("/home/jvsguerra/remote-repos/SMC-Benchmarking/results/CAVER/C1/caver_output/1/pymol")
+	cmd.cd("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/C1/caver_output/1/pymol")
 
 cmd.cd("modules")
 import caver

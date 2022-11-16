@@ -79,8 +79,8 @@ if __name__ == "__main__":
     # User manual: https://fpocket.sourceforge.net/manual_fpocket2.pdf
     fpocket.run(
         pdbs,
-        min_radius=[3.4, 3.4, 3.4, 3.4, 3.4, 2.0, 2.0, 3.4, 3.4, 3.7, 3.4, 3.4, 3.4, 4.0],
-        max_radius=[8.0, 8.0, 8.0, 8.0, 8.0, 6.2, 6.2, 40., 6.2, 8.0, 6.2, 6.2, 6.2, 7.0],
+        min_radius=[3.4, 3.4, 3.4, 3.4, 3.4, 3.4, 2.0, 3.4, 3.4, 3.7, 3.4, 3.4, 3.4, 4.0],
+        max_radius=[8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 6.2, 40., 6.2, 8.0, 6.2, 6.2, 6.2, 7.0],
         num_spheres=[15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15],
         selection=[1, 1, 1, 1, 1, 1, 1, 37, 1, 1, 1, 1, 1, 7],
     )
@@ -107,7 +107,7 @@ if __name__ == "__main__":
             [-4.729, 18.156, 7.611, 6.5],
             [20.538, 0.000, 63.698, 6.5],
             [18.745, 18.747, 18.753, 6.5],
-            [6.927, 5.681, 6.603, 10],
+            [-6.470, 29.785, 13.872, 10],
             [13.148, 19.722, 3.994, 6.5],
             [37.141, 17.836, 18.198, 25],
             [18.038, 7.504, 11.476, 5],
@@ -137,6 +137,7 @@ if __name__ == "__main__":
     )
 
     # MoloVol
+    # Documentation: https://molovol.com/
     MoloVol.run(
         pdbs,
         grid_spacings=0.6,
@@ -160,6 +161,7 @@ if __name__ == "__main__":
     )
 
     # CAVER
+    # Documentation: https://caver.cz
     print("> CAVER (v3.0.3)") ## NOTE: Use CAVER Analyst 2.0
     print("Creating output directories. Now, run CAVER in pymol.")
     os.makedirs("./results/CAVER", exist_ok=True)

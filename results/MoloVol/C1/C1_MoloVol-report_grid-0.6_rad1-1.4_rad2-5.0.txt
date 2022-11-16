@@ -18,8 +18,8 @@ Copyright © 2020-2021 Jasmin B. Maglic, Roy Lavendomme
 MoloVol program: calculation results report
 version: 1.0.0
 
-Time of the calculation: 2022-11-10_17h31m43s
-Duration of the calculation: 0.409891 s
+Time of the calculation: 2022-11-16_13h10m51s
+Duration of the calculation: 0.312436 s
 
 Structure file analyzed: ./hosts/C1.pdb
 Chemical formula: C84H48O24Si6
@@ -48,31 +48,31 @@ C : 1.77 A
 	// Total Volumes calculated //
 	//////////////////////////////
 
-Van der Waals volume:                1272.024000 A^3
-                                        0.475856 cm^3/g
+Van der Waals volume:                1273.104000 A^3
+                                        0.476260 cm^3/g
 
-Probe excluded void volume:           103.464000 A^3
-                                        0.038705 cm^3/g
+Probe excluded void volume:           101.952000 A^3
+                                        0.038140 cm^3/g
 
-Molecular volume:                    1375.488000 A^3
-(vdw + probe excluded void)             0.514562 cm^3/g
+Molecular volume:                    1375.056000 A^3
+(vdw + probe excluded void)             0.514400 cm^3/g
 
-Molecular volume:                    1375.488000 A^3
-with isolated cavities                  0.514562 cm^3/g
+Molecular volume:                    1375.056000 A^3
+with isolated cavities                  0.514400 cm^3/g
 
-Small probe core volume:              289.656000 A^3
-                                        0.108359 cm^3/g
+Small probe core volume:              289.008000 A^3
+                                        0.108116 cm^3/g
 
-Small probe shell volume:             345.816000 A^3
-                                        0.129368 cm^3/g
+Small probe shell volume:             358.992000 A^3
+                                        0.134297 cm^3/g
 
-Small probe occupied volume:          635.472000 A^3
-(core + shell)                          0.237726 cm^3/g
+Small probe occupied volume:          648.000000 A^3
+(core + shell)                          0.242413 cm^3/g
 
 Large probe core volume: No physical meaning, contains all volume outside the structure.
 
-Large probe shell volume:            8226.360000 A^3
-                                        3.077431 cm^3/g
+Large probe shell volume:            8187.264000 A^3
+                                        3.062805 cm^3/g
 
 
 	///////////////////
@@ -90,7 +90,7 @@ Note 6:	For a detailed shape of each cavity, check the surface maps.
 
 Cavity ID Occupied      Accessible    Cavity Type   Cavity center coordinates (A)
           Volume (A^3)  Volume (A^3)                x       y       z
-1         635.472       289.656       Tunnel        6.9     5.7     6.6
+1         648           289.008       Tunnel        -6      29.7    13.8
 
 
 	/////////////////////////////
