@@ -9,7 +9,6 @@ A set of well-known supramolecular cages were selected from the literature to ev
 
 - KVFinder suite ([parKVFinder](https://doi.org/10.1016/j.softx.2020.100606) and [pyKVFinder](https://doi.org/10.1186/s12859-021-04519-4));
 - [Fpocket](https://doi.org/10.1186/1471-2105-10-168);
-- [McVol](https://doi.org/10.1007/s00894-009-0541-y);
 - [pywindow](https://doi.org/10.1021/acs.jcim.8b00490);
 - [POVME](https://doi.org/10.1021/acs.jctc.7b00500);
 - [GHECOM](https://doi.org/10.1002/prot.22639);
