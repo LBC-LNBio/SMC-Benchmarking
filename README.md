@@ -83,6 +83,15 @@ unzip etc/CAVER/caver-pymol-plugin-3.0.3.zip -d etc/CAVER/caver-pymol-plugin-3.0
 4. Install plugin (Install new plugin -> Choose file... and select ./etc/CAVER/caver-pymol-plugin-3.0.3/caver-pymol-plugin-3.0.3/Caver3/__init__.py)
 5. Restart PyMOL
 
+To install CAVER Analyst 2.0, run:
+
+```bash
+mkdir -p etc/CAVER
+wget -O etc/CAVER/CAVER-Analyst-2.zip https://www.caver.cz/fil/download/caver_analyst/caver_analyst2_beta2.zip
+unzip etc/CAVER/CAVER-Analyst-2.zip -d etc/CAVER
+```
+
+
 ## Python 3 requirements
 
 - [toml](https://pypi.org/project/toml) (v0.10.2): a Python library for parsing and creating TOML.

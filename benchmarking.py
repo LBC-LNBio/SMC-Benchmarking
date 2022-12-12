@@ -69,18 +69,108 @@ if __name__ == "__main__":
     # pyKVFinder documentation: https://lbc-lnbio.github.io/pyKVFinder/
     KVsuite.run(
         pdbs,
-        step=[0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
-        probe_out=[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0, 10.0, 20.0, 10.0, 10.0],
-        removal_distance=[0.75, 2.0, 1.75, 2.0, 2.0, 1.0, 1.25, 3.5, 2.0, 1.5, 1.25, 0.5, 2.0, 1.75],
-        volume_cutoff=[80.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 80.0, 2.0, 5.0, 20.0],
+        step=[
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.6,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+        ],
+        probe_out=[
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            20.0,
+            10.0,
+            10.0,
+            10.0,
+            20.0,
+            10.0,
+            10.0,
+        ],
+        removal_distance=[
+            0.75,
+            2.0,
+            1.75,
+            2.0,
+            2.0,
+            1.0,
+            1.25,
+            3.5,
+            2.0,
+            1.5,
+            1.25,
+            0.5,
+            2.0,
+            1.75,
+        ],
+        volume_cutoff=[
+            80.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            80.0,
+            2.0,
+            5.0,
+            20.0,
+        ],
     )
 
     # Fpocket
     # User manual: https://fpocket.sourceforge.net/manual_fpocket2.pdf
     fpocket.run(
         pdbs,
-        min_radius=[3.4, 3.4, 3.4, 3.4, 3.4, 3.4, 2.0, 3.4, 3.4, 3.7, 3.4, 3.4, 3.4, 4.0],
-        max_radius=[8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 6.2, 40., 6.2, 8.0, 6.2, 6.2, 6.2, 7.0],
+        min_radius=[
+            3.4,
+            3.4,
+            3.4,
+            3.4,
+            3.4,
+            3.4,
+            2.0,
+            3.4,
+            3.4,
+            3.7,
+            3.4,
+            3.4,
+            3.4,
+            4.0,
+        ],
+        max_radius=[
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            6.2,
+            40.0,
+            6.2,
+            8.0,
+            6.2,
+            6.2,
+            6.2,
+            7.0,
+        ],
         num_spheres=[15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15],
         selection=[1, 1, 1, 1, 1, 1, 1, 37, 1, 1, 1, 1, 1, 7],
     )
@@ -89,8 +179,38 @@ if __name__ == "__main__":
     # Documentation: https://pdbj.org/ghecom/README_ghecom.html
     GHECOM.run(
         pdbs,
-        gws=[0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80, 0.80],
-        rlxs=[10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 20.00, 10.0, 10.0, 10.0, 10.00, 10.0, 10.0],
+        gws=[
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+            0.80,
+        ],
+        rlxs=[
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            20.00,
+            10.0,
+            10.0,
+            10.0,
+            10.00,
+            10.0,
+            10.0,
+        ],
     )
 
     # pywindow
@@ -162,16 +282,65 @@ if __name__ == "__main__":
 
     # CAVER
     # Documentation: https://caver.cz
-    print("> CAVER (v3.0.3)") ## NOTE: Use CAVER Analyst 2.0
-    print("Creating output directories. Now, run CAVER in pymol.")
+    print("> CAVER (v3.0.3)")
+    print(
+        "Creating output directories. Now, run CAVER v3.0.3 in pymol to compute tunnels."
+    )
     os.makedirs("./results/CAVER", exist_ok=True)
     for d in pdbs:
         d = os.path.basename(d).strip(".pdb")
         os.makedirs(os.path.join("./results/CAVER", d), exist_ok=True)
-    print("== CAVER custom parameters ==")
-    print("C1: {'Shell Radius': 10, 'Minimum Probe Radius': 0.7}")
-    print("F1: {'Shell Radius': 5}")
-    print("F2: {'Clustering Threshold': 5}")
-    print("N1: {'Shell Radius': 7}")
-    print("O2: {'Shell Radius': 2}")
-    print("=============================")
+
+    print(
+        "Here, we defined the starting point as the center of mass of the target supramolecular cage\n"
+    )
+    print(
+        "{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format(
+            "Supramolecular cage",
+            "Minimum Probe Radius",
+            "Shell Depth",
+            "Shell Radius",
+            "Clustering threshold",
+        )
+    )
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("A1", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("B1", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("B2", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("B3", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("B4", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("C1", 0.7, 4.0, 10.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("F1", 0.9, 4.0, 5.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("F2", 0.9, 4.0, 3.0, 5.0))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("H1", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("N1", 0.9, 4.0, 7.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("O1", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("O2", 0.9, 4.0, 2.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("R1", 0.9, 4.0, 3.0, 3.5))
+    print("{:<20}\t{:<20}\t{:<20}\t{:<20}\t{:<20}".format("W1", 0.9, 4.0, 3.0, 3.5))
+
+    # CAVER Analyst 2.0 (CAVER 3.0)
+    # Documentation: https://caver.cz
+    print("> CAVER Analyst 2.0 (CAVER v3.0.2)")
+    print("Now, run CAVER Analyst 2.0 to compute cavity volumes, by typing:")
+    print("$ bash etc/CAVER/caver_analyst2/bin/caver_analyst\n")
+    print(
+        "{:<20}\t{:<20}\t{:<20}".format(
+            "Supramolecular cage",
+            "Probe",
+            "Large Probe",
+        )
+    )
+    print("{:<20}\t{:<20}\t{:<20}".format("A1", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("B1", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("B2", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("B3", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("B4", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("C1", 1.4, 4.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("F1", 1.4, 4.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("F2", 1.4, 5.3))
+    print("{:<20}\t{:<20}\t{:<20}".format("H1", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("N1", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("O1", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("O2", "N/A", "N/A"))
+    print("{:<20}\t{:<20}\t{:<20}".format("R1", 1.4, 3.0))
+    print("{:<20}\t{:<20}\t{:<20}".format("W1", 1.4, 3.0))
