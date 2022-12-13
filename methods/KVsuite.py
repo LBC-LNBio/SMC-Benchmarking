@@ -1,9 +1,18 @@
 #!/usr/bin/env python3
 import os
 import subprocess
-from typing import List, Union, Optional
+from typing import List, Union, Optional, Any
 import toml
 import pyKVFinder
+
+
+def _split(parameter: Union[List[float], float]) -> List[float]:
+    if type(parameter) in [list]:
+        p1, p2 = parameter
+    else:
+        p1 = p2 = parameter
+
+    return p1, p2
 
 
 def _pymol(
@@ -251,10 +260,10 @@ def _run_parKVFinder(
 
 def run(
     molecules: List[str],
-    step: Union[float, List[float]] = 0.6,
-    probe_out: Union[float, List[float]] = 8.0,
-    removal_distance: Union[float, List[float]] = 2.4,
-    volume_cutoff: Union[float, List[float]] = 5.0,
+    step: Union[float, List[Any]] = 0.6,
+    probe_out: Union[float, List[Any]] = 8.0,
+    removal_distance: Union[float, List[Any]] = 2.4,
+    volume_cutoff: Union[float, List[Any]] = 5.0,
 ) -> None:
     # Check arguments
     if type(molecules) not in [list]:
@@ -309,16 +318,34 @@ def run(
         f.write("```bash\npython A1-pymol2.py\n```\n")
 
     # Run KVFinder-suite for all files
-    print("> pyKVFinder (v0.4.4)")
+    print("> pyKVFinder (v0.4.5)")
     for molecule, s, po, rd, vc in zip(
         molecules, step, probe_out, removal_distance, volume_cutoff
     ):
         print(molecule)
-        _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
+
+        # Prepare different parameters for pyKVFinder and parKVFinder
+        s, _ = _split(s)
+        po, _ = _split(po)
+        rd, _ = _split(rd)
+        vc, _ = _split(vc)
+
+        # Run pyKVFinder
+        print(molecule, s, po, rd, vc)
+        # _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
 
     print("> parKVFinder (v1.1.4)")
     for molecule, s, po, rd, vc in zip(
         molecules, step, probe_out, removal_distance, volume_cutoff
     ):
         print(molecule)
-        _run_parKVFinder(molecule, s, po, rd, vc, basedir)
+
+        # Prepare different parameters for pyKVFinder and parKVFinder
+        _, s = _split(s)
+        _, po = _split(po)
+        _, rd = _split(rd)
+        _, vc = _split(vc)
+
+        # Run parKVFinder
+        print(molecule, s, po, rd, vc)
+        # _run_parKVFinder(molecule, s, po, rd, vc, basedir)
