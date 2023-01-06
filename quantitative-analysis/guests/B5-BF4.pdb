@@ -1,0 +1,11 @@
+HETATM    1  B   UNK     0      -0.314   0.050  -0.004  0.00  0.00           B  
+HETATM    2  F   UNK     0       1.253   0.124  -0.319  0.00  0.00           F  
+HETATM    3  F   UNK     0      -0.867   1.521   0.295  0.00  0.00           F  
+HETATM    4  F   UNK     0      -0.557  -0.881   1.274  0.00  0.00           F  
+HETATM    5  F   UNK     0      -1.083  -0.563  -1.265  0.00  0.00           F  
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+END

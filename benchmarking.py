@@ -42,17 +42,6 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
 
 if __name__ == "__main__":
     print("[==> Converting XYZ to PDB")
-    # Get XYZ files in guests
-    xyzs = [
-        os.path.join("./guests", f)
-        for f in sorted(os.listdir("./guests"))
-        if f.endswith(".xyz")
-    ]
-
-    # Convert guests XYZ to PDB files
-    xyz2pdb(xyzs)
-    # NOTE: Volume of guests are calculated with YASARA software
-
     # Get XYZ files in hosts
     xyzs = [
         os.path.join("./hosts", f)

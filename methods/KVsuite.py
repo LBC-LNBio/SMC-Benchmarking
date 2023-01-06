@@ -331,8 +331,7 @@ def run(
         vc, _ = _split(vc)
 
         # Run pyKVFinder
-        print(molecule, s, po, rd, vc)
-        # _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
+        _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
 
     print("> parKVFinder (v1.1.4)")
     for molecule, s, po, rd, vc in zip(
@@ -347,5 +346,4 @@ def run(
         _, vc = _split(vc)
 
         # Run parKVFinder
-        print(molecule, s, po, rd, vc)
-        # _run_parKVFinder(molecule, s, po, rd, vc, basedir)
+        _run_parKVFinder(molecule, s, po, rd, vc, basedir)
