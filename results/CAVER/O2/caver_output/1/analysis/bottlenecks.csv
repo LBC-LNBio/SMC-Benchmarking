@@ -1,4 +1,0 @@
-Bottleneck residues:, Residues in distance <= 3.0 A from the bottleneck, sorted from the closest.
-Snapshot,Tunnel cluster,Tunnel,Throughput,Cost,Bottleneck X,Bottleneck Y,Bottleneck Z,Bottleneck R,Bottleneck residues
-O2.pdb,1,1,0.9059031484735541,0.0988228787929499,8.129864287782159,10.140516553927453,14.434923639809739,1.7223337688925937,1
-O2.pdb,2,2,0.623603320980054,0.47224081631549586,2.514471650571395,12.171882950322898,12.171547537949484,0.9533075586878719,1

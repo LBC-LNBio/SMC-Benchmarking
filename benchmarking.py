@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import os
+import re
 from typing import List
+
 from openbabel import pybel
-from methods import KVsuite, fpocket, pywindow, GHECOM, POVME, MoloVol
+
+from methods import GHECOM, POVME, KVsuite, MoloVol, fpocket, pywindow
 
 
 def xyz2pdb(xyzs: List[str]) -> List[str]:
@@ -40,6 +43,12 @@ def xyz2pdb(xyzs: List[str]) -> List[str]:
     return pdbs
 
 
+def sorting(molecules: List[str]) -> List[str]:
+    convert = lambda text: int(text) if text.isdigit() else text
+    alphanumeric = lambda key: [convert(c) for c in re.split("([0-9]+)", key)]
+    return sorted(molecules, key=alphanumeric)
+
+
 if __name__ == "__main__":
     print("[==> Converting XYZ to PDB")
     # Get XYZ files in hosts
@@ -51,118 +60,37 @@ if __name__ == "__main__":
 
     # Convert hosts XYZ to PDB files
     pdbs = xyz2pdb(xyzs)
+    pdbs = sorting(pdbs)
 
     print("[==> Benchmarking methods: ")
+    
     # KVFinder suite
     # parKVFinder documentation: https://github.com/LBC-LNBio/parKVFinder/wiki
     # pyKVFinder documentation: https://lbc-lnbio.github.io/pyKVFinder/
-    KVsuite.run(
-        pdbs,
-        step=[
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-            0.6,
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-            0.25,
-        ],
-        probe_out=[
-            10.0,
-            10.0,
-            10.0,
-            10.0,
-            10.0,
-            10.0,
-            10.0,
-            20.0,
-            10.0,
-            10.0,
-            10.0,
-            20.0,
-            10.0,
-            10.0,
-        ],
-        removal_distance=[
-            0.75,
-            2.0,
-            1.75,
-            2.0,
-            2.0,
-            1.0,
-            1.25,
-            3.5,
-            2.0,
-            1.5,
-            1.25,
-            [0.5, 1.25],
-            2.0,
-            1.75,
-        ],
-        volume_cutoff=[
-            80.0,
-            5.0,
-            5.0,
-            5.0,
-            5.0,
-            5.0,
-            5.0,
-            5.0,
-            5.0,
-            5.0,
-            80.0,
-            5.0,
-            5.0,
-            20.0,
-        ],
-    )
+    # KVsuite.run(
+    #     pdbs,
+    #     step=[0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+    #     probe_out=[10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 6, 6, 10, 10, 20, 10, 10, 10, 20, 10, 10],
+    #     removal_distance=[0.75, 2, 1.75, 2, 2, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1, 1.25, 3.5, 2, 1.5, 1.25, [0.5, 1.25], 2, 1.75],
+    #     volume_cutoff=[80, 5, 5, 5, 5, 5, 5, 110, 25, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 80, 5, 5, 20],
+    # )
 
     # Fpocket
     # User manual: https://fpocket.sourceforge.net/manual_fpocket2.pdf
     fpocket.run(
         pdbs,
-        min_radius=[
-            3.4,
-            3.4,
-            3.4,
-            3.4,
-            3.4,
-            3.4,
-            2.0,
-            3.4,
-            3.4,
-            3.7,
-            3.4,
-            3.4,
-            3.4,
-            4.0,
-        ],
-        max_radius=[
-            8.0,
-            8.0,
-            8.0,
-            8.0,
-            8.0,
-            8.0,
-            6.2,
-            40.0,
-            6.2,
-            8.0,
-            6.2,
-            6.2,
-            6.2,
-            7.0,
-        ],
+        min_radius=[3.4, 
+        3.4, 3.4, 3.4, 3.4,
+        #B5-B14 
+        3.4, 2.0, 3.4, 3.4, 3.7, 3.4, 3.4, 3.4, 4.0],
+        max_radius=[8, 
+        8, 8, 8, 8,
+        #B5-B14
+        8, 6.2, 40, 6.2, 8, 6.2, 6.2, 6.2, 7],
         num_spheres=[15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15],
         selection=[1, 1, 1, 1, 1, 1, 1, 37, 1, 1, 1, 1, 1, 7],
     )
+    exit()
 
     # GHECOM
     # Documentation: https://pdbj.org/ghecom/README_ghecom.html
