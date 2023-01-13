@@ -1,0 +1,42 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     1:
+HEADER 0  - Pocket Score                      : 0.5453
+HEADER 1  - Drug Score                        : 0.3173
+HEADER 2  - Number of alpha spheres           :    21
+HEADER 3  - Mean alpha-sphere radius          : 3.4156
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.6058
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 0.0000
+HEADER 7  - Polarity Score                    :     0
+HEADER 8  - Amino Acid based volume Score     : 0.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 84.3297
+HEADER 10  -Pocket volume (convex hull)       : 1.9982
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 20.0000
+HEADER 13 - Number of apolar alpha sphere     :    21
+HEADER 14 - Proportion of apolar alpha sphere : 1.0000
+HETATM   23    C UNK     1      12.776  11.640  10.729  0.00  0.00           C 0
+HETATM   15    C UNK     1      12.572  13.445   6.260  0.00  0.00           C 0
+HETATM   26    C UNK     1      13.899  13.418   6.584  0.00  0.00           C 0
+HETATM    1    C UNK     1      13.391  11.398   4.379  0.00  0.00           C 0
+HETATM   22    C UNK     1      12.457   7.883   3.724  0.00  0.00           C 0
+HETATM    8   PD UNK     1      15.120   9.042   4.015  0.00  0.00          Pd 0
+HETATM   21    C UNK     1      15.746   6.758   5.758  0.00  0.00           C 0
+HETATM   24    C UNK     1       9.704  10.415   8.898  0.00  0.00           C 0
+HETATM   27    C UNK     1      11.594  13.592   7.221  0.00  0.00           C 0
+HETATM   86    C UNK     1       8.995  10.264   6.158  0.00  0.00           C 0
+HETATM   57    C UNK     1      10.740   6.604   9.772  0.00  0.00           C 0
+HETATM   61   PD UNK     1      11.254   9.190  11.037  0.00  0.00          Pd 0
+HETATM   20    C UNK     1      16.700  10.293   6.134  0.00  0.00           C 0
+HETATM   41    C UNK     1      14.335  13.506   7.890  0.00  0.00           C 0
+HETATM   66    C UNK     1      13.341  13.640   8.854  0.00  0.00           C 0
+HETATM  102    C UNK     1       9.639  10.598   4.951  0.00  0.00           C 0
+HETATM   88    C UNK     1      16.973  10.349  10.055  0.00  0.00           C 0
+HETATM  113    C UNK     1      12.264   4.718   7.077  0.00  0.00           C 0
+HETATM   93    C UNK     1      13.579   4.816   6.634  0.00  0.00           C 0
+HETATM   76    C UNK     1      14.600   4.809   7.611  0.00  0.00           C 0
+TER
+END

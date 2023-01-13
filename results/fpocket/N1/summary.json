@@ -1,0 +1,23 @@
+{
+    "pocket1": {
+        "score": 0.143,
+        "druggability_score": 0.506,
+        "number_of_alpha_spheres": 167,
+        "total_sasa": 126.801,
+        "polar_sasa": 0.0,
+        "apolar_sasa": 126.801,
+        "volume": 494.979,
+        "mean_local_hydrophobic_density": 166.0,
+        "mean_alpha_sphere_radius": 5.123,
+        "mean_alp_sph_solvent_access": 0.714,
+        "apolar_alpha_sphere_proportion": 1.0,
+        "hydrophobicity_score": 0.0,
+        "volume_score": 0.0,
+        "polarity_score": 0,
+        "charge_score": 0,
+        "proportion_of_polar_atoms": 0.0,
+        "alpha_sphere_density": 2.17,
+        "cent_of_mass_alpha_sphere_max_dist": 5.723,
+        "flexibility": 0.0
+    }
+}

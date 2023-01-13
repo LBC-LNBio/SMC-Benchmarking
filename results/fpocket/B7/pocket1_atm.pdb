@@ -1,0 +1,121 @@
+HEADER
+HEADER This is a pdb format file writen by the programm fpocket.                 
+HEADER It represents the atoms contacted by the voronoi vertices of the pocket.  
+HEADER                                                                           
+HEADER Information about the pocket     1:
+HEADER 0  - Pocket Score                      : 0.3219
+HEADER 1  - Drug Score                        : 0.5804
+HEADER 2  - Number of alpha spheres           :   203
+HEADER 3  - Mean alpha-sphere radius          : 4.9434
+HEADER 4  - Mean alpha-sphere Solvent Acc.    : 0.7380
+HEADER 5  - Mean B-factor of pocket residues  : 0.0000
+HEADER 6  - Hydrophobicity Score              : 0.0000
+HEADER 7  - Polarity Score                    :     0
+HEADER 8  - Amino Acid based volume Score     : 0.0000
+HEADER 9  - Pocket volume (Monte Carlo)       : 770.9802
+HEADER 10  -Pocket volume (convex hull)       : 179.2412
+HEADER 11 - Charge Score                      :     0
+HEADER 12 - Local hydrophobic density Score   : 106.5872
+HEADER 13 - Number of apolar alpha sphere     :   109
+HEADER 14 - Proportion of apolar alpha sphere : 0.5369
+HETATM  257    N UNK     1      19.535  17.363  16.753  0.48  1.09           N 0
+HETATM  431    O UNK     1      19.144  21.507   9.917  0.00  0.00           O 0
+HETATM   13    N UNK     1      18.281  26.577  12.415  0.00  0.00           N 0
+HETATM  458    C UNK     1      22.147  21.196   9.188  0.00  0.00           C 0
+HETATM  322    C UNK     1      19.514  17.077  11.935  0.00  0.00           C 0
+HETATM  387    O UNK     1      19.713  19.224   9.645  0.62  1.07           O 0
+HETATM    9    C UNK     1      16.505  25.725  16.211  0.00  0.00           C 0
+HETATM  172    N UNK     1      16.662  19.892  18.104  0.00  0.00           N 0
+HETATM    6    C UNK     1      15.806  24.522  16.299  0.00  0.00           C 0
+HETATM    2    C UNK     1      15.836  23.901  15.068  0.00  0.00           C 0
+HETATM  256    N UNK     1      19.017  18.711  19.246  0.00  0.00           N 0
+HETATM  295    C UNK     1      19.852  16.902  15.388  0.00  0.00           C 0
+HETATM   31    C UNK     1      20.160  28.983  12.459  0.00  0.00           C 0
+HETATM  309    C UNK     1      24.173  29.853  15.330  0.00  0.00           C 0
+HETATM   60    C UNK     1      22.138  28.361  10.108  0.00  0.00           C 0
+HETATM  165    C UNK     1      25.714  29.069  11.935  0.00  0.00           C 0
+HETATM    7    C UNK     1      17.621  25.543  12.010  0.00  0.00           C 0
+HETATM    3    C UNK     1      16.807  24.667  12.837  0.00  0.00           C 0
+HETATM   15    C UNK     1      16.813  22.439  11.752  0.00  0.00           C 0
+HETATM  521    N UNK     1      26.947  19.569  12.415  0.00  0.00           N 0
+HETATM  520    C UNK     1      26.293  20.209  10.339  0.00  0.00           C 0
+HETATM  484    C UNK     1      26.196  19.188  11.339  0.00  0.00           C 0
+HETATM  489    C UNK     1      23.274  21.501   8.823  0.00  0.00           C 0
+HETATM  398    C UNK     1      23.090  17.785  10.108  0.00  0.00           C 0
+HETATM    4    N UNK     1      16.879  25.980  14.904  0.00  0.00           N 0
+HETATM  152    O UNK     1      21.137  26.519  21.811  0.62  2.14           O 0
+HETATM  273    C UNK     1      24.263  28.884  18.824  0.00  0.00           C 0
+HETATM   17    N UNK     1      18.142  28.297  16.113  0.00  0.00           N 0
+HETATM  221    C UNK     1      18.616  19.495  20.291  0.00  0.00           C 0
+HETATM  186    C UNK     1      20.763  23.522  22.425  0.00  0.00           C 0
+HETATM  264    C UNK     1      19.668  19.360  21.331  0.00  0.00           C 0
+HETATM   16    C UNK     1      16.734  26.691  17.317  0.00  0.00           C 0
+HETATM   38    C UNK     1      16.611  25.937  19.718  0.00  0.00           C 0
+HETATM   96    O UNK     1      18.806  26.011  22.016  0.61  1.07           O 0
+HETATM  119    C UNK     1      17.401  22.565  21.513  0.00  0.00           C 0
+HETATM  215   ZN UNK     1      17.955  18.377  17.463  0.00  0.00          Zn 0
+HETATM   18    N UNK     1      19.430  29.023  13.628  0.00  0.00           N 0
+HETATM   10   ZN UNK     1      17.975  27.596  14.206  0.00  0.00          Zn 0
+HETATM  333    C UNK     1      23.624  29.903  16.504  0.00  0.00           C 0
+HETATM  302    C UNK     1      24.580  29.201  17.366  0.00  0.00           C 0
+HETATM  310    N UNK     1      25.693  28.783  16.753  0.00  0.00           N 0
+HETATM  260    C UNK     1      18.839  17.265  14.321  0.00  0.00           C 0
+HETATM   20    C UNK     1      18.935  25.937  10.339  0.00  0.00           C 0
+HETATM   12    C UNK     1      18.073  25.076  10.703  0.00  0.00           C 0
+HETATM  287    C UNK     1      21.954  24.645   8.823  0.00  0.00           C 0
+HETATM  561    C UNK     1      27.155  21.070  10.703  0.00  0.00           C 0
+HETATM  332    N UNK     1      26.211  27.435  19.246  0.65  1.09           N 0
+HETATM  618    C UNK     1      28.762  21.286  14.224  0.00  0.00           C 0
+HETATM  338   ZN UNK     1      27.273  27.769  17.463  0.00  0.00          Zn 0
+HETATM  301    C UNK     1      25.092  28.124  19.606  0.00  0.00           C 0
+HETATM  450    C UNK     1      25.291  18.055  11.432  0.00  0.00           C 0
+HETATM  483    C UNK     1      25.068  17.163  12.459  0.00  0.00           C 0
+HETATM    1    C UNK     1      16.466  24.860  14.224  0.00  0.00           C 0
+HETATM  214    C UNK     1      16.590  20.563  19.215  0.00  0.00           C 0
+HETATM  183    C UNK     1      17.636  20.341  20.242  0.00  0.00           C 0
+HETATM  294    C UNK     1      20.648  16.945  17.366  0.00  0.00           C 0
+HETATM  298    C UNK     1      20.543  18.523  20.913  0.00  0.00           C 0
+HETATM  293    C UNK     1      20.136  18.022  19.606  0.00  0.00           C 0
+HETATM  224    C UNK     1      21.064  22.332  22.913  0.00  0.00           C 0
+HETATM   27    C UNK     1      17.446  27.789  17.233  0.00  0.00           C 0
+HETATM  274    C UNK     1      21.999  28.952  19.833  0.00  0.00           C 0
+HETATM   29    C UNK     1      18.715  29.478  16.557  0.00  0.00           C 0
+HETATM  331    C UNK     1      24.685  27.623  20.913  0.00  0.00           C 0
+HETATM  281    C UNK     1      25.376  29.244  15.388  0.00  0.00           C 0
+HETATM  312    N UNK     1      28.029  27.617  15.544  0.00  0.00           N 0
+HETATM  208    O UNK     1      26.084  24.639   9.917  0.43  3.21           O 0
+HETATM  245    C UNK     1      26.389  28.881  14.321  0.00  0.00           C 0
+HETATM  640    C UNK     1      29.392  22.245  15.068  0.00  0.00           C 0
+HETATM  174    N UNK     1      17.199  18.529  15.544  0.59  1.09           N 0
+HETATM  582    C UNK     1      28.421  21.479  12.837  0.00  0.00           C 0
+HETATM  576    O UNK     1      24.091  19.627  21.811  0.97  4.29           O 0
+HETATM  367    C UNK     1      23.229  17.194  19.833  0.00  0.00           C 0
+HETATM  321    C UNK     1      21.055  16.293  15.330  0.00  0.00           C 0
+HETATM  218    C UNK     1      17.573  17.843  14.437  0.00  0.00           C 0
+HETATM  615    C UNK     1      24.465  22.624  22.425  0.00  0.00           C 0
+HETATM  499    O UNK     1      26.422  20.135  22.016  0.00  0.00           O 0
+HETATM  405    C UNK     1      27.827  23.581  21.513  0.00  0.00           C 0
+HETATM  529    C UNK     1      28.617  20.209  19.718  0.00  0.00           C 0
+HETATM  351    C UNK     1      25.560  26.786  21.331  0.00  0.00           C 0
+HETATM  353    C UNK     1      26.612  26.651  20.291  0.00  0.00           C 0
+HETATM  372    C UNK     1      27.592  25.805  20.242  0.00  0.00           C 0
+HETATM  597    N UNK     1      28.349  20.166  14.904  0.50  1.09           N 0
+HETATM   33    C UNK     1      19.936  28.091  11.432  0.00  0.00           C 0
+HETATM  356    N UNK     1      28.566  26.254  18.104  0.51  1.09           N 0
+HETATM  562    C UNK     1      27.607  20.603  12.010  0.00  0.00           C 0
+HETATM  583    C UNK     1      28.415  23.707  11.752  0.00  0.00           C 0
+HETATM  282    C UNK     1      27.655  28.303  14.437  0.00  0.00           C 0
+HETATM  519    N UNK     1      25.798  17.123  13.628  0.83  1.09           N 0
+HETATM  319    C UNK     1      20.965  17.262  18.824  0.00  0.00           C 0
+HETATM  634    C UNK     1      24.164  23.814  22.913  0.00  0.00           C 0
+HETATM  648    C UNK     1      29.422  21.624  16.299  0.00  0.00           C 0
+HETATM  377    C UNK     1      28.638  25.583  19.215  0.00  0.00           C 0
+HETATM  252    C UNK     1      23.081  24.950   9.188  0.00  0.00           C 0
+HETATM  130    O UNK     1      25.515  26.922   9.645  0.00  0.00           O 0
+HETATM   22    C UNK     1      19.032  26.958  11.339  0.00  0.00           C 0
+HETATM  607    C UNK     1      28.494  19.455  17.317  0.00  0.00           C 0
+HETATM  627    C UNK     1      27.782  18.357  17.233  0.00  0.00           C 0
+HETATM  559   ZN UNK     1      27.253  18.550  14.206  0.00  0.00          Zn 0
+HETATM  320    C UNK     1      21.604  16.243  16.504  0.00  0.00           C 0
+TER
+END
