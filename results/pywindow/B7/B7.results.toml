@@ -1,0 +1,24 @@
+title = "pywindow results file"
+
+no_of_atoms = 668
+centre_of_mass = [ "22.613998349670126", "23.07299639696227", "15.429596325987461",]
+pore_volume = "398.59265264791776"
+pore_volume_opt = "491.72793595745253"
+
+[maximum_diameter]
+diameter = "34.230924791649926"
+atom_1 = 134
+atom_2 = 580
+
+[pore_diameter]
+diameter = "9.130829267691352"
+atom = 489
+
+[pore_diameter_opt]
+diameter = "9.792842128356444"
+atom_1 = 617
+centre_of_mass = [ "22.615800043047916", "23.079082454100952", "15.812034085872027",]
+
+[windows]
+diameters = [ "1.3128502891130736",]
+centre_of_mass = [ [ "21.966168746866444", "20.065002072547887", "21.985175259973346",],]

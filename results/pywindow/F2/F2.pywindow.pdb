@@ -1,0 +1,57 @@
+HEADER
+HEADER 0  - Void volume                       : 30567.56
+HEADER 1  - Window 1 diameter                 : 6.1426
+HEADER 2  - Window 2 diameter                 : 10.5546
+HEADER 3  - Window 3 diameter                 : 11.0231
+HEADER 4  - Window 4 diameter                 : 10.4923
+HEADER 5  - Window 5 diameter                 : 10.3435
+HEADER 6  - Window 6 diameter                 : 10.3939
+HEADER 7  - Window 7 diameter                 : 10.3868
+HEADER 8  - Window 8 diameter                 : 6.1014
+HEADER 9  - Window 9 diameter                 : 11.5949
+HEADER 10  - Window 10 diameter                : 10.5758
+HEADER 11  - Window 11 diameter                : 10.3039
+HEADER 12  - Window 12 diameter                : 10.4287
+HEADER 13  - Window 13 diameter                : 6.1762
+HEADER 14  - Window 14 diameter                : 10.4274
+HEADER 15  - Window 15 diameter                : 10.1854
+HEADER 16  - Window 16 diameter                : 10.4703
+HEADER 17  - Window 17 diameter                : 10.3228
+HEADER 18  - Window 18 diameter                : 10.3817
+HEADER 19  - Window 19 diameter                : 10.3925
+HEADER 20  - Window 20 diameter                : 6.1190
+HEADER 21  - Window 21 diameter                : 6.1735
+HEADER 22  - Window 22 diameter                : 10.2983
+HEADER 23  - Window 23 diameter                : 10.3550
+HEADER 24  - Window 24 diameter                : 11.2505
+HEADER 25  - Window 25 diameter                : 10.4648
+HEADER 26  - Window 26 diameter                : 10.4217
+HEADER 27  - Window 27 diameter                : 6.1601
+HETATM    0  PS1 COM A   1      37.183  17.869  18.155   0.0 19.40           P
+HETATM    1  PS1 W1  A   1      32.765  20.639  39.688   0.0  3.07           P
+HETATM    2  PS1 W2  A   1      35.390   9.538  37.043   0.0  5.28           P
+HETATM    3  PS1 W3  A   1      52.213  15.795  39.168   0.0  5.51           P
+HETATM    4  PS1 W4  A   1      23.067  23.150  33.442   0.0  5.25           P
+HETATM    5  PS1 W5  A   1      23.466   8.971  30.593   0.0  5.17           P
+HETATM    6  PS1 W6  A   1      30.959  34.752  29.700   0.0  5.20           P
+HETATM    7  PS1 W7  A   1      40.099  -0.247  27.814   0.0  5.19           P
+HETATM    8  PS1 W8  A   1      50.217   5.077  29.858   0.0  3.05           P
+HETATM    9  PS1 W9  A   1      51.949  35.542  29.644   0.0  5.80           P
+HETATM   10  PS1 W10 A   1      56.858  19.688  25.357   0.0  5.29           P
+HETATM   11  PS1 W11 A   1      27.356  -0.034  21.435   0.0  5.15           P
+HETATM   12  PS1 W12 A   1      29.910  17.333  -1.279   0.0  5.21           P
+HETATM   13  PS1 W13 A   1      40.404  38.613  23.878   0.0  3.09           P
+HETATM   14  PS1 W14 A   1      55.422   7.532  19.679   0.0  5.21           P
+HETATM   15  PS1 W15 A   1      25.435  35.423  17.364   0.0  5.09           P
+HETATM   16  PS1 W16 A   1      45.060  -1.237  15.342   0.0  5.24           P
+HETATM   17  PS1 W17 A   1      37.647  37.965  12.703   0.0  5.16           P
+HETATM   18  PS1 W18 A   1      19.984   6.429  12.113   0.0  5.19           P
+HETATM   19  PS1 W19 A   1      53.027  35.132   8.484   0.0  5.20           P
+HETATM   20  PS1 W20 A   1      57.931  23.169  14.103   0.0  3.06           P
+HETATM   21  PS1 W21 A   1      33.857  -2.764  12.337   0.0  3.09           P
+HETATM   22  PS1 W22 A   1      59.328  11.403   6.557   0.0  5.15           P
+HETATM   23  PS1 W23 A   1      30.216   4.021   3.666   0.0  5.18           P
+HETATM   24  PS1 W24 A   1      48.343   3.260   0.339   0.0  5.63           P
+HETATM   25  PS1 W25 A   1      34.507  30.532   1.793   0.0  5.23           P
+HETATM   26  PS1 W26 A   1      47.747  24.125   1.297   0.0  5.21           P
+HETATM   27  PS1 W27 A   1      41.265  15.217  -2.833   0.0  3.08           P
