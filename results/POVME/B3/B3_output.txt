@@ -1,0 +1,42 @@
+
+If you use POVME in your research, please cite the following reference:
+  Durrant, J. D., C. A. de Oliveira, et al. (2011). "POVME: An algorithm
+  for measuring binding-pocket volumes." J Mol Graph Model 29(5): 773-776.
+
+Parameters:
+	OUTPUTFILENAMEPREFIX: /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B3/B3_
+	POINTSINCLUDEREGIONS: sphere at (20.538, 0.0, 63.698), radius = 6.5
+	NUMFRAMES: -1
+	OutputFrameFilenamePrefix: /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B3/B3_frameInfo/B3_
+	MAXGROWITERATIONS: 10000000000.0
+	GRIDSPACING: 1.0
+	NUMPROCESSORS: 12
+	DISTANCECUTOFF: 1.09
+	COMPRESSOUTPUT: False
+	PDBFILENAME: /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/B3.pdb
+	CONVEXHULLEXCLUSION: max
+	SAVEREGIONS: False
+	CONTIGUOUSPOINTSCRITERIA: 3
+	OUTPUTBASENAME: B3_
+
+Reading frames from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/B3.pdb
+	Further processing frame 1
+
+
+Generating the pocket-encompassing point field
+
+Saving the point field as a PDB and NPY file
+	Point field saved to /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B3/B3_frameInfo/B3_inclusion.pdb to permit visualization
+	Point field saved to /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B3/B3_frameInfo/B3_inclusion.npy to optionally load for the volume calculation
+
+Calculating the pocket volume of each frame
+	Frame 1:  Volume 99.0 A^3  Surf. A. 92.0 A^2
+
+FRAME        | VOLUME (A^3) | SURF. A. (A^2)
+-------------+--------------+----------------
+1            |   99.0       |   92.0
+
+Execution time = 2.06019687653 sec
+
+WARNING! Cannot save color file for aromatic because no color present in any frame.
+WARNING! Cannot save color file for hbondAcceptor because no color present in any frame.
