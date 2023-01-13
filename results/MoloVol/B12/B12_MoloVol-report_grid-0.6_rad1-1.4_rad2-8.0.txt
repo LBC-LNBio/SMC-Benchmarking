@@ -1,0 +1,141 @@
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+   MM           MM            LL           VV           VV           LL   
+   MMM         MMM            LL            VV         VV            LL   
+   MMMM       MMMM            LL             VV       VV             LL   
+   MM MM     MM MM            LL              VV     VV              LL   
+   MM  MM   MM  MM    OOOO    LL    OOOO       VV   VV       OOOO    LL   
+   MM   MM MM   MM   OO  OO   LL   OO  OO       VV VV       OO  OO   LL   
+   MM    MMM    MM   OO  OO   LL   OO  OO        VVV        OO  OO   LL   
+   MM     M     MM    OOOO    LL    OOOO          V          OOOO    LL   
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Source code available at https://github.com/molovol/MoloVol under the MIT licence
+Copyright © 2020-2021 Jasmin B. Maglic, Roy Lavendomme
+
+MoloVol program: calculation results report
+version: 1.0.0
+
+Time of the calculation: 2023-01-13_20h11m09s
+Duration of the calculation: 1.15347 s
+
+Structure file analyzed: ./hosts/B12.pdb
+Chemical formula: C216H132N24O16P4Zn4
+Molar mass: 3705 g/mol
+
+
+	////////////////////////////
+	// Calculation parameters //
+	////////////////////////////
+
+Include HETATM from pdb file
+Crystal unit cell analysis: No
+Probe mode: two probes
+Small probe radius: 1.4 A
+Large probe radius: 8 A
+Grid resolution: 0.6 A
+Optimization depth: 4
+Elements radii:
+P : 1.9 A
+H : 1.2 A
+Zn : 2.39 A
+O : 1.5 A
+C : 1.77 A
+N : 1.66 A
+
+
+	//////////////////////////////
+	// Total Volumes calculated //
+	//////////////////////////////
+
+Van der Waals volume:                3022.488000 A^3
+                                        0.491278 cm^3/g
+
+Probe excluded void volume:           957.096000 A^3
+                                        0.155567 cm^3/g
+
+Molecular volume:                    3979.584000 A^3
+(vdw + probe excluded void)             0.646845 cm^3/g
+
+Molecular volume:                    4441.824000 A^3
+with isolated cavities                  0.721978 cm^3/g
+
+Small probe core volume:              167.184000 A^3
+                                        0.027174 cm^3/g
+
+Small probe shell volume:             586.656000 A^3
+                                        0.095356 cm^3/g
+
+Small probe occupied volume:          753.840000 A^3
+(core + shell)                          0.122530 cm^3/g
+
+Large probe core volume: No physical meaning, contains all volume outside the structure.
+
+Large probe shell volume:           29132.568000 A^3
+                                        4.735234 cm^3/g
+
+
+	///////////////////
+	// Cavities data //
+	///////////////////
+
+Note 1:	Separate cavities are defined by space accessible to the core of the small probe.
+	Two cavities can be in contact but if a probe cannot pass from one to the other, they are considered separated.
+Note 2:	In single probe mode, pockets and tunnels are counted in the 'outside space'.
+Note 3:	Some very small isolated chunks of small probe cores can be detected and lead to small cavities.
+Note 4:	Probe occupied volume corresponds to empty space as defined by the molecular surface (similar to the Connolly surface).
+Note 5:	Probe accessible volume corresponds to empty space as defined
+	by the surface accessible to its core (similar to the Lee-Richards surface).
+Note 6:	For a detailed shape of each cavity, check the surface maps.
+
+Cavity ID Occupied      Accessible    Cavity Type   Cavity center coordinates (A)
+          Volume (A^3)  Volume (A^3)                x       y       z
+1         434.808       138.456       Isolated      -2      16.8    17.4
+2         46.008        6.696         Pocket        6.6     15.6    21.3
+3         42.12         5.184         Pocket        -1e+01  18.3    13.8
+4         41.256        4.968         Pocket        5.7     21      14.7
+5         27.648        2.16          Pocket        -4      18.6    26.1
+6         27.432        2.592         Pocket        -7      24      21.9
+7         25.056        1.728         Pocket        -2      9.3     22.8
+8         23.544        1.728         Pocket        -5      10.2    11.4
+9         21.6          1.512         Pocket        0.9     17.1    8.4
+10        15.12         0.648         Pocket        4.5     10.5    13.8
+11        13.824        0.432         Pocket        -3      25.5    13.2
+12        9.72          0.216         Isolated      4.8     14.1    12.9
+13        9.288         0.216         Isolated      2.1     24      22.8
+14        8.424         0.216         Isolated      -1e+01  12.9    20.1
+15        7.992         0.432         Pocket        2.1     18.9    9.6
+
+
+	/////////////////////////////
+	// Surface map information //
+	/////////////////////////////
+
+The surface map files generated (.dx, OpenDX format) can be opened with
+PyMOL, USCF Chimera or USCF ChimeraX.
+
+Use the following isosurface levels to visualize the desired surface:
+Level 0.5 : Van der Waals surface
+Level 1.5 : Molecular surface (both probes excluded, similar to the Connolly surface)
+Level 3.0 : Isolated cavities, pockets and tunnels (small probe excluded, similar to the Connolly surface but only 'inside')
+Level 5.0 : Small probe accessible surface (similar to Lee-Richards molecular surface but only 'inside')
+
+For help on how to vizualize maps check the user manual or:
+ - in PyMOL, simply open the map file then click 'A' in the right panel, choose mesh or surface and select the level.
+   For more information, check https://pymolwiki.org/index.php/Isomesh and https://pymolwiki.org/index.php/Isosurface 
+ - in USCF Chimera, check https://www.cgl.ucsf.edu/chimera/docs/ContributedSoftware/volumeviewer/volumeviewer.html 
+ - in USCF ChimeraX, check https://www.cgl.ucsf.edu/chimerax/docs/user/tools/volumeviewer.html 
+
+If you wish to visualize the structure file in PyMOL with the same element radii as in the MoloVol calculation,
+paste the following command lines (all at once) in the command prompt of PyMOL after opening the structure file.
+
+alter (elem P),vdw=1.9
+alter (elem H),vdw=1.2
+alter (elem Zn),vdw=2.39
+alter (elem O),vdw=1.5
+alter (elem C),vdw=1.77
+alter (elem N),vdw=1.66
+rebuild
+
