@@ -1,0 +1,173 @@
+HEADER    GRID     ./results/GHECOM/B6/B6.pocket. 13-JAN-23   0XXX
+TITLE   Clustered_MultiScale_Pocket
+REMARK  minNgridClus 0 Nrank_keep -1
+REMARK  COMMAND ghecom -M M -ipdb ./hosts/B6.pdb -opocpdb ./results/GHECOM/B6/B6.pocket.pdb -opdb ./results/GHECOM/B6/B6.pocketness.pdb -ores ./results/GHECOM/B6/B6.res -atmhet B -gw 0.8 -rlx 10
+REMARK  DATE    Jan 13,2023 18:39:23
+REMARK  grid_size   75   73   74
+REMARK  grid_width    0.800
+REMARK  OrigPos  -28.374 -24.684  -25.583
+REMARK  COMMENT INPUT_RECEPTOR_PDB_FILE:./hosts/B6.pdb
+REMARK  COMMENT NATOM_OF_RECEPTOR:82
+REMARK  COMMENT grid_width  0.800 A VdW volume: 1941 grids, 993.79 AAA
+REMARK  COMMENT MIN_RLARGE:2.000000
+REMARK  COMMENT MAX_RLARGE:10.000000
+REMARK  COMMENT BIN_RLARGE:0.500000
+REMARK  COMMENT RSMALL: 1.870
+REMARK  MULSC_PROBE: NRADIUS 17
+REMARK  MULSC_PROBE: RADIUS   1 th  2.000 Ang  0.500 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   2 th  2.500 Ang  0.400 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   3 th  3.000 Ang  0.333 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   4 th  3.500 Ang  0.286 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   5 th  4.000 Ang  0.250 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   6 th  4.500 Ang  0.222 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   7 th  5.000 Ang  0.200 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   8 th  5.500 Ang  0.182 1/Ang 
+REMARK  MULSC_PROBE: RADIUS   9 th  6.000 Ang  0.167 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  10 th  6.500 Ang  0.154 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  11 th  7.000 Ang  0.143 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  12 th  7.500 Ang  0.133 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  13 th  8.000 Ang  0.125 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  14 th  8.500 Ang  0.118 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  15 th  9.000 Ang  0.111 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  16 th  9.500 Ang  0.105 1/Ang 
+REMARK  MULSC_PROBE: RADIUS  17 th 10.000 Ang  0.100 1/Ang 
+REMARK  MIN_NUM_OF_GRID_IN_CLUSTER 0
+REMARK  CLUSTER_PROPERTY   1 Ngrid    124 Vol(AAA)    63.5 Rinac(A) av  2.50 mi  2.50 invRvolume(AA)    25.4 
+REMARK   Rinac(A) av     : harmonic average value of Rinaccess in the cluster (angstrom)
+REMARK   Rinac(A) mi     : minimum value of Rinaccess in the cluster (angstrom)
+REMARK   invRvolume(AA)  : sum of [1/Rinaccc] * Vol_of_one_voxel for the grids in the cluster (angstrom * angstrom)
+REMARK   Atoms with name ' CK ' correspond to the skeleton or core atoms.
+REMARK   Atoms with name ' CE ' correspond to the extended atoms from the skeleton or core.
+REMARK   Ngrid_total 124 Volume_total(AAA) 63.488003
+TER
+REMARK  CLUSTER   1
+REMARK  CLUSTER_PROPERTY   1 Ngrid    124 Vol(AAA)    63.5 Rinac(A) av  2.50 mi  2.50 invRvolume(AA)    25.4 
+REMARK  CLUSTER_RINACC_HISTOGRAM   1 Rinacc  2.50 Ngrid    124 100.00 %
+HETATM    0  CA  CEN 1 255       1.768   4.264   4.127  0.40  2.50
+REMARK  [ChainID:ClusNum],[ResNum:char value]       [Radius][Rinacc][x][y][z]
+HETATM    2  CE  GRD 1   2       0.426   3.316   4.017  0.40  2.50 36 35 37
+HETATM    3  CE  GRD 1   2      -0.374   4.116   4.017  0.40  2.50 35 36 37
+HETATM    4  CE  GRD 1   2       0.426   4.116   4.017  0.40  2.50 36 36 37
+HETATM    5  CE  GRD 1   2      -0.374   4.116   4.817  0.40  2.50 35 36 38
+HETATM    6  CE  GRD 1   2       0.426   3.316   4.817  0.40  2.50 36 35 38
+HETATM    7  CE  GRD 1   2       0.426   2.516   4.017  0.40  2.50 36 34 37
+HETATM    8  CE  GRD 1   2      -0.374   4.116   3.217  0.40  2.50 35 36 36
+HETATM    9  CE  GRD 1   2       0.426   3.316   3.217  0.40  2.50 36 35 36
+HETATM   10  CE  GRD 1   2       0.426   4.116   4.817  0.40  2.50 36 36 38
+HETATM   11  CE  GRD 1   2       1.226   4.116   3.217  0.40  2.50 37 36 36
+HETATM   12  CE  GRD 1   2       0.426   4.916   3.217  0.40  2.50 36 37 36
+HETATM   13  CE  GRD 1   2       0.426   4.116   2.417  0.40  2.50 36 36 35
+HETATM   14  CE  GRD 1   2       1.226   4.916   3.217  0.40  2.50 37 37 36
+HETATM   15  CE  GRD 1   2       0.426   4.916   4.017  0.40  2.50 36 37 37
+HETATM   16  CE  GRD 1   2       1.226   4.116   4.017  0.40  2.50 37 36 37
+HETATM   17  CE  GRD 1   2       1.226   3.316   3.217  0.40  2.50 37 35 36
+HETATM   18  CE  GRD 1   2       0.426   4.916   2.417  0.40  2.50 36 37 35
+HETATM   19  CE  GRD 1   2       1.226   4.116   2.417  0.40  2.50 37 36 35
+HETATM   20  CE  GRD 1   2      -0.374   4.916   3.217  0.40  2.50 35 37 36
+HETATM   21  CE  GRD 1   2       1.226   4.916   4.017  0.40  2.50 37 37 37
+HETATM   22  CE  GRD 1   2       1.226   4.916   2.417  0.40  2.50 37 37 35
+HETATM   23  CE  GRD 1   2       1.226   3.316   4.017  0.40  2.50 37 35 37
+HETATM   24  CE  GRD 1   2       1.226   3.316   2.417  0.40  2.50 37 35 35
+HETATM   25  CE  GRD 1   2      -0.374   5.716   4.017  0.40  2.50 35 38 37
+HETATM   26  CE  GRD 1   2      -0.374   4.916   4.817  0.40  2.50 35 37 38
+HETATM   27  CE  GRD 1   2       0.426   5.716   4.017  0.40  2.50 36 38 37
+HETATM   28  CE  GRD 1   2       0.426   4.916   4.817  0.40  2.50 36 37 38
+HETATM   29  CE  GRD 1   2       0.426   5.716   4.817  0.40  2.50 36 38 38
+HETATM   30  CE  GRD 1   2       1.226   5.716   3.217  0.40  2.50 37 38 36
+HETATM   31  CE  GRD 1   2       1.226   6.516   3.217  0.40  2.50 37 39 36
+HETATM   32  CE  GRD 1   2       0.426   6.516   4.017  0.40  2.50 36 39 37
+HETATM   33  CE  GRD 1   2       1.226   5.716   4.017  0.40  2.50 37 38 37
+HETATM   34  CE  GRD 1   2       1.226   5.716   2.417  0.40  2.50 37 38 35
+HETATM   35  CE  GRD 1   2       2.026   6.516   4.017  0.40  2.50 38 39 37
+HETATM   36  CE  GRD 1   2       1.226   6.516   4.817  0.40  2.50 37 39 38
+HETATM   37  CE  GRD 1   2       2.026   6.516   4.817  0.40  2.50 38 39 38
+HETATM   38  CE  GRD 1   2       2.026   5.716   4.017  0.40  2.50 38 38 37
+HETATM   39  CE  GRD 1   2       2.026   6.516   3.217  0.40  2.50 38 39 36
+HETATM   40  CE  GRD 1   2       1.226   5.716   4.817  0.40  2.50 37 38 38
+HETATM   41  CE  GRD 1   2       2.026   5.716   4.817  0.40  2.50 38 38 38
+HETATM   42  CE  GRD 1   2       2.826   5.716   3.217  0.40  2.50 39 38 36
+HETATM   43  CE  GRD 1   2       2.026   4.916   3.217  0.40  2.50 38 37 36
+HETATM   44  CE  GRD 1   2       2.026   5.716   2.417  0.40  2.50 38 38 35
+HETATM   45  CE  GRD 1   2       2.826   5.716   4.017  0.40  2.50 39 38 37
+HETATM   46  CE  GRD 1   2       2.026   4.916   2.417  0.40  2.50 38 37 35
+HETATM   47  CE  GRD 1   2       2.826   4.916   3.217  0.40  2.50 39 37 36
+HETATM   48  CE  GRD 1   2       2.026   4.916   4.017  0.40  2.50 38 37 37
+HETATM   49  CE  GRD 1   2       2.826   6.516   4.017  0.40  2.50 39 39 37
+HETATM   50  CE  GRD 1   2       2.826   4.916   4.017  0.40  2.50 39 37 37
+HETATM   51  CE  GRD 1   2       2.826   4.116   2.417  0.40  2.50 39 36 35
+HETATM   52  CE  GRD 1   2       3.626   4.916   3.217  0.40  2.50 40 37 36
+HETATM   53  CE  GRD 1   2       2.026   4.116   2.417  0.40  2.50 38 36 35
+HETATM   54  CE  GRD 1   2       2.826   4.116   3.217  0.40  2.50 39 36 36
+HETATM   55  CE  GRD 1   2       3.626   4.116   3.217  0.40  2.50 40 36 36
+HETATM   56  CE  GRD 1   2       2.026   3.316   3.217  0.40  2.50 38 35 36
+HETATM   57  CE  GRD 1   2       2.026   4.116   4.017  0.40  2.50 38 36 37
+HETATM   58  CE  GRD 1   2       2.826   4.116   4.017  0.40  2.50 39 36 37
+HETATM   59  CE  GRD 1   2       2.026   3.316   2.417  0.40  2.50 38 35 35
+HETATM   60  CE  GRD 1   2       2.826   3.316   3.217  0.40  2.50 39 35 36
+HETATM   61  CE  GRD 1   2       2.026   3.316   4.017  0.40  2.50 38 35 37
+HETATM   62  CE  GRD 1   2       2.826   3.316   4.017  0.40  2.50 39 35 37
+HETATM   63  CE  GRD 1   2       3.626   3.316   3.217  0.40  2.50 40 35 36
+HETATM   64  CE  GRD 1   2       2.026   2.516   2.417  0.40  2.50 38 34 35
+HETATM   65  CE  GRD 1   2       2.826   2.516   3.217  0.40  2.50 39 34 36
+HETATM   66  CE  GRD 1   2       1.226   2.516   3.217  0.40  2.50 37 34 36
+HETATM   67  CE  GRD 1   2       2.026   1.716   3.217  0.40  2.50 38 33 36
+HETATM   68  CE  GRD 1   2       2.026   2.516   4.017  0.40  2.50 38 34 37
+HETATM   69  CE  GRD 1   2       2.826   2.516   4.017  0.40  2.50 39 34 37
+HETATM   70  CE  GRD 1   2       2.026   1.716   4.017  0.40  2.50 38 33 37
+HETATM   71  CE  GRD 1   2       1.226   2.516   4.017  0.40  2.50 37 34 37
+HETATM   72  CE  GRD 1   2       2.826   1.716   4.017  0.40  2.50 39 33 37
+HETATM   73  CE  GRD 1   2       1.226   2.516   4.817  0.40  2.50 37 34 38
+HETATM   74  CE  GRD 1   2       2.026   1.716   4.817  0.40  2.50 38 33 38
+HETATM   75  CE  GRD 1   2       2.826   2.516   4.817  0.40  2.50 39 34 38
+HETATM   76  CE  GRD 1   2       2.026   3.316   4.817  0.40  2.50 38 35 38
+HETATM   77  CE  GRD 1   2       2.026   2.516   5.617  0.40  2.50 38 34 39
+HETATM   78  CE  GRD 1   2       2.826   3.316   4.817  0.40  2.50 39 35 38
+HETATM   79  CE  GRD 1   2       2.026   3.316   5.617  0.40  2.50 38 35 39
+HETATM   80  CE  GRD 1   2       1.226   3.316   4.817  0.40  2.50 37 35 38
+HETATM   81  CE  GRD 1   2       2.826   3.316   5.617  0.40  2.50 39 35 39
+HETATM   82  CE  GRD 1   2       1.226   4.116   5.617  0.40  2.50 37 36 39
+HETATM   83  CE  GRD 1   2       2.026   4.116   5.617  0.40  2.50 38 36 39
+HETATM   84  CE  GRD 1   2       1.226   4.116   6.417  0.40  2.50 37 36 40
+HETATM   85  CE  GRD 1   2       2.026   3.316   6.417  0.40  2.50 38 35 40
+HETATM   86  CE  GRD 1   2       1.226   4.116   4.817  0.40  2.50 37 36 38
+HETATM   87  CE  GRD 1   2       0.426   4.116   5.617  0.40  2.50 36 36 39
+HETATM   88  CE  GRD 1   2       2.026   4.116   6.417  0.40  2.50 38 36 40
+HETATM   89  CE  GRD 1   2       2.826   4.116   4.817  0.40  2.50 39 36 38
+HETATM   90  CE  GRD 1   2       2.026   4.916   4.817  0.40  2.50 38 37 38
+HETATM   91  CE  GRD 1   2       2.826   4.916   4.817  0.40  2.50 39 37 38
+HETATM   92  CE  GRD 1   2       2.026   4.916   5.617  0.40  2.50 38 37 39
+HETATM   93  CE  GRD 1   2       2.826   4.116   5.617  0.40  2.50 39 36 39
+HETATM   94  CE  GRD 1   2       1.226   4.916   4.817  0.40  2.50 37 37 38
+HETATM   95  CE  GRD 1   2       2.826   4.916   5.617  0.40  2.50 39 37 39
+HETATM   96  CE  GRD 1   2       0.426   4.916   5.617  0.40  2.50 36 37 39
+HETATM   97  CE  GRD 1   2       1.226   5.716   5.617  0.40  2.50 37 38 39
+HETATM   98  CE  GRD 1   2       2.026   5.716   5.617  0.40  2.50 38 38 39
+HETATM   99  CE  GRD 1   2       3.626   4.116   4.817  0.40  2.50 40 36 38
+HETATM  100  CE  GRD 1   2       3.626   3.316   4.817  0.40  2.50 40 35 38
+HETATM  101  CE  GRD 1   2       3.626   4.916   4.017  0.40  2.50 40 37 37
+HETATM  102  CE  GRD 1   2       3.626   2.516   4.017  0.40  2.50 40 34 37
+HETATM  103  CE  GRD 1   2       3.626   3.316   4.017  0.40  2.50 40 35 37
+HETATM  104  CE  GRD 1   2       3.626   4.116   4.017  0.40  2.50 40 36 37
+HETATM  105  CE  GRD 1   2       3.626   5.716   4.017  0.40  2.50 40 38 37
+HETATM  106  CE  GRD 1   2       2.826   5.716   4.817  0.40  2.50 39 38 38
+HETATM  107  CE  GRD 1   2       3.626   4.916   4.817  0.40  2.50 40 37 38
+HETATM  108  CE  GRD 1   2       3.626   4.116   5.617  0.40  2.50 40 36 39
+HETATM  109  CE  GRD 1   2       2.826   4.116   6.417  0.40  2.50 39 36 40
+HETATM  110  CE  GRD 1   2       2.026   4.916   6.417  0.40  2.50 38 37 40
+HETATM  111  CE  GRD 1   2       1.226   4.916   5.617  0.40  2.50 37 37 39
+HETATM  112  CE  GRD 1   2       2.026   4.116   4.817  0.40  2.50 38 36 38
+HETATM  113  CE  GRD 1   2       1.226   3.316   5.617  0.40  2.50 37 35 39
+HETATM  114  CE  GRD 1   2       2.026   2.516   4.817  0.40  2.50 38 34 38
+HETATM  115  CE  GRD 1   2       1.226   1.716   4.017  0.40  2.50 37 33 37
+HETATM  116  CE  GRD 1   2       2.026   2.516   3.217  0.40  2.50 38 34 36
+HETATM  117  CE  GRD 1   2       2.826   3.316   2.417  0.40  2.50 39 35 35
+HETATM  118  CE  GRD 1   2       2.026   4.116   3.217  0.40  2.50 38 36 36
+HETATM  119  CE  GRD 1   2       2.826   4.916   2.417  0.40  2.50 39 37 35
+HETATM  120  CE  GRD 1   2       2.026   5.716   3.217  0.40  2.50 38 38 36
+HETATM  121  CE  GRD 1   2       1.226   6.516   4.017  0.40  2.50 37 39 37
+HETATM  122  CE  GRD 1   2       0.426   5.716   3.217  0.40  2.50 36 38 36
+HETATM  123  CE  GRD 1   2      -0.374   4.916   4.017  0.40  2.50 35 37 37
+HETATM  124  CE  GRD 1   2       0.426   4.116   3.217  0.40  2.50 36 36 36
+HETATM  125  CE  GRD 1   2      -0.374   3.316   4.017  0.40  2.50 35 35 37
+TER
+END
