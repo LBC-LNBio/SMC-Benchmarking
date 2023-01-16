@@ -1,9 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/env/bin python3
 import os
 import subprocess
-from typing import List, Union, Optional, Any
-import toml
+from typing import Any, List, Optional, Union
+
 import pyKVFinder
+import toml
 
 
 def _split(parameter: Union[List[float], float]) -> List[float]:
@@ -72,6 +73,7 @@ def _run_pyKVFinder(
 
     # Atomic information
     atomic = pyKVFinder.read_pdb(molecule)
+
     # Grid dimensions
     vertices = pyKVFinder.get_vertices(atomic, probe_out=probe_out)
 
@@ -87,6 +89,7 @@ def _run_pyKVFinder(
 
     # Spatial characterization
     surface, volume, area = pyKVFinder.spatial(cavities, step=step)
+
     # Depth characterization
     depths, max_depth, avg_depth = pyKVFinder.depth(cavities, step=step)
 

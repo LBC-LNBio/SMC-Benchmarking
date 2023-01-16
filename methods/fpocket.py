@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/env/bin python3
 import os
 from typing import List, Union
+
 from biobb_vs.fpocket.fpocket_run import fpocket_run
 from biobb_vs.fpocket.fpocket_select import fpocket_select
 

@@ -1,9 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/env/bin python3
 import os
-from typing import List, Dict, Any
-import toml
+from typing import Any, Dict, List
+
 import numpy
 import pywindow
+import toml
 
 
 def _get_PDB_line(

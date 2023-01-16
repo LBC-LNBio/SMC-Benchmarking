@@ -1,57 +1,38 @@
-#!/usr/bin/env python3
+#!/usr/env/bin python3
 import os
 import re
 from typing import List
 
-from openbabel import pybel
 
-from methods import GHECOM, POVME, KVsuite, MoloVol, fpocket, pywindow
-
-
-def xyz2pdb(xyzs: List[str]) -> List[str]:
-    """Convert XYZ to PDB files.
-
-    Parameters
-    ----------
-    xyzs : List[Union[str, pathlib.Path]]
-        List of XYZ files.
-
-    Returns
-    -------
-    pdbs : List[str]
-        List of PDB files.
-    """
-    # Check arguments
-    if type(xyzs) not in [list]:
-        raise TypeError("`xyzs` must be a list of XYZ files.")
-    if any([not xyz.endswith(".xyz") for xyz in xyzs]):
-        raise ValueError("`xyzs` must contain only XYZ files.")
-    if any([not os.path.isfile(xyz) for xyz in xyzs]):
-        raise ValueError("`xyzs` must contain valid XYZ files.")
-
-    # Prepare filenames
-    pdbs = [xyz.replace("xyz", "pdb") for xyz in xyzs]
-
-    # Convert XYZ to PDB
-    for xyz, pdb in zip(xyzs, pdbs):
-        mol = next(pybel.readfile("xyz", xyz))
-        # Convert residue names from UNL to UNK
-        for atom in mol.atoms:
-            atom.residue.OBResidue.SetName("UNK")
-        mol.write("pdb", pdb, overwrite=True)
-
-    return pdbs
-
-
-def sorting(molecules: List[str]) -> List[str]:
-    convert = lambda text: int(text) if text.isdigit() else text
-    alphanumeric = lambda key: [convert(c) for c in re.split("([0-9]+)", key)]
-    return sorted(molecules, key=alphanumeric)
+from methods import GHECOM, POVME, KVsuite, MoloVol, fpocket, pywindow, utils
 
 
 if __name__ == "__main__":
-    print("[==> Converting XYZ to PDB")
-    # Get XYZ files in hosts
+    print("[==> Estimating guests' vdW volume")
+    # Get guests' files
+    guests = [os.path.join("./guests", f) for f in os.listdir("./guests")]
+    guests = utils.sorting(guests)
+
+    # Estimate guests' volumes
+    volumes = utils.guests.volume(guests)
+
+    # Add void volume to ball-shaped cages, ie C60 (B7, B8, 13) and C70 (B14)
+    voids = [
+        "./guests/B7-C60.pdb",
+        "./guests/B8-C60.pdb",
+        "./guests/B13-C60.pdb",
+        "./guests/B14-C70.pdb",
+    ]
+    additions = utils.guests.void(voids, removal_distance=0.0, volume_cutoff=10.0)
+
+    for index in additions.index:
+        volumes.loc[index, :] = volumes.loc[index, :] + additions.loc[index, "void"]
+
+    # Save guests' volume
+    volumes.to_csv("results/guest-volume.csv")
+
+    print("[==> Converting hosts from XYZ to PDB")
+    # Get hosts' XYZ files
     xyzs = [
         os.path.join("./hosts", f)
         for f in sorted(os.listdir("./hosts"))
@@ -59,11 +40,11 @@ if __name__ == "__main__":
     ]
 
     # Convert hosts XYZ to PDB files
-    pdbs = xyz2pdb(xyzs)
-    pdbs = sorting(pdbs)
+    pdbs = utils.xyz2pdb(xyzs)
+    pdbs = utils.sorting(pdbs)
 
     print("[==> Benchmarking methods: ")
-    
+
     # KVFinder suite
     # parKVFinder documentation: https://github.com/LBC-LNBio/parKVFinder/wiki
     # pyKVFinder documentation: https://lbc-lnbio.github.io/pyKVFinder/
@@ -84,7 +65,6 @@ if __name__ == "__main__":
     #     num_spheres=[15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15],
     #     selection=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 37, 1, 1, 1, 1, 1, 7],
     # )
-    
 
     # GHECOM
     # Documentation: https://pdbj.org/ghecom/README_ghecom.html
@@ -107,7 +87,7 @@ if __name__ == "__main__":
     #         [13.179, 9.119, 7.562, 6.5],
     #         [1.589, 4.259, 4.046, 6.5],
     #         [22.614, 23.073, 15.430, 8],
-    #         [-9.087,12.579, -10.771, 6.5], 
+    #         [-9.087,12.579, -10.771, 6.5],
     #         [18.603, 4.743, 21.449, 6.5],
     #         [-20.465, -20.518, -20.505, 6.5],
     #         [2.482, 8.476, 20.911, 6.5],
@@ -132,7 +112,7 @@ if __name__ == "__main__":
     # Documentation: https://marcinmiklitz.github.io/pywindow/
     # WARNING: numpy<=1.23.5
     # NOTE: numpy>=1.24.0 returns:
-    # "ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part" 
+    # "ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part"
     # pywindow.run(pdbs)
 
     # MoloVol
