@@ -345,7 +345,7 @@ class Molecule(object):
         os.makedirs(os.path.abspath(os.path.dirname(fn)), exist_ok=True)
 
         # Save grid to PDB file
-        export(fn, (self.grid == 0).astype(numpy.int32), None, self.vertices, self.step)
+        export(fn, (self.grid == 0).astype(numpy.int32) * 2, None, self.vertices, self.step)
 
 
 class guests(object):
