@@ -108,6 +108,17 @@ class Molecule(object):
         else:
             self._radii = read_vdw(VDW)
 
+        # Using PyMOL v2.5.0 vdW radii
+        # REFERENCE: The PyMOL Molecular Graphics System, Version 2.0 Schrödinger, LLC. 
+        self._radii['GEN']['C'] = 1.7
+        self._radii['GEN']['O'] = 1.52
+        self._radii['GEN']['H'] = 1.2
+        self._radii['GEN']['N'] = 1.55
+        self._radii['GEN']['B'] = 1.85
+        self._radii['GEN']['F'] = 1.47
+        self._radii['GEN']['CL'] = 1.75
+        self._radii['GEN']['CO'] = 1.8
+
         # Step
         if type(step) not in [int, float]:
             raise TypeError("`step` must be a postive real number.")
