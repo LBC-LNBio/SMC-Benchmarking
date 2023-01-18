@@ -1,0 +1,53 @@
+Caver computation started.
+Settings loaded from:
+/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/F2/caver_output/1/inputs/config_2023-01-18-17-50.txt
+
+Basic parameters:
+starting_point_coordinates [37.139, 17.835, 18.2]
+probe_radius 0.9
+shell_radius 3.0
+shell_depth 4.0
+frame_weighting_coefficient 1.0
+frame_clustering_threshold 1.0
+
+*** Processing F2.pdb ***
+1160 redundant tunnels removed.
+119 tunnels stored.
+
+Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/F2/caver_output/1/data/tunnels/tunnels_F2.pdb.obj
+Loaded 119 tunnels for F2.pdb.
+119 tunnels successfully loaded.
+
+Computing average surface for 119 tunnels.
+Average surface represented by 106 points.
+Computing distance matrix using weighting_coefficient 1.0.
+Performing average link hierarchical of 119 tunnels clustering to create /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/F2/caver_output/1/data/tree_.txt.
+Total java memory: 5592 MB.
+Allocating 5392 MB of RAM...
+Maximum allowed cluster-cluster distance matrix size is 51926, in case of memory error in the next computation phase, try to set the parameter murtagh_matrix_size to a lower value in config.txt.
+119 tunnels clustered into 32 clusters using clustering_threshold 5.0.
+
+Leaving only the cheapest tunnel per cluster per snapshot - 32 tunnels kept.
+Statistical analysis of results started.
+Saving summary information.
+Saving profile heat maps.
+Saving tunnel characteristics.
+Saving tunnel-lining residues and atoms.
+Saving bottlenecks.
+Saving tunnel profiles.
+Statistical analysis finished.
+Visualizations started.
+Cluster subsampling for visualization: random.
+Visualizations finished.
+
+Finished successfully.
+
+-----------------------------------------------------------------------
+ Thank you for using CAVER, please cite:
+
+ Chovancova, E., Pavelka, A., Benes, P., Strnad, O., Brezovsky, J.,
+ Kozlikova, B., Gora, A., Sustr, V., Klvana, M., Medek, P.,
+ Biedermannova, L., Sochor, J. Damborsky, J. (2012) CAVER 3.0: A Tool
+ for the Analysis of Transport Pathways in Dynamic Protein Structures.
+ PLoS Comput Biol 8: e1002708. doi:10.1371/journal.pcbi.1002708
+-----------------------------------------------------------------------

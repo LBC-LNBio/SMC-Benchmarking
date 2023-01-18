@@ -1,0 +1,7 @@
+13 total tunnels
+-1 by assign
+13 by murtagh
+c 23 4.242054727793834
+2 
+c 20 1.4882893038391514
+18 

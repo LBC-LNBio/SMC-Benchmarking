@@ -1,0 +1,5 @@
+# Tunnel-lining atoms (atoms wihtin the 3.0 A distnace from individual tunnels)
+== Tunnel cluster 1 ==
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 20 71 98 99 108 
+== Tunnel cluster 2 ==
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 20 71 98 99 108 
