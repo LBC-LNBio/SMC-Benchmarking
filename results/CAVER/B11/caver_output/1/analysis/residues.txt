@@ -1,0 +1,12 @@
+# Tunnel-lining resiudes (residues wihtin the 3.0 A distnace from individual tunnels)
+# Column content
+# C:     chain
+# res:   residue index in PDB file
+# AA:    amino acid
+# N:     number of snapshots in which the residue lined the tunnel
+# sideN: same as N, but backbone atoms are not counted (those named H, N, C, O, CA or HA)
+# atoms: tunnel-lining atoms. Format is <number of snapshots>:<atom name>_<atom serial number>
+#
+== Tunnel cluster 1 ==
+# C    res  AA       N   sideN atoms
+         1 UNK       1       1 1:PD_1 1:N_2 1:C_3 1:H_4 1:N_5 1:N_11 1:C_12 1:C_13 1:C_14 1:C_15 1:C_16 1:C_18 1:H_19 1:C_20 1:H_21 1:C_22 1:C_23 1:H_24 1:C_25 1:H_26 1:C_27 1:C_29 1:C_31 1:C_32 1:C_34 1:PT_36 1:N_37 1:N_40 1:N_41 1:C_44 1:H_45 1:C_46 1:C_47 1:H_48 1:C_50 1:C_51 1:C_53 1:C_54 1:C_56 1:H_57 1:C_58 1:C_59 1:C_61 1:C_62 1:C_63 1:C_65 1:C_67 1:H_68 1:N_71 1:N_74 1:N_75 1:C_78 1:H_79 1:C_80 1:C_81 1:H_82 1:C_84 1:C_85 1:C_87 1:C_88 1:C_90 1:H_91 1:C_92 1:C_93 1:C_95 1:C_96 1:C_97 1:C_99 1:C_101 1:H_102 1:N_105 1:C_106 1:H_107 1:N_108 1:N_114 1:C_115 1:C_116 1:C_117 1:C_118 1:C_119 1:C_121 1:H_122 1:C_123 1:H_124 1:C_125 1:C_126 1:H_127 1:C_128 1:H_129 1:C_130 1:C_132 1:C_134 1:C_135 1:C_137 

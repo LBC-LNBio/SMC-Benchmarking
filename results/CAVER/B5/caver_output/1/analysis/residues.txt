@@ -1,0 +1,15 @@
+# Tunnel-lining resiudes (residues wihtin the 3.0 A distnace from individual tunnels)
+# Column content
+# C:     chain
+# res:   residue index in PDB file
+# AA:    amino acid
+# N:     number of snapshots in which the residue lined the tunnel
+# sideN: same as N, but backbone atoms are not counted (those named H, N, C, O, CA or HA)
+# atoms: tunnel-lining atoms. Format is <number of snapshots>:<atom name>_<atom serial number>
+#
+== Tunnel cluster 1 ==
+# C    res  AA       N   sideN atoms
+         1 UNK       1       1 1:C_1 1:H_2 1:C_3 1:N_4 1:C_5 1:O_6 1:C_7 1:PD_8 1:H_9 1:H_10 1:H_11 1:H_12 1:H_13 1:C_14 1:C_15 1:N_17 1:N_18 1:N_19 1:C_20 1:C_21 1:C_22 1:C_23 1:C_24 1:C_26 1:C_27 1:C_28 1:C_29 1:C_30 1:C_31 1:H_32 1:C_33 1:C_34 1:H_35 1:C_36 1:N_37 1:C_38 1:N_39 1:H_40 1:C_41 1:C_42 1:H_43 1:C_45 1:C_48 1:H_49 1:C_50 1:O_51 1:C_52 1:C_53 1:O_54 1:C_55 1:O_56 1:C_57 1:C_58 1:O_59 1:C_60 1:PD_61 1:C_62 1:O_63 1:C_64 1:H_65 1:C_66 1:H_67 1:C_72 1:C_73 1:N_74 1:C_76 1:C_78 1:C_79 1:N_80 1:C_82 1:H_83 1:C_85 1:C_86 1:H_87 1:C_88 1:C_89 1:C_90 1:O_91 1:C_92 1:C_93 1:C_94 1:C_95 1:C_96 1:C_97 1:O_98 1:C_99 1:C_102 1:C_103 1:H_104 1:C_105 1:C_106 1:H_107 1:C_109 1:C_110 1:H_111 1:H_112 1:C_113 1:C_114 1:H_115 1:H_116 1:H_117 1:H_118 1:C_119 1:C_120 1:H_121 1:H_122 1:H_123 1:H_124 1:H_125 1:H_127 1:H_128 1:H_129 
+== Tunnel cluster 2 ==
+# C    res  AA       N   sideN atoms
+         1 UNK       1       1 1:C_1 1:H_2 1:C_3 1:N_4 1:C_5 1:O_6 1:C_7 1:PD_8 1:H_9 1:H_10 1:H_11 1:H_12 1:H_13 1:C_14 1:C_15 1:N_17 1:N_18 1:N_19 1:C_20 1:C_21 1:C_22 1:C_23 1:C_24 1:C_26 1:C_27 1:C_28 1:C_29 1:C_30 1:C_31 1:H_32 1:C_33 1:C_34 1:H_35 1:C_36 1:N_37 1:C_38 1:N_39 1:H_40 1:C_41 1:C_42 1:H_43 1:C_45 1:C_50 1:O_51 1:C_52 1:C_53 1:O_54 1:C_55 1:O_56 1:C_57 1:C_58 1:O_59 1:C_60 1:PD_61 1:C_62 1:O_63 1:C_64 1:H_65 1:C_66 1:H_67 1:H_71 1:C_72 1:C_73 1:N_74 1:C_76 1:C_78 1:C_79 1:N_80 1:H_81 1:C_82 1:H_83 1:C_85 1:C_86 1:H_87 1:C_88 1:C_89 1:C_90 1:O_91 1:C_92 1:C_93 1:C_94 1:C_95 1:C_96 1:C_97 1:O_98 1:C_99 1:H_100 1:C_102 1:C_103 1:H_104 1:C_105 1:C_106 1:H_107 1:C_109 1:C_110 1:H_111 1:H_112 1:C_113 1:C_114 1:H_115 1:H_116 1:H_117 1:C_119 1:C_120 1:H_121 1:H_122 1:H_123 1:H_124 1:H_125 1:H_127 1:H_128 

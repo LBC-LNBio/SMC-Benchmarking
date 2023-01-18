@@ -1,0 +1,4 @@
+Jan 18, 2023 6:00:07 PM algorithms.search.DijkstraTunnelComputation computeTunnelsBlock
+WARNING: Outer shell probe reached starting point, setting its radius to 8.922
+Jan 18, 2023 6:00:07 PM caver.Printer warn
+WARNING: Surface space (shell_depth 4.0) reached starting point, applying starting_point_protection_radius 4.0.

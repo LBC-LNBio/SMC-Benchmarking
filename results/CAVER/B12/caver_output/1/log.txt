@@ -1,0 +1,46 @@
+Caver computation started.
+Settings loaded from:
+/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/inputs/config_2023-01-18-18-01.txt
+
+Basic parameters:
+starting_point_coordinates [-1.704, 17.118, 17.447]
+probe_radius 0.9
+shell_radius 3.0
+shell_depth 4.0
+frame_weighting_coefficient 1.0
+frame_clustering_threshold 1.0
+
+*** Processing B12.pdb ***
+4 redundant tunnels removed.
+1 tunnels stored.
+
+Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/data/tunnels/tunnels_B12.pdb.obj
+Loaded 1 tunnels for B12.pdb.
+1 tunnels successfully loaded.
+
+Computing average surface for 1 tunnels.
+Average surface represented by 1 points.
+Leaving only the cheapest tunnel per cluster per snapshot - 1 tunnels kept.
+Statistical analysis of results started.
+Saving summary information.
+Saving profile heat maps.
+Saving tunnel characteristics.
+Saving tunnel-lining residues and atoms.
+Saving bottlenecks.
+Saving tunnel profiles.
+Statistical analysis finished.
+Visualizations started.
+Cluster subsampling for visualization: random.
+Visualizations finished.
+
+Finished successfully.
+
+-----------------------------------------------------------------------
+ Thank you for using CAVER, please cite:
+
+ Chovancova, E., Pavelka, A., Benes, P., Strnad, O., Brezovsky, J.,
+ Kozlikova, B., Gora, A., Sustr, V., Klvana, M., Medek, P.,
+ Biedermannova, L., Sochor, J. Damborsky, J. (2012) CAVER 3.0: A Tool
+ for the Analysis of Transport Pathways in Dynamic Protein Structures.
+ PLoS Comput Biol 8: e1002708. doi:10.1371/journal.pcbi.1002708
+-----------------------------------------------------------------------
