@@ -3,14 +3,11 @@ import math
 import os
 import pathlib
 import re
-import sys
-from typing import Any, List, Optional, Union
+from typing import Any, List, Dict, Optional, Union
 
 import _pyKVFinder
 import numpy
 import pandas
-import toml
-from .KVsuite import _run_pyKVFinder, _split
 from openbabel import pybel
 from pyKVFinder import (
     read_pdb,
@@ -79,7 +76,7 @@ class Molecule(object):
     def __init__(
         self,
         molecule: Union[str, pathlib.Path],
-        radii: Union[str, pathlib.Path] = None,
+        radii: Union[str, pathlib.Path, Dict[str, Any]] = None,
         step: Union[str, pathlib.Path] = 0.6,
         model: Optional[int] = None,
         nthreads: Optional[int] = None,
@@ -103,21 +100,15 @@ class Molecule(object):
         # van der Waals radii
         if self.verbose:
             print("> Loading van der Waals radii")
-        if radii is not None:
-            self._radii = read_vdw(radii)
-        else:
+        if radii is None:
+            # default
             self._radii = read_vdw(VDW)
-
-        # Using PyMOL v2.5.0 vdW radii
-        # REFERENCE: The PyMOL Molecular Graphics System, Version 2.0 Schrödinger, LLC. 
-        self._radii['GEN']['C'] = 1.7
-        self._radii['GEN']['O'] = 1.52
-        self._radii['GEN']['H'] = 1.2
-        self._radii['GEN']['N'] = 1.55
-        self._radii['GEN']['B'] = 1.85
-        self._radii['GEN']['F'] = 1.47
-        self._radii['GEN']['CL'] = 1.75
-        self._radii['GEN']['CO'] = 1.8
+        elif type(radii) in [str, pathlib.Path]:
+            # vdw file
+            self._radii = read_vdw(radii)
+        elif type(radii) in [dict]:
+            # Processed dictionary
+            self._radii = radii
 
         # Step
         if type(step) not in [int, float]:
@@ -356,12 +347,16 @@ class Molecule(object):
         os.makedirs(os.path.abspath(os.path.dirname(fn)), exist_ok=True)
 
         # Save grid to PDB file
-        export(fn, (self.grid == 0).astype(numpy.int32) * 2, None, self.vertices, self.step)
+        export(
+            fn, (self.grid == 0).astype(numpy.int32) * 2, None, self.vertices, self.step
+        )
 
 
 class guests(object):
     @staticmethod
-    def volume(molecules: List[str], step: float = 0.1) -> pandas.DataFrame:
+    def volume(
+        molecules: List[str], step: float = 0.1, radii: Optional[List[Any]] = None
+    ) -> pandas.DataFrame:
         # Check arguments
         if type(molecules) not in [list]:
             raise TypeError("`molecules` must be a list of PDB files.")
@@ -371,17 +366,22 @@ class guests(object):
             raise ValueError("`pdbs` must contain valid PDB files.")
         if type(step) not in [float]:
             raise TypeError("`step` must be a positive float.")
+        if radii is not None:
+            if type(radii) not in [list]:
+                raise TypeError(
+                    "`radii` must be a list of vdW radii files or dictionaries."
+                )
 
         # Calculate volumes
         volumes = {}
-        for molecule in molecules:
+        for molecule, r in zip(molecules, radii):
             print(f"> Guest volume: {os.path.basename(molecule).rstrip('.pdb')}")
 
             # Create empty values
             volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"] = numpy.zeros(3)
 
             # Load molecule
-            mol = Molecule(molecule, step=step)
+            mol = Molecule(molecule, step=step, radii=r)
 
             # van der Waals volume
             mol.vdw(padding=3)
@@ -423,7 +423,11 @@ class guests(object):
 
     @staticmethod
     def void(
-        molecules: List[str], probe_out: float = 4.0, step: float = 0.1, **kwargs
+        molecules: List[str],
+        probe_out: float = 4.0,
+        step: float = 0.1,
+        radii: Optional[List[Any]] = None,
+        **kwargs,
     ) -> pandas.DataFrame:
         # Check arguments
         if type(molecules) not in [list]:
@@ -436,16 +440,19 @@ class guests(object):
             raise TypeError("`probe_out` must be a float.")
         if type(step) not in [float]:
             raise TypeError("`step` must be a positive float.")
+        if radii is not None:
+            if type(radii) not in [list]:
+                raise TypeError(
+                    "`radii` must be a list of vdW radii files or dictionaries."
+                )
 
         # Calculate volumes
         volumes = {}
-        for molecule in molecules:
+        for molecule, r in zip(molecules, radii):
             print(f"> Void Volume: {os.path.basename(molecule).rstrip('.pdb')}")
 
-            # Create empty values
-
             # Atomic information
-            atomic = read_pdb(molecule)
+            atomic = read_pdb(molecule, r)
 
             # Grid dimensions
             vertices = get_vertices(atomic, probe_out=probe_out)
@@ -476,7 +483,9 @@ class guests(object):
             )
 
             # Save volume
-            volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"] = max(volume.values())
+            volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"] = max(
+                volume.values()
+            )
 
         # Convert to pandas
         volumes = pandas.DataFrame(volumes, index=["void"]).T
