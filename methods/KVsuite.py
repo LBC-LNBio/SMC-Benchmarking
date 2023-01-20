@@ -275,25 +275,25 @@ def run(
         raise ValueError("`molecules` must contain only PDB files.")
     if any([not os.path.isfile(molecule) for molecule in molecules]):
         raise ValueError("`pdbs` must contain valid PDB files.")
-    if type(probe_out) not in [float, list]:
+    if type(probe_out) not in [float, int, list]:
         raise TypeError("`probe_out` must be a float or a list of them.")
     elif type(probe_out) is float:
         probe_out = [probe_out] * len(molecules)
     elif len(probe_out) != len(molecules):
         raise Exception("`probe_out` must have the same length as `molecules`.")
-    if type(step) not in [float, list]:
+    if type(step) not in [float, int, list]:
         raise TypeError("`step` must be a float or a list of them.")
     elif type(step) is float:
         step = [step] * len(molecules)
     elif len(step) != len(molecules):
         raise Exception("`step` must have the same length as `molecules`.")
-    if type(removal_distance) not in [float, list]:
+    if type(removal_distance) not in [float, int, list]:
         raise TypeError("`removal_distance` must be a float or a list of them.")
     elif type(removal_distance) is float:
         removal_distance = [removal_distance] * len(molecules)
     elif len(removal_distance) != len(molecules):
         raise Exception("`removal_distance` must have the same length as `molecules`.")
-    if type(volume_cutoff) not in [float, list]:
+    if type(volume_cutoff) not in [float, int, list]:
         raise TypeError("`volume_cutoff` must be a float or a list of them.")
     elif type(volume_cutoff) is float:
         volume_cutoff = [volume_cutoff] * len(molecules)

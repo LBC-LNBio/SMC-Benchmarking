@@ -63,19 +63,19 @@ def run(
         raise ValueError("`molecules` must contain only PDB or XYZ files.")
     if any([not os.path.isfile(molecule) for molecule in molecules]):
         raise ValueError("`molecules` must contain valid PDB or XYZ files.")
-    if type(grid_spacings) not in [float, list]:
+    if type(grid_spacings) not in [float, int, list]:
         raise TypeError("`grid_spacings` must be a float or a list of them.")
     elif type(grid_spacings) is float:
         grid_spacings = [grid_spacings] * len(molecules)
     elif len(grid_spacings) != len(molecules):
         raise Exception("`grid_spacings` must have the same length as `molecules`.")
-    if type(small_probes) not in [float, list]:
+    if type(small_probes) not in [float, int, list]:
         raise TypeError("`small_probes` must be a float or a list of them.")
     elif type(small_probes) is float:
         small_probes = [small_probes] * len(molecules)
     elif len(small_probes) != len(molecules):
         raise Exception("`small_probes` must have the same length as `molecules`.")
-    if type(large_probes) not in [float, list]:
+    if type(large_probes) not in [float, int, list]:
         raise TypeError("`large_probes` must be a float or a list of them.")
     elif type(large_probes) is float:
         large_probes = [large_probes] * len(molecules)

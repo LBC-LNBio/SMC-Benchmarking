@@ -18,12 +18,12 @@ Copyright © 2020-2021 Jasmin B. Maglic, Roy Lavendomme
 MoloVol program: calculation results report
 version: 1.0.0
 
-Time of the calculation: 2023-01-13_20h10m55s
-Duration of the calculation: 0.86629 s
+Time of the calculation: 2023-01-20_16h12m49s
+Duration of the calculation: 0.799887 s
 
 Structure file analyzed: ./hosts/B2.pdb
-Chemical formula: C172H96Ga4N13O37
-Molar mass: 3215.61 g/mol
+Chemical formula: C144H85Ga4N12O36
+Molar mass: 2838.2 g/mol
 
 
 	////////////////////////////
@@ -49,31 +49,31 @@ N : 1.66 A
 	// Total Volumes calculated //
 	//////////////////////////////
 
-Van der Waals volume:                2290.032000 A^3
-                                        0.428874 cm^3/g
+Van der Waals volume:                2152.224000 A^3
+                                        0.456662 cm^3/g
 
-Probe excluded void volume:           714.960000 A^3
-                                        0.133897 cm^3/g
+Probe excluded void volume:           679.536000 A^3
+                                        0.144185 cm^3/g
 
-Molecular volume:                    3004.992000 A^3
-(vdw + probe excluded void)             0.562771 cm^3/g
+Molecular volume:                    2831.760000 A^3
+(vdw + probe excluded void)             0.600847 cm^3/g
 
-Molecular volume:                    3273.048000 A^3
-with isolated cavities                  0.612972 cm^3/g
+Molecular volume:                    2869.344000 A^3
+with isolated cavities                  0.608821 cm^3/g
 
-Small probe core volume:               68.688000 A^3
-                                        0.012864 cm^3/g
+Small probe core volume:               77.112000 A^3
+                                        0.016362 cm^3/g
 
-Small probe shell volume:             446.040000 A^3
-                                        0.083534 cm^3/g
+Small probe shell volume:             471.312000 A^3
+                                        0.100004 cm^3/g
 
-Small probe occupied volume:          514.728000 A^3
-(core + shell)                          0.096398 cm^3/g
+Small probe occupied volume:          548.424000 A^3
+(core + shell)                          0.116365 cm^3/g
 
 Large probe core volume: No physical meaning, contains all volume outside the structure.
 
-Large probe shell volume:           22822.344000 A^3
-                                        4.274136 cm^3/g
+Large probe shell volume:           22652.352000 A^3
+                                        4.806408 cm^3/g
 
 
 	///////////////////
@@ -91,15 +91,17 @@ Note 6:	For a detailed shape of each cavity, check the surface maps.
 
 Cavity ID Occupied      Accessible    Cavity Type   Cavity center coordinates (A)
           Volume (A^3)  Volume (A^3)                x       y       z
-1         240.84        46.656        Isolated      -4      17.1    7.2
-2         65.016        7.128         Pocket        -8      18.9    14.1
-3         61.56         4.968         Pocket        -1e+01  15.9    7.5
-4         56.376        5.184         Pocket        -5      19.8    0.6
-5         48.168        3.456         Pocket        -0.9    15.6    13.8
-6         15.552        0.648         Pocket        0       20.7    12.6
-7         10.368        0.216         Isolated      0.3     15.3    1.8
-8         9.072         0.216         Isolated      -1e+01  18      2.1
-9         7.776         0.216         Isolated      2.1     21.6    10.2
+1         288.576       56.808        Pocket        -4      16.2    7.2
+2         67.824        7.128         Pocket        -4      19.2    0.6
+3         61.776        5.616         Pocket        -1e+01  15.9    8.1
+4         51.192        3.672         Pocket        -0.3    17.7    13.2
+5         28.08         2.16          Pocket        -9      19.2    13.8
+6         13.392        0.648         Pocket        1.8     21.3    10.2
+7         9.936         0.216         Isolated      -1e+01  18      2.1
+8         7.776         0.216         Isolated      -1e+01  18.9    12.3
+9         7.56          0.216         Isolated      -3      23.7    2.1
+10        6.696         0.216         Isolated      -0.3    14.7    2.1
+11        5.616         0.216         Isolated      -0.3    16.5    1.2
 
 
 	/////////////////////////////

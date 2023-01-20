@@ -1,33 +1,33 @@
 Caver computation started.
 Settings loaded from:
-/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B2/caver_output/1/inputs/config_2023-01-18-17-44.txt
+/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B2/caver_output/1/inputs/config_2023-01-20-16-33.txt
 
 Basic parameters:
-starting_point_coordinates [-4.664, 18.188, 7.576]
-probe_radius 0.9
+starting_point_coordinates [-4.84, 17.75, 7.458]
+probe_radius 0.7
 shell_radius 3.0
 shell_depth 4.0
 frame_weighting_coefficient 1.0
 frame_clustering_threshold 1.0
 
 *** Processing B2.pdb ***
-16 redundant tunnels removed.
-13 tunnels stored.
+15 redundant tunnels removed.
+6 tunnels stored.
 
 Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B2/caver_output/1/data/tunnels/tunnels_B2.pdb.obj
-Loaded 13 tunnels for B2.pdb.
-13 tunnels successfully loaded.
+Loaded 6 tunnels for B2.pdb.
+6 tunnels successfully loaded.
 
-Computing average surface for 13 tunnels.
-Average surface represented by 12 points.
+Computing average surface for 6 tunnels.
+Average surface represented by 4 points.
 Computing distance matrix using weighting_coefficient 1.0.
-Performing average link hierarchical of 13 tunnels clustering to create /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B2/caver_output/1/data/tree_.txt.
+Performing average link hierarchical of 6 tunnels clustering to create /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B2/caver_output/1/data/tree_.txt.
 Total java memory: 5592 MB.
 Allocating 5392 MB of RAM...
 Maximum allowed cluster-cluster distance matrix size is 51926, in case of memory error in the next computation phase, try to set the parameter murtagh_matrix_size to a lower value in config.txt.
-13 tunnels clustered into 2 clusters using clustering_threshold 3.5.
+6 tunnels clustered into 4 clusters using clustering_threshold 3.5.
 
-Leaving only the cheapest tunnel per cluster per snapshot - 2 tunnels kept.
+Leaving only the cheapest tunnel per cluster per snapshot - 4 tunnels kept.
 Statistical analysis of results started.
 Saving summary information.
 Saving profile heat maps.
@@ -39,7 +39,8 @@ Statistical analysis finished.
 Visualizations started.
 Cluster subsampling for visualization: random.
 Visualizations finished.
-Calculation finished with warnings, summary is in /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B2/caver_output/1/warnings.txt (size 322).
+
+Finished successfully.
 
 -----------------------------------------------------------------------
  Thank you for using CAVER, please cite:

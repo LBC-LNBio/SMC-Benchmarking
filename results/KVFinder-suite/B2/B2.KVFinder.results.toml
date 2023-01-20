@@ -8,13 +8,13 @@ OUTPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVF
 STEP = 0.25
 
 [RESULTS.VOLUME]
-KAA = 261.19
+KAA = 286.84
 
 [RESULTS.AREA]
-KAA = 235.25
+KAA = 245.62
 
 [RESULTS.MAX_DEPTH]
-KAA = 0.0
+KAA = 11.0
 
 [RESULTS.AVG_DEPTH]
-KAA = 0.0
+KAA = 5.47

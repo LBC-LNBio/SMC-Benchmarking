@@ -30,12 +30,12 @@ Saving the point field as a PDB and NPY file
 	Point field saved to /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B2/B2_frameInfo/B2_inclusion.npy to optionally load for the volume calculation
 
 Calculating the pocket volume of each frame
-	Frame 1:  Volume 92.0 A^3  Surf. A. 117.0 A^2
+	Frame 1:  Volume 108.0 A^3  Surf. A. 123.0 A^2
 
 FRAME        | VOLUME (A^3) | SURF. A. (A^2)
 -------------+--------------+----------------
-1            |   92.0       |   117.0
+1            |   108.0      |   123.0
 
-Execution time = 2.07184886932 sec
+Execution time = 2.07098197937 sec
 
 WARNING! Cannot save color file for aromatic because no color present in any frame.

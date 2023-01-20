@@ -1,10 +1,8 @@
 REMARK Frame 1
-REMARK Feature Volume = 5 Cubic Angstroms
-ATOM      1    X AAA X   1      -7.000  15.000   4.000                       X
-ATOM      2    X AAB X   2      -2.000  13.000   7.000                       X
-ATOM      3    X AAC X   3      -2.000  13.000   8.000                       X
-ATOM      4    X AAD X   4      -1.000  17.000   5.000                       X
-ATOM      5    X AAE X   5      -1.000  17.000   6.000                       X
+REMARK Feature Volume = 3 Cubic Angstroms
+ATOM      1    X AAA X   1      -1.000  16.000   5.000                       X
+ATOM      2    X AAB X   2      -1.000  17.000   5.000                       X
+ATOM      3    X AAC X   3      -1.000  17.000   6.000                       X
 ATOM      1    X XXX X   1     -99.000 -99.000 -99.000                       X
 ATOM      2    X XXX X   2     -99.000 -99.000 -99.000                       X
 ATOM      3    X XXX X   3     -99.000 -99.000 -99.000                       X
@@ -2755,4 +2753,6 @@ ATOM   2747    X XXX X2747     -99.000 -99.000 -99.000                       X
 ATOM   2748    X XXX X2748     -99.000 -99.000 -99.000                       X
 ATOM   2749    X XXX X2749     -99.000 -99.000 -99.000                       X
 ATOM   2750    X XXX X2750     -99.000 -99.000 -99.000                       X
+ATOM   2751    X XXX X2751     -99.000 -99.000 -99.000                       X
+ATOM   2752    X XXX X2752     -99.000 -99.000 -99.000                       X
 END

@@ -99,13 +99,13 @@ def run(
         raise ValueError("`molecules` must contain only PDB files.")
     if any([not os.path.isfile(molecule) for molecule in molecules]):
         raise ValueError("`molecules` must contain valid PDB files.")
-    if type(min_radius) not in [float, list]:
+    if type(min_radius) not in [float, int, list]:
         raise TypeError("`min_radius` must be a float or a list of them.")
     elif type(min_radius) is float:
         min_radius = [min_radius] * len(molecules)
     elif len(min_radius) != len(molecules):
         raise Exception("`min_radius` must have the same length as `molecules`.")
-    if type(max_radius) not in [float, list]:
+    if type(max_radius) not in [float, int, list]:
         raise TypeError("`max_radius` must be a float or a list of them.")
     elif type(max_radius) is float:
         max_radius = [max_radius] * len(molecules)

@@ -85,13 +85,13 @@ def run(
         raise ValueError("`molecules` must contain only PDB files.")
     if any([not os.path.isfile(molecule) for molecule in molecules]):
         raise ValueError("`molecules` must contain valid PDB files.")
-    if type(gws) not in [float, list]:
+    if type(gws) not in [float, int, list]:
         raise TypeError("`gws` must be a float or a list of them.")
     elif type(gws) is float:
         gws = [gws] * len(molecules)
     elif len(gws) != len(molecules):
         raise Exception("`gws` must have the same length as `molecules`.")
-    if type(rlxs) not in [float, list]:
+    if type(rlxs) not in [float, int, list]:
         raise TypeError("`rlxs` must be a float or a list of them.")
     elif type(rlxs) is float:
         rlxs = [rlxs] * len(molecules)

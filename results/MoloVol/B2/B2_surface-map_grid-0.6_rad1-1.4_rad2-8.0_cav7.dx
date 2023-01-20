@@ -2,13 +2,13 @@
 # Contains 3D surface map data to read in PyMOL, Chimera or ChimeraX
 # Data is written in C array order: In grid[x,y,z] the axis z is fastest
 # varying, then y, then finally x.
-object 1 class gridpositions counts 7 7 6
-origin  -1.5 13.5 0.3
+object 1 class gridpositions counts 6 6 7
+origin  -12.9 16.5 0.3
 delta 0.6 0 0
 delta 0 0.6 0
 delta 0 0 0.6
-object 2 class gridconnections counts 7 7 6
-object 3 class array type double rank 0 items 294 data follows
+object 2 class gridconnections counts 6 6 7
+object 3 class array type double rank 0 items 252 data follows
 0 0 0
 0 0 0
 0 0 0
@@ -26,13 +26,12 @@ object 3 class array type double rank 0 items 294 data follows
 0 0 0
 0 0 0
 0 0 0
+4 4 4
+0 0 0
+0 4 4
+4 4 0
 0 0 0
 0 0 4
-4 0 0
-0 0 4
-4 0 0
-0 4 4
-4 0 0
 0 0 0
 0 0 0
 0 0 0
@@ -40,14 +39,29 @@ object 3 class array type double rank 0 items 294 data follows
 0 0 0
 0 0 0
 0 0 0
-4 0 0
 0 0 0
+4 4 4
+0 0 0
+4 4 4
 4 4 0
 0 0 4
+6 4 4
+0 0 0
+0 0 0
+4 0 0
+0 0 0
+0 0 0
+0 0 0
+0 0 0
+0 0 0
+0 4 4
+0 0 0
+4 4 4
 4 4 0
 0 4 4
-4 4 0
-0 4 4
+4 4 4
+0 0 0
+4 4 4
 4 0 0
 0 0 0
 0 0 0
@@ -56,40 +70,12 @@ object 3 class array type double rank 0 items 294 data follows
 0 0 0
 0 0 0
 0 0 0
-4 4 0
-0 0 6
-4 4 0
-0 4 4
-4 4 0
 0 4 4
 4 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-4 4 0
 0 0 4
 4 4 0
-0 4 4
-4 4 0
-0 4 4
-4 0 0
 0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-0 0 0
-4 0 0
-0 4 4
-4 0 0
-0 0 0
+4 4 4
 0 0 0
 0 0 0
 0 0 0

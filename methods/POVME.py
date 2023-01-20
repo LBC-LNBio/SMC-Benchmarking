@@ -116,17 +116,17 @@ def run(
         raise TypeError("`inclusion_region` must be a list of coordinates.")
     elif len(inclusion_regions) != len(molecules):
         raise Exception("`inclusion_regions` must have the same length as `molecules`.")
-    if type(grid_spacings) not in [float, list]:
+    if type(grid_spacings) not in [float, int, list]:
         raise TypeError("`grid_spacings` must be a float or a list of them.")
     elif type(grid_spacings) is float:
         grid_spacings = [grid_spacings] * len(molecules)
     elif len(grid_spacings) != len(molecules):
         raise Exception("`grid_spacings` must have the same length as `molecules`.")
-    if type(contiguous_points_criterias) not in [int, list]:
+    if type(contiguous_points_criterias) not in [float, int, list]:
         raise TypeError(
             "`contiguous_points_criterias` must be an integer or a list of them."
         )
-    elif type(contiguous_points_criterias) is int:
+    elif type(contiguous_points_criterias) is (int or float):
         contiguous_points_criterias = [contiguous_points_criterias] * len(molecules)
     elif len(contiguous_points_criterias) != len(contiguous_points_criterias):
         raise Exception(

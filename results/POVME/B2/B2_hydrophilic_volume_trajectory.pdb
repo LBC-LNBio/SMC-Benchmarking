@@ -1,28 +1,32 @@
 REMARK Frame 1
-REMARK Feature Volume = 23 Cubic Angstroms
-ATOM      1    X AAA X   1      -7.000  14.000   4.000                       X
-ATOM      2    X AAB X   2      -7.000  14.000   5.000                       X
-ATOM      3    X AAC X   3      -7.000  14.000   6.000                       X
-ATOM      4    X AAD X   4      -7.000  15.000  10.000                       X
-ATOM      5    X AAE X   5      -7.000  16.000  10.000                       X
-ATOM      6    X AAF X   6      -7.000  17.000   3.000                       X
-ATOM      7    X AAG X   7      -7.000  20.000  10.000                       X
-ATOM      8    X AAH X   8      -7.000  21.000   9.000                       X
-ATOM      9    X AAI X   9      -7.000  21.000  10.000                       X
-ATOM     10    X AAJ X  10      -6.000  13.000   5.000                       X
-ATOM     11    X AAK X  11      -6.000  16.000   3.000                       X
-ATOM     12    X AAL X  12      -6.000  17.000   3.000                       X
-ATOM     13    X AAM X  13      -4.000  13.000  10.000                       X
-ATOM     14    X AAN X  14      -4.000  14.000  10.000                       X
-ATOM     15    X AAO X  15      -3.000  13.000   9.000                       X
-ATOM     16    X AAP X  16      -2.000  13.000   6.000                       X
-ATOM     17    X AAQ X  17      -2.000  14.000   6.000                       X
-ATOM     18    X AAR X  18      -2.000  15.000   5.000                       X
-ATOM     19    X AAS X  19      -2.000  20.000   5.000                       X
-ATOM     20    X AAT X  20      -2.000  21.000   2.000                       X
-ATOM     21    X AAU X  21      -1.000  14.000   6.000                       X
-ATOM     22    X AAV X  22      -1.000  15.000   6.000                       X
-ATOM     23    X AAW X  23      -1.000  17.000   9.000                       X
+REMARK Feature Volume = 27 Cubic Angstroms
+ATOM      1    X AAA X   1      -7.000  14.000   5.000                       X
+ATOM      2    X AAB X   2      -7.000  14.000   6.000                       X
+ATOM      3    X AAC X   3      -7.000  15.000  10.000                       X
+ATOM      4    X AAD X   4      -7.000  16.000  10.000                       X
+ATOM      5    X AAE X   5      -7.000  20.000  10.000                       X
+ATOM      6    X AAF X   6      -7.000  21.000   9.000                       X
+ATOM      7    X AAG X   7      -6.000  12.000   6.000                       X
+ATOM      8    X AAH X   8      -6.000  13.000   5.000                       X
+ATOM      9    X AAI X   9      -6.000  13.000   6.000                       X
+ATOM     10    X AAJ X  10      -6.000  21.000   5.000                       X
+ATOM     11    X AAK X  11      -5.000  12.000   5.000                       X
+ATOM     12    X AAL X  12      -4.000  12.000   9.000                       X
+ATOM     13    X AAM X  13      -4.000  12.000  10.000                       X
+ATOM     14    X AAN X  14      -4.000  13.000  10.000                       X
+ATOM     15    X AAO X  15      -4.000  14.000  10.000                       X
+ATOM     16    X AAP X  16      -3.000  12.000   5.000                       X
+ATOM     17    X AAQ X  17      -3.000  12.000   9.000                       X
+ATOM     18    X AAR X  18      -3.000  13.000   9.000                       X
+ATOM     19    X AAS X  19      -3.000  14.000   5.000                       X
+ATOM     20    X AAT X  20      -2.000  12.000   6.000                       X
+ATOM     21    X AAU X  21      -2.000  13.000   6.000                       X
+ATOM     22    X AAV X  22      -2.000  14.000   6.000                       X
+ATOM     23    X AAW X  23      -2.000  15.000   5.000                       X
+ATOM     24    X AAX X  24      -2.000  20.000   5.000                       X
+ATOM     25    X AAY X  25      -1.000  14.000   6.000                       X
+ATOM     26    X AAZ X  26      -1.000  15.000   6.000                       X
+ATOM     27    X ABA X  27      -1.000  17.000   9.000                       X
 ATOM      1    X XXX X   1     -99.000 -99.000 -99.000                       X
 ATOM      2    X XXX X   2     -99.000 -99.000 -99.000                       X
 ATOM      3    X XXX X   3     -99.000 -99.000 -99.000                       X
@@ -2751,8 +2755,4 @@ ATOM   2725    X XXX X2725     -99.000 -99.000 -99.000                       X
 ATOM   2726    X XXX X2726     -99.000 -99.000 -99.000                       X
 ATOM   2727    X XXX X2727     -99.000 -99.000 -99.000                       X
 ATOM   2728    X XXX X2728     -99.000 -99.000 -99.000                       X
-ATOM   2729    X XXX X2729     -99.000 -99.000 -99.000                       X
-ATOM   2730    X XXX X2730     -99.000 -99.000 -99.000                       X
-ATOM   2731    X XXX X2731     -99.000 -99.000 -99.000                       X
-ATOM   2732    X XXX X2732     -99.000 -99.000 -99.000                       X
 END
