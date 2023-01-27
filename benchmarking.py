@@ -8,14 +8,19 @@ from methods import GHECOM, POVME, KVsuite, MoloVol, fpocket, pywindow, utils
 
 
 if __name__ == "__main__":
-    # print("[==> Estimating guests' vdW volume")
-    # # Get guests' files
-    # guests = [os.path.join("./guests", f) for f in os.listdir("./guests")]
-    # guests = utils.sorting(guests)
+    print("[==> Estimating guests' vdW volume")
+    # Get guests' files
+    guests = [os.path.join("./guests", f) for f in os.listdir("./guests")]
+    guests = utils.sorting(guests)
 
-    # # vdW radii dictionary (ChimeraX)
-    # # REFERENCE: UCSF ChimeraX: Structure visualization for researchers, educators, and developers. Pettersen EF, Goddard TD, Huang CC, Meng EC, Couch GS, Croll TI, Morris JH, Ferrin TE. Protein Sci. 2021 Jan;30(1):70-82.
-    # # NOTE: https://www.cgl.ucsf.edu/chimerax/docs/user/radii.html
+    # vdW radii dictionary (PyMOL v2.5.0)
+    # REFERENCE: The PyMOL Molecular Graphics System, Version 2.0 Schrödinger, LLC.
+    # NOTE: https://pymolwiki.org/index.php/Category:Uncategorized
+    radii = [{'GEN': {"C": 1.7, "H": 1.2, "N": 1.55, "O": 1.52, "B":1.85, "F":1.47, "CL": 1.75, "CO":1.8}}] * 13
+
+    # vdW radii dictionary (ChimeraX)
+    # REFERENCE: UCSF ChimeraX: Structure visualization for researchers, educators, and developers. Pettersen EF, Goddard TD, Huang CC, Meng EC, Couch GS, Croll TI, Morris JH, Ferrin TE. Protein Sci. 2021 Jan;30(1):70-82.
+    # NOTE: https://www.cgl.ucsf.edu/chimerax/docs/user/radii.html
     # radii = [
     #     {"GEN": {"C": 1.7, "H": 1, "N": 1.625}},  # Et4N
     #     {"GEN": {"C": 1.7, "H": 1, "N": 1.625}},  # BnNMe3
@@ -27,35 +32,32 @@ if __name__ == "__main__":
     #     {"GEN": {"C": 1.61}},  # C60
     #     {"GEN": {"C": 1.7, "H": 1, "O": 1.48}},  # Ad
     #     {"GEN": {"C": 1.7, "H": 1, "N": 1.625}},  # Et4N
-    #     {"GEN": {"C": 1.7, "H": 1, "N": 1.625, 'O': 1.46}},  # AQ
     #     {"GEN": {"C": 1.7, "H": 1, "N": 1.625}},  # 2 guests
     #     {"GEN": {"C": 1.61}},  # C60
     #     {"GEN": {"C": 1.61}},  # C70
     # ]
+    
+    # pyKVFinder radii dictionary (Amber99)
+    # radii = [KVsuite.pyKVFinder.read_vdw()] * 13
 
-    # # vdW radii dictionary (PyMOL v2.5.0)
-    # # REFERENCE: The PyMOL Molecular Graphics System, Version 2.0 Schrödinger, LLC.
-    # # NOTE: https://pymolwiki.org/index.php/Category:Uncategorized
-    # # radii = [{"C": 1.7, "H": 1.2, "N": 1.55, "O": 1.52, "B":1.85, "F":1.47, "CL": 1.75, "CO":1.8}] * 14
+    # Estimate guests' volumes
+    volumes = utils.guests.volume(guests, step=0.1, radii=radii)
 
-    # # Estimate guests' volumes
-    # volumes = utils.guests.volume(guests, step=0.1, radii=radii)
+    # Add void volume to ball-shaped cages, ie C60 (B7, B8, 13) and C70 (B14)
+    voids = [
+        "./guests/B7-C60.pdb",
+        "./guests/B8-C60.pdb",
+        "./guests/B13-C60.pdb",
+        "./guests/B14-C70.pdb",
+    ]
+    radii = [radii[index] for index in [6, 7, 11, 12]]
+    additions = utils.guests.void(voids, removal_distance=0.0, volume_cutoff=10.0, radii=radii)
 
-    # # Add void volume to ball-shaped cages, ie C60 (B7, B8, 13) and C70 (B14)
-    # voids = [
-    #     "./guests/B7-C60.pdb",
-    #     "./guests/B8-C60.pdb",
-    #     "./guests/B13-C60.pdb",
-    #     "./guests/B14-C70.pdb",
-    # ]
-    # radii = [radii[index] for index in [6, 7, 12, 13]]
-    # additions = utils.guests.void(voids, removal_distance=0.0, volume_cutoff=10.0, radii=radii)
+    for index in additions.index:
+        volumes.loc[index, :] = volumes.loc[index, :] + additions.loc[index, "void"]
 
-    # for index in additions.index:
-    #     volumes.loc[index, :] = volumes.loc[index, :] + additions.loc[index, "void"]
-
-    # # Save guests' volume
-    # volumes.to_csv("results/guest-volume.csv")
+    # Save guests' volume
+    volumes.to_csv("results/guest-volume.csv")
 
     print("[==> Converting hosts from XYZ to PDB")
     # Get hosts' XYZ files

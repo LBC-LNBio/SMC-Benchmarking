@@ -324,19 +324,6 @@ class Molecule(object):
             self.verbose,
         ).reshape(self.nx, self.ny, self.nz)
 
-    def preview(self, **kwargs):
-        if self.grid is not None:
-            from plotly.express import scatter_3d
-
-            x, y, z = numpy.nonzero(self.grid == 0)
-            fig = scatter_3d(x=x, y=y, z=z, **kwargs)
-            fig.update_layout(
-                scene_xaxis_showticklabels=False,
-                scene_yaxis_showticklabels=False,
-                scene_zaxis_showticklabels=False,
-            )
-            fig.show()
-
     def save(
         self,
         fn: Union[str, pathlib.Path] = "molecule.pdb",
@@ -378,42 +365,42 @@ class guests(object):
             print(f"> Guest volume: {os.path.basename(molecule).rstrip('.pdb')}")
 
             # Create empty values
-            volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"] = numpy.zeros(3)
+            volumes[f"{os.path.basename(molecule).replace('.pdb', '')}"] = numpy.zeros(3)
 
             # Load molecule
             mol = Molecule(molecule, step=step, radii=r)
 
             # van der Waals volume
             mol.vdw(padding=3)
-            volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"][
+            volumes[f"{os.path.basename(molecule).replace('.pdb', '')}"][
                 0
             ] = _pyKVFinder._volume(
                 (mol.grid == 0).astype(numpy.int32) * 2, step, 1, 16
             )
             mol.save(
-                f"results/guests/{os.path.basename(molecule).rstrip('.pdb').split('-')[0]}/{os.path.basename(molecule).rstrip('.pdb')}.vdw.pdb"
+                f"results/guests/{os.path.basename(molecule).replace('.pdb', '').split('-')[0]}/{os.path.basename(molecule).replace('.pdb', '')}.vdw.pdb"
             )
 
             # Surface Excluded Surface (SES) volume
             mol.surface(probe=1.4, surface="SES", padding=3)
-            volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"][
+            volumes[f"{os.path.basename(molecule).replace('.pdb', '')}"][
                 1
             ] = _pyKVFinder._volume(
                 (mol.grid == 0).astype(numpy.int32) * 2, step, 1, 16
             )
             mol.save(
-                f"results/guests/{os.path.basename(molecule).rstrip('.pdb').split('-')[0]}/{os.path.basename(molecule).rstrip('.pdb')}.ses.pdb"
+                f"results/guests/{os.path.basename(molecule).replace('.pdb', '').split('-')[0]}/{os.path.basename(molecule).replace('.pdb', '')}.ses.pdb"
             )
 
             # Solvent Accessible Surface (SAS) volume
             mol.surface(probe=1.4, surface="SAS", padding=3)
-            volumes[f"{os.path.basename(molecule).rstrip('.pdb')}"][
+            volumes[f"{os.path.basename(molecule).replace('.pdb', '')}"][
                 2
             ] = _pyKVFinder._volume(
                 (mol.grid == 0).astype(numpy.int32) * 2, step, 1, 16
             )
             mol.save(
-                f"results/guests/{os.path.basename(molecule).rstrip('.pdb').split('-')[0]}/{os.path.basename(molecule).rstrip('.pdb')}.sas.pdb"
+                f"results/guests/{os.path.basename(molecule).replace('.pdb', '').split('-')[0]}/{os.path.basename(molecule).replace('.pdb', '')}.sas.pdb"
             )
 
         # Convert to pandas
