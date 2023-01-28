@@ -3,7 +3,7 @@ from pymol import cmd
 def parrent(dir):
   return os.path.abspath(os.path.join(dir, os.path.pardir))
 
-scripts = '/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/pymol' + '/'
+scripts = '/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/pymol' + '/'
 home = parrent(scripts) + '/'
 
 def exists(name):
@@ -19,7 +19,7 @@ def load_safely(file, name):
 
 view = cmd.get_view()
 
-id = 'B12'
+id = 'B11'
 cmd.delete(id + '_*_*')
 cmd.delete(id + '_origins')
 cmd.delete(id + '_v_origins')

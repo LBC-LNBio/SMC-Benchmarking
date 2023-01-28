@@ -1,6 +1,6 @@
 Caver computation started.
 Settings loaded from:
-/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/inputs/config_2023-01-18-18-01.txt
+/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/inputs/config_2023-01-18-18-01.txt
 
 Basic parameters:
 starting_point_coordinates [-1.704, 17.118, 17.447]
@@ -10,12 +10,12 @@ shell_depth 4.0
 frame_weighting_coefficient 1.0
 frame_clustering_threshold 1.0
 
-*** Processing B12.pdb ***
+*** Processing B11.pdb ***
 4 redundant tunnels removed.
 1 tunnels stored.
 
-Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/data/tunnels/tunnels_B12.pdb.obj
-Loaded 1 tunnels for B12.pdb.
+Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/data/tunnels/tunnels_B11.pdb.obj
+Loaded 1 tunnels for B11.pdb.
 1 tunnels successfully loaded.
 
 Computing average surface for 1 tunnels.

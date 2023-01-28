@@ -1,6 +1,6 @@
 Caver computation started.
 Settings loaded from:
-/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B14/caver_output/1/inputs/config_2023-01-18-18-02.txt
+/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B13/caver_output/1/inputs/config_2023-01-18-18-02.txt
 
 Basic parameters:
 starting_point_coordinates [15.108, 16.108, 14.168]
@@ -10,18 +10,18 @@ shell_depth 4.0
 frame_weighting_coefficient 1.0
 frame_clustering_threshold 1.0
 
-*** Processing B14.pdb ***
+*** Processing B13.pdb ***
 52 redundant tunnels removed.
 24 tunnels stored.
 
-Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B14/caver_output/1/data/tunnels/tunnels_B14.pdb.obj
-Loaded 24 tunnels for B14.pdb.
+Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B13/caver_output/1/data/tunnels/tunnels_B13.pdb.obj
+Loaded 24 tunnels for B13.pdb.
 24 tunnels successfully loaded.
 
 Computing average surface for 24 tunnels.
 Average surface represented by 22 points.
 Computing distance matrix using weighting_coefficient 1.0.
-Performing average link hierarchical of 24 tunnels clustering to create /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B14/caver_output/1/data/tree_.txt.
+Performing average link hierarchical of 24 tunnels clustering to create /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B13/caver_output/1/data/tree_.txt.
 Total java memory: 5592 MB.
 Allocating 5392 MB of RAM...
 Maximum allowed cluster-cluster distance matrix size is 51926, in case of memory error in the next computation phase, try to set the parameter murtagh_matrix_size to a lower value in config.txt.
