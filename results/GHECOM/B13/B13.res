@@ -1,10 +1,10 @@
 #TITLE   Pocket invRinacc value for residues
 #OUTPUTFILENAME    ./results/GHECOM/B13/B13.res
-#DATE    Jan 13,2023 18:39:26
+#DATE    Jan 28,2023 11:51:49
 #COMMAND ghecom -M M -ipdb ./hosts/B13.pdb -opocpdb ./results/GHECOM/B13/B13.pocket.pdb -opdb ./results/GHECOM/B13/B13.pocketness.pdb -ores ./results/GHECOM/B13/B13.res -atmhet B -gw 0.8 -rlx 10
 #COMMENT INPUT_RECEPTOR_PDB_FILE:./hosts/B13.pdb
 #COMMENT NATOM_OF_RECEPTOR:264
-#COMMENT grid_width  0.800 A VdW volume: 6094 grids, 3120.13 AAA
+#COMMENT grid_width  0.800 A VdW volume: 6101 grids, 3123.71 AAA
 #COMMENT MIN_RLARGE:2.000000
 #COMMENT MAX_RLARGE:10.000000
 #COMMENT BIN_RLARGE:0.500000
@@ -41,4 +41,4 @@
 #COLUMN 11|pocketness_clus 3 |sum of 1/[Rpocket_for_pocketcluster 3] /(1/[Rmin]*[vol of shell]) (%)
 #COLUMN 12|pocketness_clus 4 |sum of 1/[Rpocket_for_pocketcluster 4] /(1/[Rmin]*[vol of shell]) (%)
 #COLUMN 13|pocketness_clus 5 |sum of 1/[Rpocket_for_pocketcluster 5] /(1/[Rmin]*[vol of shell]) (%)
-   1  - UNK 100.00  9.366 264  0   2.10   2.10   0.00   0.00   0.00   0.00
+   1  - UNK 100.00  9.380 264  0   2.52   2.52   0.00   0.00   0.00   0.00

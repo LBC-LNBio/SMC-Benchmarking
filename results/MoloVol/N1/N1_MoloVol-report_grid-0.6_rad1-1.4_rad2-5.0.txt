@@ -18,8 +18,8 @@ Copyright © 2020-2021 Jasmin B. Maglic, Roy Lavendomme
 MoloVol program: calculation results report
 version: 1.0.0
 
-Time of the calculation: 2023-01-13_20h14m21s
-Duration of the calculation: 0.637493 s
+Time of the calculation: 2023-01-28_16h16m33s
+Duration of the calculation: 0.915602 s
 
 Structure file analyzed: ./hosts/N1.pdb
 Chemical formula: C204H144Fe4N24

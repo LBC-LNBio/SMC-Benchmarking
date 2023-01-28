@@ -1,32 +1,25 @@
 Caver computation started.
 Settings loaded from:
-/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/inputs/config_2023-01-18-18-01.txt
+/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/inputs/config_2023-01-18-18-01.txt
 
 Basic parameters:
-starting_point_coordinates [2.484, 8.476, 20.953]
+starting_point_coordinates [-1.704, 17.118, 17.447]
 probe_radius 0.9
 shell_radius 3.0
 shell_depth 4.0
 frame_weighting_coefficient 1.0
 frame_clustering_threshold 1.0
 
-*** Processing B11.pdb ***
-33 redundant tunnels removed.
-8 tunnels stored.
+*** Processing B12.pdb ***
+4 redundant tunnels removed.
+1 tunnels stored.
 
-Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/data/tunnels/tunnels_B11.pdb.obj
-Loaded 8 tunnels for B11.pdb.
-8 tunnels successfully loaded.
+Loading tunnels from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/data/tunnels/tunnels_B12.pdb.obj
+Loaded 1 tunnels for B12.pdb.
+1 tunnels successfully loaded.
 
-Computing average surface for 8 tunnels.
-Average surface represented by 8 points.
-Computing distance matrix using weighting_coefficient 1.0.
-Performing average link hierarchical of 8 tunnels clustering to create /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/data/tree_.txt.
-Total java memory: 5592 MB.
-Allocating 5392 MB of RAM...
-Maximum allowed cluster-cluster distance matrix size is 51926, in case of memory error in the next computation phase, try to set the parameter murtagh_matrix_size to a lower value in config.txt.
-8 tunnels clustered into 1 clusters using clustering_threshold 3.5.
-
+Computing average surface for 1 tunnels.
+Average surface represented by 1 points.
 Leaving only the cheapest tunnel per cluster per snapshot - 1 tunnels kept.
 Statistical analysis of results started.
 Saving summary information.
@@ -39,7 +32,8 @@ Statistical analysis finished.
 Visualizations started.
 Cluster subsampling for visualization: random.
 Visualizations finished.
-Calculation finished with warnings, summary is in /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/warnings.txt (size 155).
+
+Finished successfully.
 
 -----------------------------------------------------------------------
  Thank you for using CAVER, please cite:

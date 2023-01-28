@@ -4,7 +4,7 @@ from chempy import Bond, Atom
 from pymol import cmd
 
 if not os.path.exists("../data/clusters"):
-	cmd.cd("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/pymol")
+	cmd.cd("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/pymol")
 
 filename = './modules/rgb.py'
 exec(compile(open(filename, "rb").read(), filename, 'exec'))
@@ -125,7 +125,7 @@ if load_trajectory:
 	cmd.dss("structure")
 
 else:
-	cmd.load('../data/B11.pdb', 'structure')
+	cmd.load('../data/B12.pdb', 'structure')
 
 cmd.hide('lines', 'structure')
 cmd.show('cartoon', 'structure')

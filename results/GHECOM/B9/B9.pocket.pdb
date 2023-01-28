@@ -1,8 +1,8 @@
-HEADER    GRID     ./results/GHECOM/B9/B9.pocket. 13-JAN-23   0XXX
+HEADER    GRID     ./results/GHECOM/B9/B9.pocket. 28-JAN-23   0XXX
 TITLE   Clustered_MultiScale_Pocket
 REMARK  minNgridClus 0 Nrank_keep -1
 REMARK  COMMAND ghecom -M M -ipdb ./hosts/B9.pdb -opocpdb ./results/GHECOM/B9/B9.pocket.pdb -opdb ./results/GHECOM/B9/B9.pocketness.pdb -ores ./results/GHECOM/B9/B9.res -atmhet B -gw 0.8 -rlx 10
-REMARK  DATE    Jan 13,2023 18:39:24
+REMARK  DATE    Jan 28,2023 11:51:46
 REMARK  grid_size   84   73   82
 REMARK  grid_width    0.800
 REMARK  OrigPos  -15.268 -24.223  -11.721

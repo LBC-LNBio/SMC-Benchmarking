@@ -4,30 +4,30 @@ If you use POVME in your research, please cite the following reference:
   for measuring binding-pocket volumes." J Mol Graph Model 29(5): 773-776.
 
 Parameters:
-	OUTPUTFILENAMEPREFIX: /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B5/B5_
+	OUTPUTFILENAMEPREFIX: /home/jvsguerra/remote-repos/SMC-Benchmarking/results/POVME/B5/B5_
 	POINTSINCLUDEREGIONS: sphere at (13.179, 9.119, 7.562), radius = 6.5
 	NUMFRAMES: -1
-	OutputFrameFilenamePrefix: /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B5/B5_frameInfo/B5_
+	OutputFrameFilenamePrefix: /home/jvsguerra/remote-repos/SMC-Benchmarking/results/POVME/B5/B5_frameInfo/B5_
 	MAXGROWITERATIONS: 10000000000.0
 	GRIDSPACING: 0.5
 	NUMPROCESSORS: 12
 	DISTANCECUTOFF: 1.09
 	COMPRESSOUTPUT: False
-	PDBFILENAME: /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/B5.pdb
+	PDBFILENAME: /home/jvsguerra/remote-repos/SMC-Benchmarking/hosts/B5.pdb
 	CONVEXHULLEXCLUSION: max
 	SAVEREGIONS: False
 	CONTIGUOUSPOINTSCRITERIA: 3
 	OUTPUTBASENAME: B5_
 
-Reading frames from /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/B5.pdb
+Reading frames from /home/jvsguerra/remote-repos/SMC-Benchmarking/hosts/B5.pdb
 	Further processing frame 1
 
 
 Generating the pocket-encompassing point field
 
 Saving the point field as a PDB and NPY file
-	Point field saved to /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B5/B5_frameInfo/B5_inclusion.pdb to permit visualization
-	Point field saved to /home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/POVME/B5/B5_frameInfo/B5_inclusion.npy to optionally load for the volume calculation
+	Point field saved to /home/jvsguerra/remote-repos/SMC-Benchmarking/results/POVME/B5/B5_frameInfo/B5_inclusion.pdb to permit visualization
+	Point field saved to /home/jvsguerra/remote-repos/SMC-Benchmarking/results/POVME/B5/B5_frameInfo/B5_inclusion.npy to optionally load for the volume calculation
 
 Calculating the pocket volume of each frame
 	Frame 1:  Volume 10.5 A^3  Surf. A. 12.75 A^2
@@ -36,5 +36,5 @@ FRAME        | VOLUME (A^3) | SURF. A. (A^2)
 -------------+--------------+----------------
 1            |   10.5       |   12.75
 
-Execution time = 3.08380484581 sec
+Execution time = 4.14758396149 sec
 

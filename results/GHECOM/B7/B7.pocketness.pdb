@@ -1,6 +1,6 @@
-HEADER    RECEPTOR ./results/GHECOM/B7/B7.pocketn 13-JAN-23   0XXX
+HEADER    RECEPTOR ./results/GHECOM/B7/B7.pocketn 28-JAN-23   0XXX
 TITLE   RECEPTOR:Multiscale MolVol/Pocket for protein atoms
-REMARK  DATE    Jan 13,2023 18:39:24
+REMARK  DATE    Jan 28,2023 11:51:45
 REMARK  COMMAND ghecom -M M -ipdb ./hosts/B7.pdb -opocpdb ./results/GHECOM/B7/B7.pocket.pdb -opdb ./results/GHECOM/B7/B7.pocketness.pdb -ores ./results/GHECOM/B7/B7.res -atmhet B -gw 0.8 -rlx 10
 REMARK  COMMENT INPUT_RECEPTOR_PDB_FILE:./hosts/B7.pdb
 REMARK  COMMENT NATOM_OF_RECEPTOR:440

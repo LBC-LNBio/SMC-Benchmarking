@@ -1,237 +1,282 @@
 REMARK Frame 1
-REMARK Feature Volume = 232 Cubic Angstroms
-ATOM      1    X AAA X   1       3.000  25.000  11.000                       X
-ATOM      2    X AAB X   2       3.000  26.000   7.000                       X
-ATOM      3    X AAC X   3       3.000  26.000   8.000                       X
-ATOM      4    X AAD X   4       3.000  26.000   9.000                       X
-ATOM      5    X AAE X   5       3.000  26.000  10.000                       X
-ATOM      6    X AAF X   6       3.000  27.000   7.000                       X
-ATOM      7    X AAG X   7       3.000  27.000   8.000                       X
-ATOM      8    X AAH X   8       3.000  27.000   9.000                       X
-ATOM      9    X AAI X   9       3.000  27.000  13.000                       X
-ATOM     10    X AAJ X  10       3.000  29.000   6.000                       X
-ATOM     11    X AAK X  11       3.000  29.000   7.000                       X
-ATOM     12    X AAL X  12       3.000  29.000  11.000                       X
-ATOM     13    X AAM X  13       3.000  29.000  12.000                       X
-ATOM     14    X AAN X  14       3.000  30.000   6.000                       X
-ATOM     15    X AAO X  15       3.000  30.000   7.000                       X
-ATOM     16    X AAP X  16       3.000  30.000  10.000                       X
-ATOM     17    X AAQ X  17       3.000  30.000  11.000                       X
-ATOM     18    X AAR X  18       3.000  31.000   9.000                       X
-ATOM     19    X AAS X  19       4.000  23.000  11.000                       X
-ATOM     20    X AAT X  20       4.000  24.000  10.000                       X
-ATOM     21    X AAU X  21       4.000  24.000  11.000                       X
-ATOM     22    X AAV X  22       4.000  25.000   6.000                       X
-ATOM     23    X AAW X  23       4.000  25.000   7.000                       X
-ATOM     24    X AAX X  24       4.000  25.000   8.000                       X
-ATOM     25    X AAY X  25       4.000  25.000   9.000                       X
-ATOM     26    X AAZ X  26       4.000  25.000  11.000                       X
-ATOM     27    X ABA X  27       4.000  25.000  12.000                       X
-ATOM     28    X ABB X  28       4.000  26.000   6.000                       X
-ATOM     29    X ABC X  29       4.000  26.000  13.000                       X
-ATOM     30    X ABD X  30       4.000  27.000   6.000                       X
-ATOM     31    X ABE X  31       4.000  27.000  13.000                       X
-ATOM     32    X ABF X  32       4.000  28.000   5.000                       X
-ATOM     33    X ABG X  33       4.000  28.000  13.000                       X
-ATOM     34    X ABH X  34       4.000  29.000   5.000                       X
-ATOM     35    X ABI X  35       4.000  29.000   6.000                       X
-ATOM     36    X ABJ X  36       4.000  30.000   5.000                       X
-ATOM     37    X ABK X  37       4.000  30.000   6.000                       X
-ATOM     38    X ABL X  38       4.000  30.000  11.000                       X
-ATOM     39    X ABM X  39       4.000  30.000  12.000                       X
-ATOM     40    X ABN X  40       4.000  31.000  10.000                       X
-ATOM     41    X ABO X  41       4.000  31.000  11.000                       X
-ATOM     42    X ABP X  42       4.000  31.000  12.000                       X
-ATOM     43    X ABQ X  43       4.000  32.000   7.000                       X
-ATOM     44    X ABR X  44       4.000  32.000   8.000                       X
-ATOM     45    X ABS X  45       4.000  32.000   9.000                       X
-ATOM     46    X ABT X  46       4.000  32.000  10.000                       X
-ATOM     47    X ABU X  47       5.000  23.000  12.000                       X
-ATOM     48    X ABV X  48       5.000  24.000   7.000                       X
-ATOM     49    X ABW X  49       5.000  24.000   8.000                       X
-ATOM     50    X ABX X  50       5.000  24.000  11.000                       X
-ATOM     51    X ABY X  51       5.000  24.000  12.000                       X
-ATOM     52    X ABZ X  52       5.000  25.000   6.000                       X
-ATOM     53    X ACA X  53       5.000  26.000   5.000                       X
-ATOM     54    X ACB X  54       5.000  27.000   5.000                       X
-ATOM     55    X ACC X  55       5.000  27.000  14.000                       X
-ATOM     56    X ACD X  56       5.000  28.000   5.000                       X
-ATOM     57    X ACE X  57       5.000  28.000  14.000                       X
-ATOM     58    X ACF X  58       5.000  29.000   4.000                       X
-ATOM     59    X ACG X  59       5.000  29.000  13.000                       X
-ATOM     60    X ACH X  60       5.000  30.000  13.000                       X
-ATOM     61    X ACI X  61       5.000  31.000  12.000                       X
-ATOM     62    X ACJ X  62       5.000  31.000  13.000                       X
-ATOM     63    X ACK X  63       5.000  32.000  11.000                       X
-ATOM     64    X ACL X  64       5.000  32.000  12.000                       X
-ATOM     65    X ACM X  65       5.000  33.000   7.000                       X
-ATOM     66    X ACN X  66       5.000  33.000   8.000                       X
-ATOM     67    X ACO X  67       5.000  33.000   9.000                       X
-ATOM     68    X ACP X  68       6.000  23.000   8.000                       X
-ATOM     69    X ACQ X  69       6.000  23.000   9.000                       X
-ATOM     70    X ACR X  70       6.000  23.000  13.000                       X
-ATOM     71    X ACS X  71       6.000  24.000   6.000                       X
-ATOM     72    X ACT X  72       6.000  24.000   7.000                       X
-ATOM     73    X ACU X  73       6.000  24.000  13.000                       X
-ATOM     74    X ACV X  74       6.000  25.000   5.000                       X
-ATOM     75    X ACW X  75       6.000  25.000  14.000                       X
-ATOM     76    X ACX X  76       6.000  26.000   5.000                       X
-ATOM     77    X ACY X  77       6.000  27.000   4.000                       X
-ATOM     78    X ACZ X  78       6.000  28.000   4.000                       X
-ATOM     79    X ADA X  79       6.000  28.000  14.000                       X
-ATOM     80    X ADB X  80       6.000  29.000  14.000                       X
-ATOM     81    X ADC X  81       6.000  30.000  14.000                       X
-ATOM     82    X ADD X  82       6.000  31.000   5.000                       X
-ATOM     83    X ADE X  83       6.000  31.000  13.000                       X
-ATOM     84    X ADF X  84       6.000  32.000   5.000                       X
-ATOM     85    X ADG X  85       6.000  32.000  12.000                       X
-ATOM     86    X ADH X  86       6.000  33.000   6.000                       X
-ATOM     87    X ADI X  87       6.000  33.000  10.000                       X
-ATOM     88    X ADJ X  88       6.000  33.000  11.000                       X
-ATOM     89    X ADK X  89       7.000  23.000   7.000                       X
-ATOM     90    X ADL X  90       7.000  23.000   8.000                       X
-ATOM     91    X ADM X  91       7.000  23.000  12.000                       X
-ATOM     92    X ADN X  92       7.000  24.000   6.000                       X
-ATOM     93    X ADO X  93       7.000  24.000  13.000                       X
-ATOM     94    X ADP X  94       7.000  25.000  13.000                       X
-ATOM     95    X ADQ X  95       7.000  25.000  14.000                       X
-ATOM     96    X ADR X  96       7.000  26.000   4.000                       X
-ATOM     97    X ADS X  97       7.000  29.000  14.000                       X
-ATOM     98    X ADT X  98       7.000  30.000  14.000                       X
-ATOM     99    X ADU X  99       7.000  32.000   5.000                       X
-ATOM    100    X ADV X 100       7.000  32.000  12.000                       X
-ATOM    101    X ADW X 101       7.000  32.000  13.000                       X
-ATOM    102    X ADX X 102       7.000  33.000   6.000                       X
-ATOM    103    X ADY X 103       7.000  33.000  10.000                       X
-ATOM    104    X ADZ X 104       7.000  33.000  11.000                       X
-ATOM    105    X AEA X 105       8.000  23.000   6.000                       X
-ATOM    106    X AEB X 106       8.000  23.000   7.000                       X
-ATOM    107    X AEC X 107       8.000  23.000  11.000                       X
-ATOM    108    X AED X 108       8.000  23.000  12.000                       X
-ATOM    109    X AEE X 109       8.000  24.000   6.000                       X
-ATOM    110    X AEF X 110       8.000  24.000  12.000                       X
-ATOM    111    X AEG X 111       8.000  25.000   4.000                       X
-ATOM    112    X AEH X 112       8.000  25.000   5.000                       X
-ATOM    113    X AEI X 113       8.000  25.000  13.000                       X
-ATOM    114    X AEJ X 114       8.000  25.000  14.000                       X
-ATOM    115    X AEK X 115       8.000  30.000   4.000                       X
-ATOM    116    X AEL X 116       8.000  30.000  14.000                       X
-ATOM    117    X AEM X 117       8.000  31.000   4.000                       X
-ATOM    118    X AEN X 118       8.000  31.000  14.000                       X
-ATOM    119    X AEO X 119       8.000  32.000   5.000                       X
-ATOM    120    X AEP X 120       8.000  32.000  13.000                       X
-ATOM    121    X AEQ X 121       8.000  33.000   6.000                       X
-ATOM    122    X AER X 122       8.000  33.000   7.000                       X
-ATOM    123    X AES X 123       8.000  33.000  11.000                       X
-ATOM    124    X AET X 124       8.000  33.000  12.000                       X
-ATOM    125    X AEU X 125       9.000  23.000   6.000                       X
-ATOM    126    X AEV X 126       9.000  23.000  10.000                       X
-ATOM    127    X AEW X 127       9.000  23.000  11.000                       X
-ATOM    128    X AEX X 128       9.000  24.000   5.000                       X
-ATOM    129    X AEY X 129       9.000  24.000  12.000                       X
-ATOM    130    X AEZ X 130       9.000  25.000   4.000                       X
-ATOM    131    X AFA X 131       9.000  25.000   5.000                       X
-ATOM    132    X AFB X 132       9.000  26.000  14.000                       X
-ATOM    133    X AFC X 133       9.000  27.000  14.000                       X
-ATOM    134    X AFD X 134       9.000  28.000   4.000                       X
-ATOM    135    X AFE X 135       9.000  29.000   4.000                       X
-ATOM    136    X AFF X 136       9.000  30.000   4.000                       X
-ATOM    137    X AFG X 137       9.000  31.000   5.000                       X
-ATOM    138    X AFH X 138       9.000  32.000   5.000                       X
-ATOM    139    X AFI X 139       9.000  32.000   6.000                       X
-ATOM    140    X AFJ X 140       9.000  32.000  13.000                       X
-ATOM    141    X AFK X 141       9.000  33.000   7.000                       X
-ATOM    142    X AFL X 142       9.000  33.000   8.000                       X
-ATOM    143    X AFM X 143       9.000  33.000  12.000                       X
-ATOM    144    X AFN X 144      10.000  23.000   5.000                       X
-ATOM    145    X AFO X 145      10.000  23.000   9.000                       X
-ATOM    146    X AFP X 146      10.000  23.000  10.000                       X
-ATOM    147    X AFQ X 147      10.000  24.000   5.000                       X
-ATOM    148    X AFR X 148      10.000  24.000  11.000                       X
-ATOM    149    X AFS X 149      10.000  24.000  12.000                       X
-ATOM    150    X AFT X 150      10.000  25.000   4.000                       X
-ATOM    151    X AFU X 151      10.000  25.000  13.000                       X
-ATOM    152    X AFV X 152      10.000  26.000  13.000                       X
-ATOM    153    X AFW X 153      10.000  27.000  14.000                       X
-ATOM    154    X AFX X 154      10.000  28.000   4.000                       X
-ATOM    155    X AFY X 155      10.000  28.000  14.000                       X
-ATOM    156    X AFZ X 156      10.000  29.000   4.000                       X
-ATOM    157    X AGA X 157      10.000  30.000   4.000                       X
-ATOM    158    X AGB X 158      10.000  31.000   5.000                       X
-ATOM    159    X AGC X 159      10.000  31.000  13.000                       X
-ATOM    160    X AGD X 160      10.000  32.000   6.000                       X
-ATOM    161    X AGE X 161      10.000  32.000  13.000                       X
-ATOM    162    X AGF X 162      10.000  33.000   7.000                       X
-ATOM    163    X AGG X 163      10.000  33.000   8.000                       X
-ATOM    164    X AGH X 164      10.000  33.000  12.000                       X
-ATOM    165    X AGI X 165      11.000  23.000   6.000                       X
-ATOM    166    X AGJ X 166      11.000  24.000   6.000                       X
-ATOM    167    X AGK X 167      11.000  24.000   7.000                       X
-ATOM    168    X AGL X 168      11.000  24.000  10.000                       X
-ATOM    169    X AGM X 169      11.000  24.000  11.000                       X
-ATOM    170    X AGN X 170      11.000  25.000  12.000                       X
-ATOM    171    X AGO X 171      11.000  26.000  13.000                       X
-ATOM    172    X AGP X 172      11.000  27.000   4.000                       X
-ATOM    173    X AGQ X 173      11.000  27.000   5.000                       X
-ATOM    174    X AGR X 174      11.000  27.000  13.000                       X
-ATOM    175    X AGS X 175      11.000  28.000   4.000                       X
-ATOM    176    X AGT X 176      11.000  28.000  13.000                       X
-ATOM    177    X AGU X 177      11.000  29.000   5.000                       X
-ATOM    178    X AGV X 178      11.000  29.000  14.000                       X
-ATOM    179    X AGW X 179      11.000  30.000   5.000                       X
-ATOM    180    X AGX X 180      11.000  31.000   5.000                       X
-ATOM    181    X AGY X 181      11.000  31.000   6.000                       X
-ATOM    182    X AGZ X 182      11.000  32.000   6.000                       X
-ATOM    183    X AHA X 183      11.000  32.000   7.000                       X
-ATOM    184    X AHB X 184      11.000  33.000   9.000                       X
-ATOM    185    X AHC X 185      11.000  33.000  10.000                       X
-ATOM    186    X AHD X 186      11.000  33.000  11.000                       X
-ATOM    187    X AHE X 187      12.000  23.000   7.000                       X
-ATOM    188    X AHF X 188      12.000  24.000   7.000                       X
-ATOM    189    X AHG X 189      12.000  24.000   8.000                       X
-ATOM    190    X AHH X 190      12.000  25.000   6.000                       X
-ATOM    191    X AHI X 191      12.000  25.000   7.000                       X
-ATOM    192    X AHJ X 192      12.000  25.000   8.000                       X
-ATOM    193    X AHK X 193      12.000  25.000   9.000                       X
-ATOM    194    X AHL X 194      12.000  25.000  10.000                       X
-ATOM    195    X AHM X 195      12.000  25.000  11.000                       X
-ATOM    196    X AHN X 196      12.000  25.000  12.000                       X
-ATOM    197    X AHO X 197      12.000  26.000   5.000                       X
-ATOM    198    X AHP X 198      12.000  26.000  12.000                       X
-ATOM    199    X AHQ X 199      12.000  27.000   5.000                       X
-ATOM    200    X AHR X 200      12.000  27.000  12.000                       X
-ATOM    201    X AHS X 201      12.000  28.000   5.000                       X
-ATOM    202    X AHT X 202      12.000  28.000  13.000                       X
-ATOM    203    X AHU X 203      12.000  29.000  12.000                       X
-ATOM    204    X AHV X 204      12.000  29.000  13.000                       X
-ATOM    205    X AHW X 205      12.000  30.000   6.000                       X
-ATOM    206    X AHX X 206      12.000  30.000   7.000                       X
-ATOM    207    X AHY X 207      12.000  30.000  12.000                       X
-ATOM    208    X AHZ X 208      12.000  30.000  13.000                       X
-ATOM    209    X AIA X 209      12.000  31.000   7.000                       X
-ATOM    210    X AIB X 210      12.000  31.000   8.000                       X
-ATOM    211    X AIC X 211      12.000  32.000   8.000                       X
-ATOM    212    X AID X 212      12.000  32.000   9.000                       X
-ATOM    213    X AIE X 213      12.000  32.000  10.000                       X
-ATOM    214    X AIF X 214      12.000  32.000  11.000                       X
-ATOM    215    X AIG X 215      13.000  25.000   7.000                       X
-ATOM    216    X AIH X 216      13.000  26.000   8.000                       X
-ATOM    217    X AII X 217      13.000  26.000   9.000                       X
-ATOM    218    X AIJ X 218      13.000  26.000  10.000                       X
-ATOM    219    X AIK X 219      13.000  26.000  11.000                       X
-ATOM    220    X AIL X 220      13.000  27.000   5.000                       X
-ATOM    221    X AIM X 221      13.000  27.000   9.000                       X
-ATOM    222    X AIN X 222      13.000  27.000  10.000                       X
-ATOM    223    X AIO X 223      13.000  27.000  11.000                       X
-ATOM    224    X AIP X 224      13.000  29.000   6.000                       X
-ATOM    225    X AIQ X 225      13.000  29.000   7.000                       X
-ATOM    226    X AIR X 226      13.000  29.000  11.000                       X
-ATOM    227    X AIS X 227      13.000  29.000  12.000                       X
-ATOM    228    X AIT X 228      13.000  30.000   8.000                       X
-ATOM    229    X AIU X 229      13.000  30.000   9.000                       X
-ATOM    230    X AIV X 230      13.000  30.000  11.000                       X
-ATOM    231    X AIW X 231      13.000  30.000  12.000                       X
-ATOM    232    X AIX X 232      13.000  31.000   9.000                       X
+REMARK Feature Volume = 277 Cubic Angstroms
+ATOM      1    X AAA X   1      10.000  11.000  15.000                       X
+ATOM      2    X AAB X   2      10.000  12.000  15.000                       X
+ATOM      3    X AAC X   3      10.000  13.000  14.000                       X
+ATOM      4    X AAD X   4      10.000  13.000  17.000                       X
+ATOM      5    X AAE X   5      10.000  13.000  18.000                       X
+ATOM      6    X AAF X   6      10.000  14.000  12.000                       X
+ATOM      7    X AAG X   7      10.000  14.000  17.000                       X
+ATOM      8    X AAH X   8      10.000  15.000  12.000                       X
+ATOM      9    X AAI X   9      10.000  15.000  16.000                       X
+ATOM     10    X AAJ X  10      10.000  15.000  17.000                       X
+ATOM     11    X AAK X  11      10.000  16.000  11.000                       X
+ATOM     12    X AAL X  12      10.000  16.000  15.000                       X
+ATOM     13    X AAM X  13      10.000  16.000  16.000                       X
+ATOM     14    X AAN X  14      10.000  16.000  17.000                       X
+ATOM     15    X AAO X  15      10.000  17.000  11.000                       X
+ATOM     16    X AAP X  16      10.000  17.000  14.000                       X
+ATOM     17    X AAQ X  17      10.000  17.000  15.000                       X
+ATOM     18    X AAR X  18      10.000  17.000  16.000                       X
+ATOM     19    X AAS X  19      10.000  17.000  17.000                       X
+ATOM     20    X AAT X  20      10.000  18.000  10.000                       X
+ATOM     21    X AAU X  21      10.000  18.000  14.000                       X
+ATOM     22    X AAV X  22      10.000  18.000  15.000                       X
+ATOM     23    X AAW X  23      10.000  18.000  16.000                       X
+ATOM     24    X AAX X  24      10.000  19.000  10.000                       X
+ATOM     25    X AAY X  25      10.000  19.000  15.000                       X
+ATOM     26    X AAZ X  26      10.000  20.000  11.000                       X
+ATOM     27    X ABA X  27      10.000  20.000  12.000                       X
+ATOM     28    X ABB X  28      10.000  20.000  13.000                       X
+ATOM     29    X ABC X  29      10.000  20.000  14.000                       X
+ATOM     30    X ABD X  30      11.000  11.000  14.000                       X
+ATOM     31    X ABE X  31      11.000  12.000  13.000                       X
+ATOM     32    X ABF X  32      11.000  12.000  14.000                       X
+ATOM     33    X ABG X  33      11.000  12.000  19.000                       X
+ATOM     34    X ABH X  34      11.000  13.000  11.000                       X
+ATOM     35    X ABI X  35      11.000  13.000  13.000                       X
+ATOM     36    X ABJ X  36      11.000  13.000  18.000                       X
+ATOM     37    X ABK X  37      11.000  13.000  19.000                       X
+ATOM     38    X ABL X  38      11.000  14.000  11.000                       X
+ATOM     39    X ABM X  39      11.000  14.000  18.000                       X
+ATOM     40    X ABN X  40      11.000  14.000  19.000                       X
+ATOM     41    X ABO X  41      11.000  15.000  11.000                       X
+ATOM     42    X ABP X  42      11.000  15.000  18.000                       X
+ATOM     43    X ABQ X  43      11.000  15.000  19.000                       X
+ATOM     44    X ABR X  44      11.000  16.000  11.000                       X
+ATOM     45    X ABS X  45      11.000  17.000  11.000                       X
+ATOM     46    X ABT X  46      11.000  17.000  18.000                       X
+ATOM     47    X ABU X  47      11.000  18.000  10.000                       X
+ATOM     48    X ABV X  48      11.000  18.000  18.000                       X
+ATOM     49    X ABW X  49      11.000  19.000   9.000                       X
+ATOM     50    X ABX X  50      11.000  19.000  17.000                       X
+ATOM     51    X ABY X  51      11.000  20.000  13.000                       X
+ATOM     52    X ABZ X  52      11.000  20.000  14.000                       X
+ATOM     53    X ACA X  53      11.000  20.000  15.000                       X
+ATOM     54    X ACB X  54      11.000  20.000  16.000                       X
+ATOM     55    X ACC X  55      11.000  21.000  10.000                       X
+ATOM     56    X ACD X  56      11.000  21.000  11.000                       X
+ATOM     57    X ACE X  57      11.000  21.000  12.000                       X
+ATOM     58    X ACF X  58      11.000  21.000  13.000                       X
+ATOM     59    X ACG X  59      12.000  11.000  13.000                       X
+ATOM     60    X ACH X  60      12.000  11.000  16.000                       X
+ATOM     61    X ACI X  61      12.000  11.000  17.000                       X
+ATOM     62    X ACJ X  62      12.000  11.000  18.000                       X
+ATOM     63    X ACK X  63      12.000  12.000  11.000                       X
+ATOM     64    X ACL X  64      12.000  12.000  12.000                       X
+ATOM     65    X ACM X  65      12.000  12.000  19.000                       X
+ATOM     66    X ACN X  66      12.000  13.000  10.000                       X
+ATOM     67    X ACO X  67      12.000  13.000  11.000                       X
+ATOM     68    X ACP X  68      12.000  14.000  10.000                       X
+ATOM     69    X ACQ X  69      12.000  15.000  10.000                       X
+ATOM     70    X ACR X  70      12.000  16.000  10.000                       X
+ATOM     71    X ACS X  71      12.000  16.000  19.000                       X
+ATOM     72    X ACT X  72      12.000  17.000  10.000                       X
+ATOM     73    X ACU X  73      12.000  17.000  19.000                       X
+ATOM     74    X ACV X  74      12.000  18.000  10.000                       X
+ATOM     75    X ACW X  75      12.000  18.000  18.000                       X
+ATOM     76    X ACX X  76      12.000  19.000   9.000                       X
+ATOM     77    X ACY X  77      12.000  19.000  18.000                       X
+ATOM     78    X ACZ X  78      12.000  20.000   9.000                       X
+ATOM     79    X ADA X  79      12.000  20.000  17.000                       X
+ATOM     80    X ADB X  80      12.000  20.000  18.000                       X
+ATOM     81    X ADC X  81      12.000  21.000  12.000                       X
+ATOM     82    X ADD X  82      12.000  21.000  13.000                       X
+ATOM     83    X ADE X  83      12.000  21.000  14.000                       X
+ATOM     84    X ADF X  84      12.000  21.000  15.000                       X
+ATOM     85    X ADG X  85      12.000  22.000  11.000                       X
+ATOM     86    X ADH X  86      13.000  11.000  12.000                       X
+ATOM     87    X ADI X  87      13.000  11.000  13.000                       X
+ATOM     88    X ADJ X  88      13.000  11.000  16.000                       X
+ATOM     89    X ADK X  89      13.000  11.000  17.000                       X
+ATOM     90    X ADL X  90      13.000  12.000  11.000                       X
+ATOM     91    X ADM X  91      13.000  12.000  18.000                       X
+ATOM     92    X ADN X  92      13.000  12.000  19.000                       X
+ATOM     93    X ADO X  93      13.000  13.000  10.000                       X
+ATOM     94    X ADP X  94      13.000  13.000  19.000                       X
+ATOM     95    X ADQ X  95      13.000  14.000   9.000                       X
+ATOM     96    X ADR X  96      13.000  15.000   9.000                       X
+ATOM     97    X ADS X  97      13.000  17.000   9.000                       X
+ATOM     98    X ADT X  98      13.000  17.000  19.000                       X
+ATOM     99    X ADU X  99      13.000  18.000   9.000                       X
+ATOM    100    X ADV X 100      13.000  18.000  10.000                       X
+ATOM    101    X ADW X 101      13.000  18.000  19.000                       X
+ATOM    102    X ADX X 102      13.000  19.000   9.000                       X
+ATOM    103    X ADY X 103      13.000  19.000  19.000                       X
+ATOM    104    X ADZ X 104      13.000  20.000   9.000                       X
+ATOM    105    X AEA X 105      13.000  20.000  18.000                       X
+ATOM    106    X AEB X 106      13.000  21.000  15.000                       X
+ATOM    107    X AEC X 107      13.000  21.000  16.000                       X
+ATOM    108    X AED X 108      13.000  21.000  17.000                       X
+ATOM    109    X AEE X 109      13.000  22.000  11.000                       X
+ATOM    110    X AEF X 110      13.000  22.000  12.000                       X
+ATOM    111    X AEG X 111      13.000  22.000  13.000                       X
+ATOM    112    X AEH X 112      13.000  22.000  14.000                       X
+ATOM    113    X AEI X 113      13.000  22.000  15.000                       X
+ATOM    114    X AEJ X 114      13.000  22.000  16.000                       X
+ATOM    115    X AEK X 115      14.000  11.000  12.000                       X
+ATOM    116    X AEL X 116      14.000  11.000  16.000                       X
+ATOM    117    X AEM X 117      14.000  11.000  17.000                       X
+ATOM    118    X AEN X 118      14.000  12.000  10.000                       X
+ATOM    119    X AEO X 119      14.000  12.000  11.000                       X
+ATOM    120    X AEP X 120      14.000  12.000  18.000                       X
+ATOM    121    X AEQ X 121      14.000  13.000  10.000                       X
+ATOM    122    X AER X 122      14.000  13.000  19.000                       X
+ATOM    123    X AES X 123      14.000  14.000   9.000                       X
+ATOM    124    X AET X 124      14.000  14.000  19.000                       X
+ATOM    125    X AEU X 125      14.000  15.000   9.000                       X
+ATOM    126    X AEV X 126      14.000  18.000  19.000                       X
+ATOM    127    X AEW X 127      14.000  19.000  19.000                       X
+ATOM    128    X AEX X 128      14.000  22.000  10.000                       X
+ATOM    129    X AEY X 129      14.000  22.000  11.000                       X
+ATOM    130    X AEZ X 130      14.000  22.000  16.000                       X
+ATOM    131    X AFA X 131      14.000  22.000  17.000                       X
+ATOM    132    X AFB X 132      15.000  11.000  11.000                       X
+ATOM    133    X AFC X 133      15.000  12.000  10.000                       X
+ATOM    134    X AFD X 134      15.000  12.000  18.000                       X
+ATOM    135    X AFE X 135      15.000  13.000   9.000                       X
+ATOM    136    X AFF X 136      15.000  13.000  10.000                       X
+ATOM    137    X AFG X 137      15.000  13.000  19.000                       X
+ATOM    138    X AFH X 138      15.000  14.000   9.000                       X
+ATOM    139    X AFI X 139      15.000  14.000  19.000                       X
+ATOM    140    X AFJ X 140      15.000  15.000   9.000                       X
+ATOM    141    X AFK X 141      15.000  16.000   9.000                       X
+ATOM    142    X AFL X 142      15.000  20.000  19.000                       X
+ATOM    143    X AFM X 143      15.000  21.000   9.000                       X
+ATOM    144    X AFN X 144      15.000  21.000  10.000                       X
+ATOM    145    X AFO X 145      15.000  21.000  11.000                       X
+ATOM    146    X AFP X 146      15.000  21.000  18.000                       X
+ATOM    147    X AFQ X 147      15.000  22.000  12.000                       X
+ATOM    148    X AFR X 148      15.000  22.000  18.000                       X
+ATOM    149    X AFS X 149      16.000  11.000  11.000                       X
+ATOM    150    X AFT X 150      16.000  11.000  16.000                       X
+ATOM    151    X AFU X 151      16.000  11.000  17.000                       X
+ATOM    152    X AFV X 152      16.000  12.000  10.000                       X
+ATOM    153    X AFW X 153      16.000  12.000  11.000                       X
+ATOM    154    X AFX X 154      16.000  12.000  18.000                       X
+ATOM    155    X AFY X 155      16.000  13.000  10.000                       X
+ATOM    156    X AFZ X 156      16.000  13.000  19.000                       X
+ATOM    157    X AGA X 157      16.000  14.000   9.000                       X
+ATOM    158    X AGB X 158      16.000  14.000  19.000                       X
+ATOM    159    X AGC X 159      16.000  15.000   9.000                       X
+ATOM    160    X AGD X 160      16.000  19.000   9.000                       X
+ATOM    161    X AGE X 161      16.000  20.000   9.000                       X
+ATOM    162    X AGF X 162      16.000  20.000  10.000                       X
+ATOM    163    X AGG X 163      16.000  20.000  19.000                       X
+ATOM    164    X AGH X 164      16.000  21.000  11.000                       X
+ATOM    165    X AGI X 165      16.000  21.000  19.000                       X
+ATOM    166    X AGJ X 166      16.000  22.000  12.000                       X
+ATOM    167    X AGK X 167      16.000  22.000  18.000                       X
+ATOM    168    X AGL X 168      17.000  11.000  14.000                       X
+ATOM    169    X AGM X 169      17.000  11.000  15.000                       X
+ATOM    170    X AGN X 170      17.000  11.000  16.000                       X
+ATOM    171    X AGO X 171      17.000  12.000  11.000                       X
+ATOM    172    X AGP X 172      17.000  12.000  17.000                       X
+ATOM    173    X AGQ X 173      17.000  12.000  18.000                       X
+ATOM    174    X AGR X 174      17.000  13.000  10.000                       X
+ATOM    175    X AGS X 175      17.000  13.000  18.000                       X
+ATOM    176    X AGT X 176      17.000  14.000   9.000                       X
+ATOM    177    X AGU X 177      17.000  14.000  19.000                       X
+ATOM    178    X AGV X 178      17.000  16.000  19.000                       X
+ATOM    179    X AGW X 179      17.000  17.000  19.000                       X
+ATOM    180    X AGX X 180      17.000  18.000   9.000                       X
+ATOM    181    X AGY X 181      17.000  19.000  10.000                       X
+ATOM    182    X AGZ X 182      17.000  20.000  10.000                       X
+ATOM    183    X AHA X 183      17.000  20.000  11.000                       X
+ATOM    184    X AHB X 184      17.000  21.000  11.000                       X
+ATOM    185    X AHC X 185      17.000  21.000  19.000                       X
+ATOM    186    X AHD X 186      17.000  22.000  13.000                       X
+ATOM    187    X AHE X 187      17.000  22.000  14.000                       X
+ATOM    188    X AHF X 188      17.000  22.000  15.000                       X
+ATOM    189    X AHG X 189      17.000  22.000  16.000                       X
+ATOM    190    X AHH X 190      17.000  22.000  17.000                       X
+ATOM    191    X AHI X 191      17.000  22.000  18.000                       X
+ATOM    192    X AHJ X 192      18.000  11.000  13.000                       X
+ATOM    193    X AHK X 193      18.000  11.000  15.000                       X
+ATOM    194    X AHL X 194      18.000  12.000  11.000                       X
+ATOM    195    X AHM X 195      18.000  12.000  15.000                       X
+ATOM    196    X AHN X 196      18.000  12.000  16.000                       X
+ATOM    197    X AHO X 197      18.000  12.000  17.000                       X
+ATOM    198    X AHP X 198      18.000  13.000  18.000                       X
+ATOM    199    X AHQ X 199      18.000  14.000  18.000                       X
+ATOM    200    X AHR X 200      18.000  15.000  18.000                       X
+ATOM    201    X AHS X 201      18.000  15.000  19.000                       X
+ATOM    202    X AHT X 202      18.000  16.000  19.000                       X
+ATOM    203    X AHU X 203      18.000  17.000  19.000                       X
+ATOM    204    X AHV X 204      18.000  18.000  10.000                       X
+ATOM    205    X AHW X 205      18.000  19.000  10.000                       X
+ATOM    206    X AHX X 206      18.000  20.000  11.000                       X
+ATOM    207    X AHY X 207      18.000  21.000  12.000                       X
+ATOM    208    X AHZ X 208      18.000  21.000  13.000                       X
+ATOM    209    X AIA X 209      18.000  21.000  14.000                       X
+ATOM    210    X AIB X 210      18.000  21.000  15.000                       X
+ATOM    211    X AIC X 211      18.000  21.000  16.000                       X
+ATOM    212    X AID X 212      18.000  21.000  17.000                       X
+ATOM    213    X AIE X 213      18.000  21.000  18.000                       X
+ATOM    214    X AIF X 214      19.000  12.000  14.000                       X
+ATOM    215    X AIG X 215      19.000  12.000  15.000                       X
+ATOM    216    X AIH X 216      19.000  12.000  16.000                       X
+ATOM    217    X AII X 217      19.000  13.000  13.000                       X
+ATOM    218    X AIJ X 218      19.000  13.000  16.000                       X
+ATOM    219    X AIK X 219      19.000  13.000  17.000                       X
+ATOM    220    X AIL X 220      19.000  14.000  17.000                       X
+ATOM    221    X AIM X 221      19.000  15.000  10.000                       X
+ATOM    222    X AIN X 222      19.000  15.000  17.000                       X
+ATOM    223    X AIO X 223      19.000  15.000  18.000                       X
+ATOM    224    X AIP X 224      19.000  16.000  10.000                       X
+ATOM    225    X AIQ X 225      19.000  16.000  18.000                       X
+ATOM    226    X AIR X 226      19.000  17.000  19.000                       X
+ATOM    227    X AIS X 227      19.000  18.000  10.000                       X
+ATOM    228    X AIT X 228      19.000  18.000  11.000                       X
+ATOM    229    X AIU X 229      19.000  19.000  11.000                       X
+ATOM    230    X AIV X 230      19.000  20.000  12.000                       X
+ATOM    231    X AIW X 231      19.000  20.000  13.000                       X
+ATOM    232    X AIX X 232      19.000  20.000  14.000                       X
+ATOM    233    X AIY X 233      19.000  20.000  15.000                       X
+ATOM    234    X AIZ X 234      19.000  20.000  16.000                       X
+ATOM    235    X AJA X 235      19.000  20.000  17.000                       X
+ATOM    236    X AJB X 236      19.000  20.000  18.000                       X
+ATOM    237    X AJC X 237      19.000  20.000  19.000                       X
+ATOM    238    X AJD X 238      19.000  21.000  18.000                       X
+ATOM    239    X AJE X 239      20.000  12.000  14.000                       X
+ATOM    240    X AJF X 240      20.000  13.000  13.000                       X
+ATOM    241    X AJG X 241      20.000  13.000  14.000                       X
+ATOM    242    X AJH X 242      20.000  13.000  16.000                       X
+ATOM    243    X AJI X 243      20.000  14.000  16.000                       X
+ATOM    244    X AJJ X 244      20.000  15.000  11.000                       X
+ATOM    245    X AJK X 245      20.000  15.000  16.000                       X
+ATOM    246    X AJL X 246      20.000  16.000  11.000                       X
+ATOM    247    X AJM X 247      20.000  16.000  12.000                       X
+ATOM    248    X AJN X 248      20.000  16.000  17.000                       X
+ATOM    249    X AJO X 249      20.000  17.000  11.000                       X
+ATOM    250    X AJP X 250      20.000  17.000  12.000                       X
+ATOM    251    X AJQ X 251      20.000  17.000  13.000                       X
+ATOM    252    X AJR X 252      20.000  17.000  18.000                       X
+ATOM    253    X AJS X 253      20.000  17.000  19.000                       X
+ATOM    254    X AJT X 254      20.000  18.000  12.000                       X
+ATOM    255    X AJU X 255      20.000  18.000  13.000                       X
+ATOM    256    X AJV X 256      20.000  18.000  14.000                       X
+ATOM    257    X AJW X 257      20.000  18.000  19.000                       X
+ATOM    258    X AJX X 258      20.000  19.000  13.000                       X
+ATOM    259    X AJY X 259      20.000  19.000  14.000                       X
+ATOM    260    X AJZ X 260      20.000  20.000  17.000                       X
+ATOM    261    X AKA X 261      20.000  20.000  18.000                       X
+ATOM    262    X AKB X 262      20.000  20.000  19.000                       X
+ATOM    263    X AKC X 263      21.000  12.000  14.000                       X
+ATOM    264    X AKD X 264      21.000  13.000  13.000                       X
+ATOM    265    X AKE X 265      21.000  14.000  16.000                       X
+ATOM    266    X AKF X 266      21.000  15.000  12.000                       X
+ATOM    267    X AKG X 267      21.000  15.000  16.000                       X
+ATOM    268    X AKH X 268      21.000  16.000  13.000                       X
+ATOM    269    X AKI X 269      21.000  16.000  14.000                       X
+ATOM    270    X AKJ X 270      21.000  16.000  17.000                       X
+ATOM    271    X AKK X 271      21.000  17.000  13.000                       X
+ATOM    272    X AKL X 272      21.000  17.000  14.000                       X
+ATOM    273    X AKM X 273      21.000  17.000  15.000                       X
+ATOM    274    X AKN X 274      21.000  17.000  18.000                       X
+ATOM    275    X AKO X 275      21.000  18.000  15.000                       X
+ATOM    276    X AKP X 276      21.000  19.000  17.000                       X
+ATOM    277    X AKQ X 277      21.000  19.000  18.000                       X
 ATOM      1    X XXX X   1     -99.000 -99.000 -99.000                       X
 ATOM      2    X XXX X   2     -99.000 -99.000 -99.000                       X
 ATOM      3    X XXX X   3     -99.000 -99.000 -99.000                       X
@@ -2710,4 +2755,70 @@ ATOM   2475    X XXX X2475     -99.000 -99.000 -99.000                       X
 ATOM   2476    X XXX X2476     -99.000 -99.000 -99.000                       X
 ATOM   2477    X XXX X2477     -99.000 -99.000 -99.000                       X
 ATOM   2478    X XXX X2478     -99.000 -99.000 -99.000                       X
+ATOM   2479    X XXX X2479     -99.000 -99.000 -99.000                       X
+ATOM   2480    X XXX X2480     -99.000 -99.000 -99.000                       X
+ATOM   2481    X XXX X2481     -99.000 -99.000 -99.000                       X
+ATOM   2482    X XXX X2482     -99.000 -99.000 -99.000                       X
+ATOM   2483    X XXX X2483     -99.000 -99.000 -99.000                       X
+ATOM   2484    X XXX X2484     -99.000 -99.000 -99.000                       X
+ATOM   2485    X XXX X2485     -99.000 -99.000 -99.000                       X
+ATOM   2486    X XXX X2486     -99.000 -99.000 -99.000                       X
+ATOM   2487    X XXX X2487     -99.000 -99.000 -99.000                       X
+ATOM   2488    X XXX X2488     -99.000 -99.000 -99.000                       X
+ATOM   2489    X XXX X2489     -99.000 -99.000 -99.000                       X
+ATOM   2490    X XXX X2490     -99.000 -99.000 -99.000                       X
+ATOM   2491    X XXX X2491     -99.000 -99.000 -99.000                       X
+ATOM   2492    X XXX X2492     -99.000 -99.000 -99.000                       X
+ATOM   2493    X XXX X2493     -99.000 -99.000 -99.000                       X
+ATOM   2494    X XXX X2494     -99.000 -99.000 -99.000                       X
+ATOM   2495    X XXX X2495     -99.000 -99.000 -99.000                       X
+ATOM   2496    X XXX X2496     -99.000 -99.000 -99.000                       X
+ATOM   2497    X XXX X2497     -99.000 -99.000 -99.000                       X
+ATOM   2498    X XXX X2498     -99.000 -99.000 -99.000                       X
+ATOM   2499    X XXX X2499     -99.000 -99.000 -99.000                       X
+ATOM   2500    X XXX X2500     -99.000 -99.000 -99.000                       X
+ATOM   2501    X XXX X2501     -99.000 -99.000 -99.000                       X
+ATOM   2502    X XXX X2502     -99.000 -99.000 -99.000                       X
+ATOM   2503    X XXX X2503     -99.000 -99.000 -99.000                       X
+ATOM   2504    X XXX X2504     -99.000 -99.000 -99.000                       X
+ATOM   2505    X XXX X2505     -99.000 -99.000 -99.000                       X
+ATOM   2506    X XXX X2506     -99.000 -99.000 -99.000                       X
+ATOM   2507    X XXX X2507     -99.000 -99.000 -99.000                       X
+ATOM   2508    X XXX X2508     -99.000 -99.000 -99.000                       X
+ATOM   2509    X XXX X2509     -99.000 -99.000 -99.000                       X
+ATOM   2510    X XXX X2510     -99.000 -99.000 -99.000                       X
+ATOM   2511    X XXX X2511     -99.000 -99.000 -99.000                       X
+ATOM   2512    X XXX X2512     -99.000 -99.000 -99.000                       X
+ATOM   2513    X XXX X2513     -99.000 -99.000 -99.000                       X
+ATOM   2514    X XXX X2514     -99.000 -99.000 -99.000                       X
+ATOM   2515    X XXX X2515     -99.000 -99.000 -99.000                       X
+ATOM   2516    X XXX X2516     -99.000 -99.000 -99.000                       X
+ATOM   2517    X XXX X2517     -99.000 -99.000 -99.000                       X
+ATOM   2518    X XXX X2518     -99.000 -99.000 -99.000                       X
+ATOM   2519    X XXX X2519     -99.000 -99.000 -99.000                       X
+ATOM   2520    X XXX X2520     -99.000 -99.000 -99.000                       X
+ATOM   2521    X XXX X2521     -99.000 -99.000 -99.000                       X
+ATOM   2522    X XXX X2522     -99.000 -99.000 -99.000                       X
+ATOM   2523    X XXX X2523     -99.000 -99.000 -99.000                       X
+ATOM   2524    X XXX X2524     -99.000 -99.000 -99.000                       X
+ATOM   2525    X XXX X2525     -99.000 -99.000 -99.000                       X
+ATOM   2526    X XXX X2526     -99.000 -99.000 -99.000                       X
+ATOM   2527    X XXX X2527     -99.000 -99.000 -99.000                       X
+ATOM   2528    X XXX X2528     -99.000 -99.000 -99.000                       X
+ATOM   2529    X XXX X2529     -99.000 -99.000 -99.000                       X
+ATOM   2530    X XXX X2530     -99.000 -99.000 -99.000                       X
+ATOM   2531    X XXX X2531     -99.000 -99.000 -99.000                       X
+ATOM   2532    X XXX X2532     -99.000 -99.000 -99.000                       X
+ATOM   2533    X XXX X2533     -99.000 -99.000 -99.000                       X
+ATOM   2534    X XXX X2534     -99.000 -99.000 -99.000                       X
+ATOM   2535    X XXX X2535     -99.000 -99.000 -99.000                       X
+ATOM   2536    X XXX X2536     -99.000 -99.000 -99.000                       X
+ATOM   2537    X XXX X2537     -99.000 -99.000 -99.000                       X
+ATOM   2538    X XXX X2538     -99.000 -99.000 -99.000                       X
+ATOM   2539    X XXX X2539     -99.000 -99.000 -99.000                       X
+ATOM   2540    X XXX X2540     -99.000 -99.000 -99.000                       X
+ATOM   2541    X XXX X2541     -99.000 -99.000 -99.000                       X
+ATOM   2542    X XXX X2542     -99.000 -99.000 -99.000                       X
+ATOM   2543    X XXX X2543     -99.000 -99.000 -99.000                       X
+ATOM   2544    X XXX X2544     -99.000 -99.000 -99.000                       X
 END

@@ -18,8 +18,8 @@ Copyright © 2020-2021 Jasmin B. Maglic, Roy Lavendomme
 MoloVol program: calculation results report
 version: 1.0.0
 
-Time of the calculation: 2023-01-13_20h14m20s
-Duration of the calculation: 0.299178 s
+Time of the calculation: 2023-01-28_16h16m33s
+Duration of the calculation: 0.366393 s
 
 Structure file analyzed: ./hosts/H1.pdb
 Chemical formula: C80H48N8Pd2

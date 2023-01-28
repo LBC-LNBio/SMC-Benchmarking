@@ -1,20 +1,20 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/hosts/B13.pdb"
-OUTPUT = "/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/KVFinder-suite/B13/B13.KVFinder.output.pdb"
+INPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/hosts/B13.pdb"
+OUTPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/B13/B13.KVFinder.output.pdb"
 
 [PARAMETERS]
 STEP = 0.25
 
 [RESULTS.VOLUME]
-KAA = 736.31
+KAA = 872.31
 
 [RESULTS.AREA]
-KAA = 456.34
+KAA = 457.09
 
 [RESULTS.MAX_DEPTH]
-KAA = 8.32
+KAA = 5.33
 
 [RESULTS.AVG_DEPTH]
-KAA = 3.99
+KAA = 2.25

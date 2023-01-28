@@ -1,7 +1,7 @@
 from pymol import cmd
 
 if not os.path.exists("../data/clusters_timeless"):
-	cmd.cd("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B11/caver_output/1/pymol")
+	cmd.cd("/home/ABTLUS/joao.guerra/CNPEM/gyorgy.szaloki/benchmarking/results/CAVER/B12/caver_output/1/pymol")
 
 cmd.cd("modules")
 import caver
@@ -34,7 +34,7 @@ cmd.load('../data/v_origins.pdb', 'v_origins')
 cmd.show('nb_spheres', 'origins')
 cmd.show('nb_spheres', 'v_origins')
 
-cmd.load('../data/B11.pdb', 'structure')
+cmd.load('../data/B12.pdb', 'structure')
 cmd.hide('lines', 'structure')
 cmd.show('cartoon', 'structure')
 cmd.color('gray', 'structure')

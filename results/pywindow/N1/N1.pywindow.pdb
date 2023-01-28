@@ -7,7 +7,7 @@ HEADER 4  - Window 4 diameter                 : 3.8584
 HEADER 5  - Window 5 diameter                 : 3.8764
 HETATM    0  PS1 COM A   1      11.196   6.463  81.687   0.0  4.22           P
 HETATM    1  PS1 W1  A   1      11.196   6.464  87.628   0.0  1.83           P
-HETATM    2  PS1 W2  A   1       6.617   4.014  81.608   0.0  0.69           P
+HETATM    2  PS1 W2  A   1       6.616   4.014  81.608   0.0  0.69           P
 HETATM    3  PS1 W3  A   1      16.222   7.458  79.842   0.0  1.92           P
 HETATM    4  PS1 W4  A   1       9.474   1.338  79.740   0.0  1.93           P
-HETATM    5  PS1 W5  A   1       8.154   9.980  79.950   0.0  1.94           P
+HETATM    5  PS1 W5  A   1       8.154   9.981  79.950   0.0  1.94           P

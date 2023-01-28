@@ -18,12 +18,12 @@ Copyright © 2020-2021 Jasmin B. Maglic, Roy Lavendomme
 MoloVol program: calculation results report
 version: 1.0.0
 
-Time of the calculation: 2023-01-13_20h11m09s
-Duration of the calculation: 0.295854 s
+Time of the calculation: 2023-01-28_16h02m18s
+Duration of the calculation: 0.932105 s
 
 Structure file analyzed: ./hosts/B11.pdb
-Chemical formula: C76H48N12Pd1Pt1
-Molar mass: 1430.81 g/mol
+Chemical formula: C216H132N24O16P4Zn4
+Molar mass: 3705 g/mol
 
 
 	////////////////////////////
@@ -38,42 +38,43 @@ Large probe radius: 5 A
 Grid resolution: 0.6 A
 Optimization depth: 4
 Elements radii:
-Pt : 2.29 A
+P : 1.9 A
 H : 1.2 A
+Zn : 2.39 A
+O : 1.5 A
 C : 1.77 A
 N : 1.66 A
-Pd : 2.15 A
 
 
 	//////////////////////////////
 	// Total Volumes calculated //
 	//////////////////////////////
 
-Van der Waals volume:                1107.000000 A^3
-                                        0.465926 cm^3/g
+Van der Waals volume:                3022.488000 A^3
+                                        0.491278 cm^3/g
 
-Probe excluded void volume:           229.824000 A^3
-                                        0.096731 cm^3/g
+Probe excluded void volume:           871.344000 A^3
+                                        0.141629 cm^3/g
 
-Molecular volume:                    1336.824000 A^3
-(vdw + probe excluded void)             0.562657 cm^3/g
+Molecular volume:                    3893.832000 A^3
+(vdw + probe excluded void)             0.632907 cm^3/g
 
-Molecular volume:                    1353.672000 A^3
-with isolated cavities                  0.569748 cm^3/g
+Molecular volume:                    4353.912000 A^3
+with isolated cavities                  0.707689 cm^3/g
 
-Small probe core volume:               83.808000 A^3
-                                        0.035274 cm^3/g
+Small probe core volume:              142.992000 A^3
+                                        0.023242 cm^3/g
 
-Small probe shell volume:             322.272000 A^3
-                                        0.135641 cm^3/g
+Small probe shell volume:             384.912000 A^3
+                                        0.062564 cm^3/g
 
-Small probe occupied volume:          406.080000 A^3
-(core + shell)                          0.170915 cm^3/g
+Small probe occupied volume:          527.904000 A^3
+(core + shell)                          0.085806 cm^3/g
 
 Large probe core volume: No physical meaning, contains all volume outside the structure.
 
-Large probe shell volume:            8247.096000 A^3
-                                        3.471128 cm^3/g
+Large probe shell volume:           14727.096000 A^3
+                                        2.393756 cm^3/g
 
 
 	///////////////////
@@ -91,9 +92,14 @@ Note 6:	For a detailed shape of each cavity, check the surface maps.
 
 Cavity ID Occupied      Accessible    Cavity Type   Cavity center coordinates (A)
           Volume (A^3)  Volume (A^3)                x       y       z
-1         389.232       83.376        Tunnel        2.7     8.4     21
-2         8.424         0.216         Isolated      -0.3    4.5     16.5
-3         8.424         0.216         Isolated      5.7     12.3    26.1
+1         434.808       138.456       Isolated      -2      16.8    17.4
+2         20.952        1.296         Pocket        6.3     16.2    21
+3         18.576        1.296         Pocket        -9      18.6    13.8
+4         14.688        0.648         Pocket        5.7     21.6    15.3
+5         13.608        0.648         Pocket        1.2     17.1    8.7
+6         8.64          0.216         Isolated      -4      17.7    26.4
+7         8.64          0.216         Isolated      -2      9.6     21.9
+8         7.992         0.216         Isolated      -7      24      21
 
 
 	/////////////////////////////
@@ -118,10 +124,11 @@ For help on how to vizualize maps check the user manual or:
 If you wish to visualize the structure file in PyMOL with the same element radii as in the MoloVol calculation,
 paste the following command lines (all at once) in the command prompt of PyMOL after opening the structure file.
 
-alter (elem Pt),vdw=2.29
+alter (elem P),vdw=1.9
 alter (elem H),vdw=1.2
+alter (elem Zn),vdw=2.39
+alter (elem O),vdw=1.5
 alter (elem C),vdw=1.77
 alter (elem N),vdw=1.66
-alter (elem Pd),vdw=2.15
 rebuild
 
