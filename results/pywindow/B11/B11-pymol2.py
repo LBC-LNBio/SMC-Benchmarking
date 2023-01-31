@@ -11,7 +11,7 @@ cmd.iterate("(resn COM)", "stored.b.append(b)")
 cmd.alter("resn COM", "vdw=stored.b[0]")
 cmd.rebuild()
 
-cmd.spectrum("b", "blue_white_red", "B11.pywindow", [0, max(stored.b)])
+cmd.spectrum("b", "blue_white_red", "B11.pywindow", 0, max(stored.b))
 cmd.ramp_new("radius", "B11.pywindow", [0, max(stored.b)], ["blue", "white", "red"])
 cmd.orient()
 

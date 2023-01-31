@@ -13,7 +13,7 @@ cmd.alter("resn W1", "vdw=stored.b[1]")
 cmd.alter("resn W2", "vdw=stored.b[2]")
 cmd.rebuild()
 
-cmd.spectrum("b", "blue_white_red", "O2.pywindow", [0, max(stored.b)])
+cmd.spectrum("b", "blue_white_red", "O2.pywindow", 0, max(stored.b))
 cmd.ramp_new("radius", "O2.pywindow", [0, max(stored.b)], ["blue", "white", "red"])
 cmd.orient()
 

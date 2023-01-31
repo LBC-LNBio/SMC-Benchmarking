@@ -74,7 +74,7 @@ def _pymol(molecule: str, windows: Dict[str, Any], basedir: str = "."):
 
         f.write("cmd.rebuild()\n\n")
         f.write(
-            f'cmd.spectrum("b", "blue_white_red", "{basename}.pywindow", [0, max(stored.b)])\n'
+            f'cmd.spectrum("b", "blue_white_red", "{basename}.pywindow", 0, max(stored.b))\n'
         )
         f.write(
             f'cmd.ramp_new("radius", "{basename}.pywindow", [0, max(stored.b)], ["blue", "white", "red"])\n'
