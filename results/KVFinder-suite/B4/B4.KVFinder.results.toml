@@ -8,13 +8,13 @@ OUTPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/B
 STEP = 0.25
 
 [RESULTS.VOLUME]
-KAA = 436.05
+KAA = 437.61
 
 [RESULTS.AREA]
-KAA = 298.82
+KAA = 285.73
 
 [RESULTS.MAX_DEPTH]
 KAA = 5.49
 
 [RESULTS.AVG_DEPTH]
-KAA = 3.06
+KAA = 3.05

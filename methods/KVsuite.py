@@ -75,7 +75,7 @@ def _run_pyKVFinder(
     atomic = pyKVFinder.read_pdb(molecule)
 
     # Grid dimensions
-    vertices = pyKVFinder.get_vertices(atomic, probe_out=probe_out)
+    vertices = pyKVFinder.get_vertices(atomic, probe_out=probe_out, step=step)
 
     # Cavity detection
     _, cavities = pyKVFinder.detect(
@@ -99,7 +99,7 @@ def _run_pyKVFinder(
     osurf = os.path.join(basedir, f"{basename}.surface.pdb")
     surface_representation = (cavities == 0).astype(int) * 2
     pyKVFinder.export(
-        osurf, surface_representation * 2, None, vertices, B=depths, step=step
+        osurf, surface_representation, None, vertices, B=depths, step=step
     )
 
     # Write results
@@ -240,7 +240,13 @@ def _run_parKVFinder(
             "p3": {"x": -probe_out, "y": probe_out, "z": -probe_out},
             "p4": {"x": -probe_out, "y": -probe_out, "z": probe_out},
         }
-        d = {"SETTINGS": {"visiblebox": visiblebox, "internalbox": internalbox}}
+        d = {"SETTINGS": {"visiblebox": visiblebox}}
+        toml.dump(o=d, f=f)
+        f.write("\n[SETTINGS.internalbox]\n")
+        f.write(
+            "# Coordinates of the vertices that define the internal 3D grid. Only four points are required to define the search space.\n\n"
+        )
+        d = {"SETTINGS": {"internalbox": internalbox}}
         toml.dump(o=d, f=f)
 
     # Run parKVFinder
@@ -321,7 +327,7 @@ def run(
         f.write("```bash\npython A1-pymol2.py\n```\n")
 
     # Run KVFinder-suite for all files
-    print("> pyKVFinder (v0.4.5)")
+    print(f"> pyKVFinder {pyKVFinder.__version__}")
     for molecule, s, po, rd, vc in zip(
         molecules, step, probe_out, removal_distance, volume_cutoff
     ):
@@ -336,7 +342,18 @@ def run(
         # Run pyKVFinder
         _run_pyKVFinder(molecule, s, po, rd, vc, basedir)
 
-    print("> parKVFinder (v1.1.4)")
+    command = "parKVFinder --version"
+    process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+    output, error = process.communicate()
+    output = (
+        str(output)
+        .replace("'", "")
+        .replace("b", "")
+        .replace("\\n", "")
+        .replace("(parallel KVFinder)", "")
+    )
+
+    print(f"> {output}")
     for molecule, s, po, rd, vc in zip(
         molecules, step, probe_out, removal_distance, volume_cutoff
     ):

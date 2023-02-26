@@ -8,24 +8,39 @@ OUTPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/O
 LIGAND = "-"
 
 [PARAMETERS]
-RESOLUTION = "Off"
-STEP_SIZE = 0.25
+STEP = 0.25
 
 [RESULTS]
-# Volume, area and interface residues information for each cavity
+# Volume, area, depth and interface residues information for each cavity
 
 	[RESULTS.VOLUME]
 	# Volume unit is cubic angstrom
-	KAA = 7.22
-	KAB = 37.67
+	KAA = 7.41
+	KAB = 36.05
 
 	[RESULTS.AREA]
 	# Area unit is square angstrom
-	KAA = 11.64
-	KAB = 34.17
+	KAA = 12.31
+	KAB = 36.05
+
+	[RESULTS.MAX_DEPTH]
+	# Maximum depth unit is angstrom
+	KAA = 1.27
+	KAB = 2.51
+
+	[RESULTS.AVG_DEPTH]
+	# Average depth unit is angstrom
+	KAA = 0.41
+	KAB = 0.74
+
+	[RESULTS.AVG_HYDROPATHY]
+	# Average hydropathy has no unit
+	KAA = 0.00
+	KAB = 0.00
+	EisenbergWeiss = [ -1.42, 2.60,]
 
 	[RESULTS.RESIDUES]
 	# Interface residues for each cavity
 	# ["residue number","chain identifier","residue name"]
-	KAA = []
-	KAB = []
+	KAA = [["1"," ","X"]]
+	KAB = [["1"," ","X"]]

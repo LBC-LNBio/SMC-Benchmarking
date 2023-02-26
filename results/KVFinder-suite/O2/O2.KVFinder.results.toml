@@ -8,17 +8,43 @@ OUTPUT = "/home/jvsguerra/remote-repos/SMC-Benchmarking/results/KVFinder-suite/O
 STEP = 0.25
 
 [RESULTS.VOLUME]
-KAA = 20.48
-KAB = 35.97
+KAA = 7.41
+KAB = 36.05
 
 [RESULTS.AREA]
-KAA = 33.43
-KAB = 46.22
+KAA = 12.31
+KAB = 36.05
 
 [RESULTS.MAX_DEPTH]
-KAA = 2.32
-KAB = 2.5
+KAA = 1.27
+KAB = 2.51
 
 [RESULTS.AVG_DEPTH]
-KAA = 0.65
-KAB = 0.72
+KAA = 0.41
+KAB = 0.74
+
+[RESULTS.RESIDUES]
+KAA = [ [ "1", " ", "UNK",],]
+KAB = [ [ "1", " ", "UNK",],]
+
+[RESULTS.FREQUENCY.KAA.RESIDUES]
+UNK = 1
+
+[RESULTS.FREQUENCY.KAA.CLASS]
+R1 = 0
+R2 = 0
+R3 = 0
+R4 = 0
+R5 = 0
+RX = 1
+
+[RESULTS.FREQUENCY.KAB.RESIDUES]
+UNK = 1
+
+[RESULTS.FREQUENCY.KAB.CLASS]
+R1 = 0
+R2 = 0
+R3 = 0
+R4 = 0
+R5 = 0
+RX = 1
