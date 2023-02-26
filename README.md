@@ -3,7 +3,7 @@
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/LBC-LNBio/SMC-Benchmarking) 
 ![GitHub](https://img.shields.io/github/license/LBC-LNBio/SMC-Benchmarking)
 
-A set of well-known supramolecular cages were selected from the literature to evaluate and validate benchmarking methods in the supramolecular cage context.
+A set of well-known supramolecular cages were selected from the literature to evaluate and validate cavity detection methods in the supramolecular cage context.
 
 ## Benchmarking methods
 
